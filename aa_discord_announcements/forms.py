@@ -4,7 +4,27 @@ The forms
 
 # Django
 from django import forms
+from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
+
+
+def _get_mandatory_form_label_text(text: str) -> str:
+    """
+    Label text for mandatory form fields
+    :param text:
+    :type text:
+    :return:
+    :rtype:
+    """
+
+    required_text = _("This field is mandatory")
+    required_marker = (
+        f'<span aria-label="{required_text}" class="form-required-marker">*</span>'
+    )
+
+    return mark_safe(
+        f'<span class="form-field-required">{text} {required_marker}</span>'
+    )
 
 
 class AnnouncementForm(forms.Form):
@@ -26,7 +46,7 @@ class AnnouncementForm(forms.Form):
     )
     announcement_text = forms.CharField(
         required=True,
-        label=_("Announcement Text"),
+        label=_get_mandatory_form_label_text(_("Announcement Text")),
         widget=forms.Textarea(
             attrs={
                 "rows": 10,
