@@ -11,6 +11,7 @@ $(document).ready(() => {
 
     // Input fields
     const inputCsrfMiddlewareToken = $('input[name="csrfmiddlewaretoken"]');
+    const inputAnnouncementText = $('textarea[name="announcement_text"]');
 
     // Form
     const announcementForm = $('#aa-discord-announcements-form');
@@ -138,6 +139,20 @@ $(document).ready(() => {
         // Close all possible form messages
         $('.aa-discord-announcements-form-message div').remove();
 
+        // Check for mandatory fields
+        const announcementFormMandatoryFields = [
+            inputAnnouncementText.val()
+        ];
+
+        if (announcementFormMandatoryFields.includes('')) {
+            showError(
+                discordAnnouncementsTranslations.error.missingFields,
+                '.aa-discord-announcements-form-message'
+            );
+
+            return false;
+        }
+
         // Get the form data
         const formData = announcementForm.serializeArray().reduce((obj, item) => {
             obj[item.name] = item.value;
@@ -157,7 +172,8 @@ $(document).ready(() => {
                     $('.aa-discord-announcements-no-announcement').hide('fast');
                     $('.aa-discord-announcements-announcement').show('fast');
 
-                    $('.aa-discord-announcements-announcement-text').html(data.announcement_context);
+                    $('.aa-discord-announcements-announcement-text')
+                        .html(data.announcement_context);
 
                     if (data.message) {
                         showSuccess(
