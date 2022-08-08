@@ -75,7 +75,7 @@ class PingTarget(models.Model):
 
     # Notes
     notes = models.TextField(
-        null=True,
+        default="",
         blank=True,
         help_text=_("You can add notes about this configuration here if you want"),
     )
@@ -86,6 +86,32 @@ class PingTarget(models.Model):
         db_index=True,
         help_text=_("Whether this formup location is enabled or not"),
     )
+
+    class Meta:  # pylint: disable=too-few-public-methods
+        """
+        DiscordPingTargets :: Meta
+        """
+
+        verbose_name = _("Discord Ping Target")
+        verbose_name_plural = _("Discord Ping Targets")
+        default_permissions = ()
+
+    def __str__(self) -> str:
+        return str(self.name)
+
+    def save(
+        self, force_insert=False, force_update=False, using=None, update_fields=None
+    ):
+        """
+        Add the Discord group ID (if Discord service is active) and save the whole thing
+        """
+
+        # Check if the Discord service is active
+        if discord_service_installed():
+            discord_group_info = DiscordUser.objects.group_to_role(self.name)
+            self.discord_id = discord_group_info["id"]
+
+        super().save()  # Call the "real" save() method.
 
     def clean(self):
         """
@@ -113,32 +139,6 @@ class PingTarget(models.Model):
                 )
 
         super().clean()
-
-    def save(
-        self, force_insert=False, force_update=False, using=None, update_fields=None
-    ):
-        """
-        Add the Discord group ID (if Discord service is active) and save the whole thing
-        """
-
-        # Check if the Discord service is active
-        if discord_service_installed():
-            discord_group_info = DiscordUser.objects.group_to_role(self.name)
-            self.discord_id = discord_group_info["id"]
-
-        super().save()  # Call the "real" save() method.
-
-    def __str__(self) -> str:
-        return str(self.name)
-
-    class Meta:  # pylint: disable=too-few-public-methods
-        """
-        DiscordPingTargets :: Meta
-        """
-
-        verbose_name = _("Discord Ping Target")
-        verbose_name_plural = _("Discord Ping Targets")
-        default_permissions = ()
 
 
 class Webhook(models.Model):
@@ -175,7 +175,7 @@ class Webhook(models.Model):
 
     # Webhook notes
     notes = models.TextField(
-        null=True,
+        default="",
         blank=True,
         help_text=_("You can add notes about this webhook here if you want"),
     )
@@ -187,9 +187,6 @@ class Webhook(models.Model):
         help_text=_("Whether this webhook is active or not"),
     )
 
-    def __str__(self) -> str:
-        return str(self.name)
-
     class Meta:  # pylint: disable=too-few-public-methods
         """
         Webhook :: Meta
@@ -198,6 +195,9 @@ class Webhook(models.Model):
         verbose_name = _("Webhook")
         verbose_name_plural = _("Webhooks")
         default_permissions = ()
+
+    def __str__(self) -> str:
+        return str(self.name)
 
     def clean(self):
         """
