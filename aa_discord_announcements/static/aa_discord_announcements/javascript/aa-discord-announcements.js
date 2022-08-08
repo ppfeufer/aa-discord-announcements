@@ -1,4 +1,4 @@
-/* global discordAnnouncementsSettings */
+/* global ClipboardJS, discordAnnouncementsSettings, discordAnnouncementsTranslations */
 
 $(document).ready(() => {
     'use strict';
@@ -87,6 +87,45 @@ $(document).ready(() => {
         closeMessageElement('.alert-message-error', 9999);
     };
 
+    /**
+     * Copy the fleet ping to clipboard
+     */
+    const copyAnnouncementText = () => {
+        /**
+         * Copy text to clipboard
+         *
+         * @type Clipboard
+         */
+        const clipboardFleetPingData = new ClipboardJS('button#copyDiscordAnnouncement');
+
+        /**
+         * Copy success
+         *
+         * @param {type} e
+         */
+        clipboardFleetPingData.on('success', (e) => {
+            showSuccess(
+                discordAnnouncementsTranslations.copyToClipboard.success,
+                '.aa-discord-announcements-announcement-copyresult'
+            );
+
+            e.clearSelection();
+            clipboardFleetPingData.destroy();
+        });
+
+        /**
+         * Copy error
+         */
+        clipboardFleetPingData.on('error', () => {
+            showError(
+                discordAnnouncementsTranslations.copyToClipboard.error,
+                '.aa-discord-announcements-announcement-copyresult'
+            );
+
+            clipboardFleetPingData.destroy();
+        });
+    };
+
     /* Events
     --------------------------------------------------------------------------------- */
     /**
@@ -141,6 +180,13 @@ $(document).ready(() => {
                 }
             }
         });
+    });
+
+    /**
+     * Copy ping text
+     */
+    $('button#copyDiscordAnnouncement').on('click', () => {
+        copyAnnouncementText();
     });
 
     /**

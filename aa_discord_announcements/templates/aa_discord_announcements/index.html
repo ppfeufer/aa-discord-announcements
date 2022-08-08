@@ -35,6 +35,13 @@
                 getAnnouncementWebhooks: '{% url "aa_discord_announcements:ajax_get_webhooks" %}'
             }
         };
+
+        const discordAnnouncementsTranslations = {
+            copyToClipboard: {
+                error: '{% translate "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn&apos;t support this feature." %}',
+                success: '{% translate "Success! Your announcement text has been copied to your clipboard." %}'
+            }
+        };
     </script>
 {% endblock %}
 
