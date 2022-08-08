@@ -26,6 +26,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const discordAnnouncementsSettings = {
+            url: {
+                {#createAnnouncement: '{% url "aa_discord_announcements:ajax_create_announcement" %}',#}
+                getAnnouncementTargets: '{% url "aa_discord_announcements:ajax_get_announcement_targets" %}',
+                getAnnouncementWebhooks: '{% url "aa_discord_announcements:ajax_get_webhooks" %}'
+            }
+        };
+    </script>
 {% endblock %}
 
 {% block extra_javascript %}
