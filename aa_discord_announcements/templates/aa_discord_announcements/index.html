@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="col-md-6 aa-discord-announcements-pingtext">
+        <div class="col-md-6 aa-discord-announcements-announcementtext">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span class="panel-title">{% translate "Formatted Announcement Text" %}</span>
@@ -30,7 +30,7 @@
     <script>
         const discordAnnouncementsSettings = {
             url: {
-                {#createAnnouncement: '{% url "aa_discord_announcements:ajax_create_announcement" %}',#}
+                createAnnouncement: '{% url "aa_discord_announcements:ajax_create_announcement" %}',
                 getAnnouncementTargets: '{% url "aa_discord_announcements:ajax_get_announcement_targets" %}',
                 getAnnouncementWebhooks: '{% url "aa_discord_announcements:ajax_get_webhooks" %}'
             }

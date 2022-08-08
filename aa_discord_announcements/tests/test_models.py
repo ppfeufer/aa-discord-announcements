@@ -62,11 +62,11 @@ class TestModels(TestCase):
         """
 
         # given
-        ping_target = PingTarget(name=self.group, discord_id=123456789)
+        announcement_target = PingTarget(name=self.group, discord_id=123456789)
 
         # when
         with self.assertRaises(ValidationError):
-            ping_target.clean()
+            announcement_target.clean()
 
         with self.assertRaisesMessage(
             ValidationError,
@@ -74,4 +74,4 @@ class TestModels(TestCase):
                 "You might want to install the Discord service first ..."
             ),
         ):
-            ping_target.clean()
+            announcement_target.clean()

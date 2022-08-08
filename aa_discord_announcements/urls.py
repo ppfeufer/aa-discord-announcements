@@ -23,9 +23,9 @@ urlpatterns = [
         views.ajax_get_webhooks,
         name="ajax_get_webhooks",
     ),
-    # path(
-    #     "ajax/create-announcement/",
-    #     views.ajax_create_announcement,
-    #     name="ajax_create_announcement",
-    # ),
+    path(
+        "ajax/create-announcement/",
+        views.ajax_create_announcement,
+        name="ajax_create_announcement",
+    ),
 ]
