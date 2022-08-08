@@ -26,23 +26,6 @@ class TestModels(TestCase):
 
         cls.group = Group.objects.create(name="Superhero")
 
-    def test_discord_webhook_valid_webhook_url(self):
-        """
-        Test if we DO NOT get a ValidationError for a Discord webhook
-        :return:
-        """
-
-        # given
-        webhook = Webhook(
-            url=(
-                "https://discord.com/api/webhooks/873266850833505395/"
-                "3pZfW9m66VO-LVomItmu2hEWFJnQkbj1aHOsPw2D6Zz-C2poLto1BArweS2pxTE7rrnI"
-            ),
-        )
-
-        # when (should not fail and raise an exception)
-        webhook.clean()
-
     def test_discord_webhook_invalid_webhook_url_should_throw_exception(self):
         """
         Test if we get a ValidationError for a Discord webhook
