@@ -21,9 +21,18 @@
                     <span class="panel-title">{% translate "Formatted Announcement Text" %}</span>
                 </div>
                 <div class="panel-body">
-                    {% include 'aa_discord_announcements/partials/announcement/announcement.html' %}
+                    {% include "aa_discord_announcements/partials/announcement/announcement.html" %}
                 </div>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block extra_javascript %}
+    {% include "bundles/clipboard-js.html" %}
+    {% include "aa_discord_announcements/bundles/discord-announcements-js.html" %}
+{% endblock %}
+
+{% block extra_css %}
+    {% include "aa_discord_announcements/bundles/discord-announcements-css.html" %}
 {% endblock %}
