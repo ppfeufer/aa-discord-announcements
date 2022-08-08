@@ -52,7 +52,7 @@ class PingTarget(models.Model):
         help_text=(
             _(
                 "Name of the Discord role to ping. "
-                "(Note: This must be an Auth group that is synched to Discord.)"
+                "(Note: This must be an Auth group that is synced to Discord.)"
             )
         ),
     )
@@ -84,7 +84,7 @@ class PingTarget(models.Model):
     is_enabled = models.BooleanField(
         default=True,
         db_index=True,
-        help_text=_("Whether this formup location is enabled or not"),
+        help_text=_("Whether this ping target is enabled or not"),
     )
 
     class Meta:  # pylint: disable=too-few-public-methods
