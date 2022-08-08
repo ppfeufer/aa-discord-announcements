@@ -6,7 +6,6 @@ Pages url config
 from django.urls import path
 
 # AA Discord Announcements
-# AA Fleet Pings
 from aa_discord_announcements import views
 
 app_name: str = "aa_discord_announcements"

@@ -205,7 +205,7 @@ class Webhook(models.Model):
         :return:
         """
 
-        # Check if it's an actual kill mail
+        # Check if it's a valid Discord webhook URL
         if not re.match(DISCORD_WEBHOOK_REGEX, self.url):
             raise ValidationError(
                 _(
