@@ -27,7 +27,7 @@ def _get_mandatory_form_label_text(text: str) -> str:
     )
 
 
-def _get_discord_markdown_hin_text() -> str:
+def _get_discord_markdown_hint_text() -> str:
     """
     Get the formatted help text for any field that allows Discord Markdown
     :return:
@@ -76,5 +76,5 @@ class AnnouncementForm(forms.Form):
                 "placeholder": _("Your announcement…"),
             }
         ),
-        help_text=_get_discord_markdown_hin_text(),
+        help_text=_get_discord_markdown_hint_text(),
     )

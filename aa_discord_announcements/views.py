@@ -89,7 +89,7 @@ def ajax_get_announcement_targets(request: WSGIRequest) -> HttpResponse:
 @permission_required("aa_discord_announcements.basic_access")
 def ajax_get_webhooks(request: WSGIRequest) -> HttpResponse:
     """
-    Get webhooks for ccurrent user
+    Get webhooks for the current user
     :param request:
     :return:
     """

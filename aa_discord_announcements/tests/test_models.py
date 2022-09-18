@@ -75,3 +75,45 @@ class TestModels(TestCase):
             ),
         ):
             announcement_target.clean()
+
+    def test_should_raise_validation_error_on_save(self):
+        """
+        Test should raise validation error on save
+        :return:
+        :rtype:
+        """
+
+        ping_target = PingTarget(name=self.group)
+
+        with self.assertRaises(ValidationError):
+            ping_target.save()
+
+    def test_should_return_ping_target_model_string_name(self):
+        """
+        Test should return the PingTarget model string name
+        :return:
+        :rtype:
+        """
+
+        ping_target = PingTarget(name=self.group)
+
+        self.assertEqual(str(ping_target), self.group.name)
+
+    def test_should_return_webhook_model_string_name(self):
+        """
+        Test should return the Webhook model string name
+        :return:
+        :rtype:
+        """
+
+        webhook = Webhook(
+            name="Test Webhook",
+            url=(
+                "https://discord.com/api/webhooks/754119343402302920F/x-BfFCdEG"
+                "-qGg_39_mFUqRSLoz2dm6Oa8vxNdaAxZdgKOAyesVpy-Bzf8wDU_vHdFpm-"
+            ),
+        )
+
+        webhook.save()
+
+        self.assertEqual(str(webhook), "Test Webhook")
