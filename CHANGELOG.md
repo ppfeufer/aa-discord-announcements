@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-- Hint text to "Announcement Text" field with link to Discord Markdown
+- Hint text to the "Announcement Text" field with a link to Discord Markdown
 
 ### Removed
 
