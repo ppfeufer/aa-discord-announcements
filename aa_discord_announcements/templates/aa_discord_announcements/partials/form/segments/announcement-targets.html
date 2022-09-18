@@ -8,7 +8,9 @@
     <option value="" disabled></option>
     <optgroup label="{% translate 'Additionally configured announcement targets' %}">
         {% for announcement_target in announcement_targets %}
-            <option value="{{ announcement_target.discord_id }}">@{{ announcement_target.name }}</option>
+            <option value="{{ announcement_target.discord_id }}">
+                @{{ announcement_target.name }}
+            </option>
         {% endfor %}
     </optgroup>
 {% endif %}
