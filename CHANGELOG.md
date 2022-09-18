@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Hint text to "Announcement Text" field with link to Discord Markdown
 
+### Removed
+
+- Deprecated attributes from `style` and `script` tags
+
 
 ## [0.0.1] - 2022-08-08
 
