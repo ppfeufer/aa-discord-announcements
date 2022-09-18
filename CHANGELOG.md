@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [0.0.2] - 2022-09-18
+
 ### Added
 
 - Hint text to "Announcement Text" field with link to Discord Markdown
