@@ -56,7 +56,7 @@ def register_menu():
 @hooks.register("url_hook")
 def register_urls():
     """
-    Register our basu url
+    Register our base url
     :return:
     """
 
