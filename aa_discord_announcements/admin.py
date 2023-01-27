@@ -28,13 +28,12 @@ class PingTargetAdmin(admin.ModelAdmin):
     ordering = ("name",)
 
     @classmethod
+    @admin.display(description="Ping Target", ordering="name")
     def _name(cls, obj):
         return obj.name
 
-    _name.short_description = "Ping Target"
-    _name.admin_order_field = "name"
-
     @classmethod
+    @admin.display(description="Restricted to", ordering="restricted_to_group__name")
     def _restricted_to_group(cls, obj):
         names = [x.name for x in obj.restricted_to_group.all().order_by("name")]
 
@@ -42,9 +41,6 @@ class PingTargetAdmin(admin.ModelAdmin):
             return ", ".join(names)
 
         return None
-
-    _restricted_to_group.short_description = "Restricted to"
-    _restricted_to_group.admin_order_field = "restricted_to_group__name"
 
 
 @admin.register(Webhook)
@@ -53,32 +49,23 @@ class WebhookAdmin(admin.ModelAdmin):
     WebhookAdmin
     """
 
-    list_display = (
-        "_name",
-        "_url",
-        "_restricted_to_group",
-        "notes",
-        "is_enabled",
-    )
+    list_display = ("_name", "_url", "_restricted_to_group", "notes", "is_enabled")
 
     filter_horizontal = ("restricted_to_group",)
     ordering = ("name",)
 
     @classmethod
+    @admin.display(description="Channel Name", ordering="name")
     def _name(cls, obj):
         return obj.name
 
-    _name.short_description = "Channel Name"
-    _name.admin_order_field = "name"
-
     @classmethod
+    @admin.display(description="Webhook URL", ordering="url")
     def _url(cls, obj):
         return obj.url
 
-    _url.short_description = "Webhook URL"
-    _url.admin_order_field = "url"
-
     @classmethod
+    @admin.display(description="Restricted to", ordering="restricted_to_group__name")
     def _restricted_to_group(cls, obj):
         names = [x.name for x in obj.restricted_to_group.all().order_by("name")]
 
@@ -86,6 +73,3 @@ class WebhookAdmin(admin.ModelAdmin):
             return ", ".join(names)
 
         return None
-
-    _restricted_to_group.short_description = "Restricted to"
-    _restricted_to_group.admin_order_field = "restricted_to_group__name"
