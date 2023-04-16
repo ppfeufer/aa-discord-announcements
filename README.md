@@ -19,12 +19,16 @@ Write announcements and manage who can write announcements on your corporation o
 alliance Discord through Alliance Auth.
 
 
-## Contents
-
-- [Installation](#installation)
-- [Change Log](https://github.com/ppfeufer/aa-discord-announcements/blob/master/CHANGELOG.md)
-- [Code of Conduct](https://github.com/ppfeufer/aa-discord-announcements/blob/master/CODE_OF_CONDUCT.md)
-- [Contribute](https://github.com/ppfeufer/aa-discord-announcements/blob/master/CONTRIBUTING.md)
+<!-- TOC -->
+* [AA Discord Announcements](#aa-discord-announcements)
+  * [Installation](#installation)
+    * [⚠️ Important ⚠️](#-important-)
+    * [Step 1: Install the App](#step-1-install-the-app)
+    * [Step 2: Update Your AA Settings](#step-2-update-your-aa-settings)
+    * [Step 3: Finalizing the Installation](#step-3-finalizing-the-installation)
+    * [Step 4: Setting up Permission](#step-4-setting-up-permission)
+    * [Step 5: Setting up the App](#step-5-setting-up-the-app)
+<!-- TOC -->
 
 
 ## Installation
@@ -33,7 +37,7 @@ alliance Discord through Alliance Auth.
 
 This app is a plugin for Alliance Auth. If you don't have Alliance Auth running already,
 please install it first before proceeding.
-(see the official
+(See the official
 [AA installation guide](https://allianceauth.readthedocs.io/en/latest/installation/allianceauth.html)
 for details)
 
@@ -41,40 +45,44 @@ for details)
 [Discord service](https://allianceauth.readthedocs.io/en/latest/features/services/discord.html)
 installed, configured and activated before installing this app. ⚠️**
 
-### Step 1 - Install the app
 
-Make sure you are in the virtual environment (venv) of your Alliance Auth installation.
+### Step 1: Install the App
+
+Make sure you're in the virtual environment (venv) of your Alliance Auth installation.
 Then install the latest version:
 
-```bash
+```shell
 pip install aa-discord-announcements
 ```
 
-### Step 2 - Update your AA settings
+
+### Step 2: Update Your AA Settings
 
 Configure your AA settings (`local.py`) as follows:
 
-- Add `'aa_discord_announcements',` to `INSTALLED_APPS`
+- Add `"aa_discord_announcements",` to `INSTALLED_APPS`
 
 
-### Step 3 - Finalize the installation
+### Step 3: Finalizing the Installation
 
 Copy static files and run migrations
 
-```bash
+```shell
 python manage.py collectstatic
 python manage.py migrate
 ```
 
 Restart your supervisor services for AA
 
-### Step 4 - Setup permission
 
-Now you can setup permissions in Alliance Auth for your users.
+### Step 4: Setting up Permission
+
+Now you can set up permissions in Alliance Auth for your users.
 Add `aa_discord_announcements | general | Can access this app` to the states and/or
 groups you would like to have access.
 
-### Step 5 - Setup the app
+
+### Step 5: Setting up the App
 
 In your admin backend you'll find a new section called `Discord Announcements`.
 This is where you set all your stuff up, like the webhooks you want to ping and who

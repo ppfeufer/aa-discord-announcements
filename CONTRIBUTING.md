@@ -1,3 +1,13 @@
+<!-- TOC -->
+* [Contributing](#contributing)
+  * [Code Formatting](#code-formatting)
+  * [Contributing via Pull Requests](#contributing-via-pull-requests)
+    * [Commits](#commits)
+    * [Test Coverage](#test-coverage)
+  * [Translation](#translation)
+<!-- TOC -->
+
+
 # Contributing
 
 ## Code Formatting
@@ -17,7 +27,7 @@ You can check if your code to commit adheres to the given style by simply runnin
 pre-commit
 ```
 
-or to check all files:
+Or to check all files:
 ```shell
 pre-commit run --all-files
 ```
@@ -31,7 +41,7 @@ The following will be checked by `pre-commit`:
 - code conforms with flake8
 
 
-## Contributing via pull requests
+## Contributing via Pull Requests
 
 To contribute code via pull request, make sure that you fork the repository and branch
 your changes from the `development` branch. Only pull requests towards the development
@@ -80,7 +90,7 @@ make tox_tests
 
 This app is fully translation-ready and translations are handled via [Weblate]. If
 you like to contribute to the app's translation or simply improve it, feel free to
-register on my [Weblate] site and message me so I can add you to the right group.
+register on my [Weblate] site and message me, so I can add you to the right group.
 
 <!-- Links -->
 [Weblate]: https://weblate.ppfeufer.de/ "Weblate"
