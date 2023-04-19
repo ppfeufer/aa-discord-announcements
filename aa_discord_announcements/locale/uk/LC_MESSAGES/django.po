@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# Kristof <kristof@teh.ninja>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-19 01:15+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2023-04-19 15:32+0000\n"
+"Last-Translator: Kristof <kristof@teh.ninja>\n"
+"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-discord-announcements/uk/>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: forms.py:20
 msgid "This field is mandatory"
@@ -24,12 +25,14 @@ msgstr ""
 
 #: forms.py:41
 msgid "Discord Markdown"
-msgstr ""
+msgstr "Discord markdown"
 
 #: forms.py:48
 #, python-brace-format
 msgid "Hint: You can use {discord_markdown_link} to format the text."
 msgstr ""
+"Підказка: Ви можете використовувати {discord_markdown_link} для форматування "
+"тексту."
 
 #: forms.py:58
 msgid "Announcement Target"
@@ -37,7 +40,7 @@ msgstr ""
 
 #: forms.py:60
 msgid "Who do you want to ping?"
-msgstr ""
+msgstr "Кого ви хочете пінгувати?"
 
 #: forms.py:64
 msgid "Announcement Channel"
@@ -57,33 +60,35 @@ msgstr ""
 
 #: models.py:37
 msgid "You might want to install the Discord service first ..."
-msgstr ""
+msgstr "Можливо, ви захочете спочатку встановити службу Discord ..."
 
 #: models.py:44
 msgid "Are you sure you have your Discord linked to your Alliance Auth?"
-msgstr ""
+msgstr "Ви впевнені, що ваш Discord пов'язаний з вашим Alliance Auth?"
 
 #: models.py:48
 msgid "This group has not been synced to Discord yet."
-msgstr ""
+msgstr "Цю групу ще не синхронізовано з Discord."
 
 #: models.py:81
 msgid ""
 "Name of the Discord role to ping. (Note: This must be an Auth group that is "
 "synced to Discord.)"
 msgstr ""
+"Ім'я ролі Discord, яку потрібно пінгувати. (Примітка: це має бути група "
+"Auth, яка синхронізована з Discord)."
 
 #: models.py:92
 msgid "ID of the Discord role to ping"
-msgstr ""
+msgstr "Ідентифікатор ролі Discord для пінгування"
 
 #: models.py:100 models.py:183
 msgid "Restrict ping rights to the following group(s) ..."
-msgstr ""
+msgstr "Обмежити права на пінг для наступних груп ..."
 
 #: models.py:107
 msgid "You can add notes about this configuration here if you want"
-msgstr ""
+msgstr "Ви можете додати примітки про цю конфігурацію тут, якщо хочете"
 
 #: models.py:114
 msgid "Whether this ping target is enabled or not"
@@ -91,42 +96,47 @@ msgstr ""
 
 #: models.py:122
 msgid "Discord Ping Target"
-msgstr ""
+msgstr "Ціль для пінгу в Discord"
 
 #: models.py:123
 msgid "Discord Ping Targets"
-msgstr ""
+msgstr "Цілі для пінгу в Discord"
 
 #: models.py:163
 msgid "Name of the channel this webhook posts to"
-msgstr ""
+msgstr "Назва каналу, на який публікується цей веб-хук"
 
 #: models.py:172
 msgid ""
 "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
 msgstr ""
+"URL-адреса цього веб-хука, наприклад, https://discord.com/api/webhooks/"
+"123456/abcdef"
 
 #: models.py:190
 msgid "You can add notes about this webhook here if you want"
-msgstr ""
+msgstr "Ви можете додати примітки про цей вебхук тут, якщо хочете"
 
 #: models.py:197
 msgid "Whether this webhook is active or not"
-msgstr ""
+msgstr "Активний цей вебхук чи ні"
 
 #: models.py:205
 msgid "Webhook"
-msgstr ""
+msgstr "Веб-хук"
 
 #: models.py:206
 msgid "Webhooks"
-msgstr ""
+msgstr "Веб-хуки"
 
 #: models.py:222
 msgid ""
 "Invalid webhook URL. The webhook URL you entered does not match any known "
 "format for a Discord webhook. Please check the webhook URL."
 msgstr ""
+"Неправильна URL-адреса веб-хука. Введена вами URL-адреса веб-хука не "
+"відповідає жодному з відомих форматів веб-хуків Discord. Будь ласка, "
+"перевірте URL-адресу веб-хука."
 
 #: templates/aa_discord_announcements/base.html:5
 #: templates/aa_discord_announcements/base.html:8
@@ -171,11 +181,11 @@ msgstr ""
 
 #: templates/aa_discord_announcements/partials/form/segments/announcement-channel.html:3
 msgid "None, just format it for me"
-msgstr ""
+msgstr "Ні, просто відформатуйте для мене"
 
 #: templates/aa_discord_announcements/partials/form/segments/announcement-targets.html:3
 msgid "Don't Ping"
-msgstr ""
+msgstr "Не пінгувати"
 
 #: templates/aa_discord_announcements/partials/form/segments/announcement-targets.html:9
 msgid "Additionally configured announcement targets"
@@ -183,8 +193,8 @@ msgstr ""
 
 #: views.py:154
 msgid "Form invalid. Please check your input."
-msgstr ""
+msgstr "Форма невірна. Будь ласка, перевірте свої дані."
 
 #: views.py:156
 msgid "No form data submitted."
-msgstr ""
+msgstr "Не подано жодних даних."
