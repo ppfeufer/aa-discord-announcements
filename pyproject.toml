@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "aa-discord-announcements"
-version = "1.1.0"
+version = "1.2.0"
 description = "Discord Announcements via Alliance Auth. Write announcements and manage who can write announcements on your corporation or alliance Discord through Alliance Auth."
 readme = "README.md"
 license = "GPL-3.0"
