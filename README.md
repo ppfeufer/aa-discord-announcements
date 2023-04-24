@@ -18,6 +18,7 @@ Discord Announcements via [Alliance Auth](https://gitlab.com/allianceauth/allian
 Write announcements and manage who can write announcements on your corporation or
 alliance Discord through Alliance Auth.
 
+---
 
 <!-- TOC -->
 * [AA Discord Announcements](#aa-discord-announcements)
@@ -29,6 +30,8 @@ alliance Discord through Alliance Auth.
     * [Step 4: Setting up Permission](#step-4-setting-up-permission)
     * [Step 5: Setting up the App](#step-5-setting-up-the-app)
 <!-- TOC -->
+
+---
 
 
 ## Installation
