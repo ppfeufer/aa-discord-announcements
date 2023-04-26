@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:15+0200\n"
+"POT-Creation-Date: 2023-04-26 21:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,7 +55,7 @@ msgid "Your announcement…"
 msgstr ""
 
 #: models.py:37
-msgid "You might want to install the Discord service first ..."
+msgid "You might want to install the Discord service first …"
 msgstr ""
 
 #: models.py:44
@@ -77,7 +77,7 @@ msgid "ID of the Discord role to ping"
 msgstr ""
 
 #: models.py:100 models.py:183
-msgid "Restrict ping rights to the following group(s) ..."
+msgid "Restrict ping rights to the following group(s) …"
 msgstr ""
 
 #: models.py:107

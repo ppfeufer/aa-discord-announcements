@@ -34,7 +34,7 @@ def _get_discord_group_info(ping_target: Group) -> dict:
 
     if not discord_service_installed():
         raise ValidationError(
-            _("You might want to install the Discord service first ...")
+            _("You might want to install the Discord service first …")
         )
 
     try:
@@ -97,7 +97,7 @@ class PingTarget(models.Model):
         Group,
         blank=True,
         related_name="discord_announcement_pingtarget_required_groups",
-        help_text=_("Restrict ping rights to the following group(s) ..."),
+        help_text=_("Restrict ping rights to the following group(s) …"),
     )
 
     # Notes
@@ -180,7 +180,7 @@ class Webhook(models.Model):
         Group,
         blank=True,
         related_name="discord_announcement_webhook_required_groups",
-        help_text=_("Restrict ping rights to the following group(s) ..."),
+        help_text=_("Restrict ping rights to the following group(s) …"),
     )
 
     # Webhook notes
@@ -190,7 +190,7 @@ class Webhook(models.Model):
         help_text=_("You can add notes about this webhook here if you want"),
     )
 
-    # Is it enabled
+    # Is it enabled?
     is_enabled = models.BooleanField(
         default=True,
         db_index=True,

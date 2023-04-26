@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:15+0200\n"
+"POT-Creation-Date: 2023-04-26 21:15+0200\n"
 "PO-Revision-Date: 2023-04-20 21:50+0000\n"
 "Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
-"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-discord-announcements/uk/>\n"
+"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-discord-announcements/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +60,9 @@ msgid "Your announcement…"
 msgstr ""
 
 #: models.py:37
-msgid "You might want to install the Discord service first ..."
+#, fuzzy
+#| msgid "You might want to install the Discord service first ..."
+msgid "You might want to install the Discord service first …"
 msgstr "Можливо, ви захочете спочатку встановити службу Discord ..."
 
 #: models.py:44
@@ -84,7 +86,9 @@ msgid "ID of the Discord role to ping"
 msgstr "Ідентифікатор ролі Discord для пінгування"
 
 #: models.py:100 models.py:183
-msgid "Restrict ping rights to the following group(s) ..."
+#, fuzzy
+#| msgid "Restrict ping rights to the following group(s) ..."
+msgid "Restrict ping rights to the following group(s) …"
 msgstr "Обмежити права на пінг для наступних груп ..."
 
 #: models.py:107
@@ -111,8 +115,8 @@ msgstr "Назва каналу, на який публікується цей �
 msgid ""
 "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
 msgstr ""
-"URL-адреса цього веб-хука, наприклад, https://discord.com/api/webhooks/"
-"123456/abcdef"
+"URL-адреса цього веб-хука, наприклад, https://discord.com/api/"
+"webhooks/123456/abcdef"
 
 #: models.py:190
 msgid "You can add notes about this webhook here if you want"
