@@ -70,9 +70,7 @@ class TestModels(TestCase):
 
         with self.assertRaisesMessage(
             ValidationError,
-            expected_message=(
-                "You might want to install the Discord service first ..."
-            ),
+            expected_message="You might want to install the Discord service first …",
         ):
             announcement_target.clean()
 
