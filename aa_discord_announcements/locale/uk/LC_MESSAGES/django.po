@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-26 21:15+0200\n"
+"POT-Creation-Date: 2023-04-26 21:21+0200\n"
 "PO-Revision-Date: 2023-04-20 21:50+0000\n"
 "Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -173,7 +173,7 @@ msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr ""
 
 #: templates/aa_discord_announcements/partials/announcement/announcement.html:5
-msgid "No announcement created yet ..."
+msgid "No announcement created yet …"
 msgstr ""
 
 #: templates/aa_discord_announcements/partials/announcement/announcement.html:22
