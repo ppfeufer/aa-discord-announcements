@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Kristof <kristof@teh.ninja>, 2023.
 # "H. Peter Pfeufer" <info@ppfeufer.de>, 2023.
+# "Andrii M." <elfleg0las88@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-26 21:21+0200\n"
-"PO-Revision-Date: 2023-04-27 19:50+0000\n"
-"Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
+"PO-Revision-Date: 2023-05-12 20:50+0000\n"
+"Last-Translator: \"Andrii M.\" <elfleg0las88@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/uk/>\n"
 "Language: uk\n"
@@ -49,15 +50,15 @@ msgstr ""
 
 #: forms.py:66
 msgid "Select a channel to send the announcement to automatically."
-msgstr ""
+msgstr "Виберіть канал для автоматичного відправлення оголошення."
 
 #: forms.py:70
 msgid "Announcement Text"
-msgstr ""
+msgstr "Текст оголошення"
 
 #: forms.py:76
 msgid "Your announcement…"
-msgstr ""
+msgstr "Ваше оголошення…"
 
 #: models.py:37
 msgid "You might want to install the Discord service first …"
