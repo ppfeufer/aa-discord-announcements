@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-13 16:16+0200\n"
-"PO-Revision-Date: 2023-04-27 19:50+0000\n"
+"PO-Revision-Date: 2023-05-13 16:36+0000\n"
 "Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
-"Language-Team: German <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-discord-announcements/de/>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-discord-announcements/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,23 +20,19 @@ msgstr ""
 
 #: admin.py:32 models.py:79
 msgid "Group name"
-msgstr ""
+msgstr "Gruppenname"
 
 #: admin.py:38 admin.py:72 models.py:102 models.py:190
 msgid "Group restrictions"
-msgstr ""
+msgstr "Gruppenbeschränkungen"
 
 #: admin.py:61 models.py:168
-#, fuzzy
-#| msgid "Discord Markdown"
 msgid "Discord channel"
-msgstr "Discord Markdown"
+msgstr "Discord-Kanal"
 
 #: admin.py:66 models.py:176
-#, fuzzy
-#| msgid "Webhook"
 msgid "Webhook URL"
-msgstr "Webhook"
+msgstr "Webhook URL"
 
 #: forms.py:20
 msgid "This field is mandatory"
@@ -98,10 +94,8 @@ msgstr ""
 "die zu Discord synchronisiert wurde.)"
 
 #: models.py:93
-#, fuzzy
-#| msgid "Discord Markdown"
 msgid "Discord ID"
-msgstr "Discord Markdown"
+msgstr "Discord ID"
 
 #: models.py:94
 msgid "ID of the Discord role to ping"
@@ -113,7 +107,7 @@ msgstr "Beschränkt die Ping-Rechte auf die folgende(n) Gruppe(n) …"
 
 #: models.py:110 models.py:198
 msgid "Notes"
-msgstr ""
+msgstr "Notizen"
 
 #: models.py:111
 msgid "You can add notes about this configuration here if you want"
@@ -123,7 +117,7 @@ msgstr ""
 
 #: models.py:118 models.py:206
 msgid "Is enabled"
-msgstr ""
+msgstr "Ist aktiviert"
 
 #: models.py:119
 msgid "Whether this ping target is enabled or not"
