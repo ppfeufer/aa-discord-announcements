@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-13 16:16+0200\n"
-"PO-Revision-Date: 2023-05-13 16:36+0000\n"
+"PO-Revision-Date: 2023-05-19 23:43+0000\n"
 "Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/de/>\n"
@@ -50,7 +50,7 @@ msgstr ""
 
 #: forms.py:58
 msgid "Announcement Target"
-msgstr "Ping"
+msgstr "Pingziel"
 
 #: forms.py:60
 msgid "Who do you want to ping?"
@@ -121,15 +121,15 @@ msgstr "Ist aktiviert"
 
 #: models.py:119
 msgid "Whether this ping target is enabled or not"
-msgstr "Ist dieses Ping Ziel aktiv oder nicht"
+msgstr "Ist dieses Pingziel aktiv oder nicht"
 
 #: models.py:127
 msgid "Discord Ping Target"
-msgstr "Discord Ping Ziel"
+msgstr "Discord Pingziel"
 
 #: models.py:128
 msgid "Discord Ping Targets"
-msgstr "Discord Ping Ziele"
+msgstr "Discord Pingziele"
 
 #: models.py:169
 msgid "Name of the channel this webhook posts to"
@@ -138,8 +138,7 @@ msgstr "Name des Kanals in dem dieser Webhook postet"
 #: models.py:179
 msgid ""
 "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
-msgstr ""
-"URL des Webhooks, z. B.: https://discord.com/api/webhooks/123456/abcdef"
+msgstr "URL des Webhooks, z. B.: https://discord.com/api/webhooks/123456/abcdef"
 
 #: models.py:199
 msgid "You can add notes about this webhook here if you want"
@@ -222,7 +221,7 @@ msgstr "Kein Ping"
 
 #: templates/aa_discord_announcements/partials/form/segments/announcement-targets.html:9
 msgid "Additionally configured announcement targets"
-msgstr "Zusätzlich konfigurierte Ping Ziele"
+msgstr "Zusätzlich konfigurierte Pingziele"
 
 #: views.py:154
 msgid "Form invalid. Please check your input."
