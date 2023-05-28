@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-13 16:16+0200\n"
-"PO-Revision-Date: 2023-05-19 23:43+0000\n"
+"PO-Revision-Date: 2023-05-28 05:53+0000\n"
 "Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/de/>\n"
@@ -169,7 +169,7 @@ msgstr ""
 #: templates/aa_discord_announcements/base.html:5
 #: templates/aa_discord_announcements/base.html:8
 msgid "Discord Announcements"
-msgstr "Discord Ankündigungen"
+msgstr "Discord-Ankündigungen"
 
 #: templates/aa_discord_announcements/index.html:10
 msgid "Announcement Details"
