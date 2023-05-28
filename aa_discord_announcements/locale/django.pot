@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-13 16:16+0200\n"
+"POT-Creation-Date: 2023-05-28 08:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: __init__.py:12 templates/aa_discord_announcements/base.html:5
+#: templates/aa_discord_announcements/base.html:8
+msgid "Discord Announcements"
+msgstr ""
 
 #: admin.py:32 models.py:79
 msgid "Group name"
@@ -153,11 +158,6 @@ msgstr ""
 msgid ""
 "Invalid webhook URL. The webhook URL you entered does not match any known "
 "format for a Discord webhook. Please check the webhook URL."
-msgstr ""
-
-#: templates/aa_discord_announcements/base.html:5
-#: templates/aa_discord_announcements/base.html:8
-msgid "Discord Announcements"
 msgstr ""
 
 #: templates/aa_discord_announcements/index.html:10

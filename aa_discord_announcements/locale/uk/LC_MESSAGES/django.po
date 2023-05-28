@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-13 16:16+0200\n"
+"POT-Creation-Date: 2023-05-28 08:03+0200\n"
 "PO-Revision-Date: 2023-05-12 20:50+0000\n"
 "Last-Translator: \"Andrii M.\" <elfleg0las88@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -20,6 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 4.17\n"
+
+#: __init__.py:12 templates/aa_discord_announcements/base.html:5
+#: templates/aa_discord_announcements/base.html:8
+msgid "Discord Announcements"
+msgstr ""
 
 #: admin.py:32 models.py:79
 msgid "Group name"
@@ -173,11 +178,6 @@ msgstr ""
 "Неправильна URL-адреса веб-хука. Введена вами URL-адреса веб-хука не "
 "відповідає жодному з відомих форматів веб-хуків Discord. Будь ласка, "
 "перевірте URL-адресу веб-хука."
-
-#: templates/aa_discord_announcements/base.html:5
-#: templates/aa_discord_announcements/base.html:8
-msgid "Discord Announcements"
-msgstr ""
 
 #: templates/aa_discord_announcements/index.html:10
 msgid "Announcement Details"
