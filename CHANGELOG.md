@@ -8,10 +8,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [1.2.1] - 2023-06-16
+
+### Added
+
+- Translations to Django Admin Backend
+
 ### Changed
 
 - English grammar improved
 - Translations improved
+
+### Removed
+
+- Non-translatable string from the announcement form
 
 
 ## [1.2.0] - 2023-04-24
