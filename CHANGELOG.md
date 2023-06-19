@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- English grammar improved
+- Translations improved
+
 
 ## [1.2.0] - 2023-04-24
 
