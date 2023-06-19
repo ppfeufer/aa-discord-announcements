@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-11 23:21+0200\n"
-"PO-Revision-Date: 2023-04-11 21:42+0000\n"
-"Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
+"POT-Creation-Date: 2023-06-19 12:12+0200\n"
+"PO-Revision-Date: 2023-06-19 10:18+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/de/>\n"
 "Language: de\n"
@@ -16,48 +16,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.18\n"
+
+#: __init__.py:12 templates/aa_discord_announcements/base.html:5
+#: templates/aa_discord_announcements/base.html:8
+msgid "Discord Announcements"
+msgstr "Discord-Ankündigungen"
+
+#: admin.py:32 models.py:79
+msgid "Group name"
+msgstr "Gruppenname"
+
+#: admin.py:38 admin.py:72 models.py:102 models.py:190
+msgid "Group restrictions"
+msgstr "Gruppenbeschränkungen"
+
+#: admin.py:61 models.py:168
+msgid "Discord channel"
+msgstr "Discord-Kanal"
+
+#: admin.py:66 models.py:176
+msgid "Webhook URL"
+msgstr "Webhook URL"
 
 #: forms.py:20
 msgid "This field is mandatory"
 msgstr "Dies ist ein Pflichtfeld"
 
-#: forms.py:41
-msgid "Discord Markdown"
-msgstr "Discord Markdown"
-
-#: forms.py:48
-#, python-brace-format
-msgid "Hint: You can use {discord_markdown_link} to format the text."
-msgstr ""
-"Hinweis: Du kannst {discord_markdown_link} nutzen um den Text zu formatieren."
-
-#: forms.py:58
+#: forms.py:37
 msgid "Announcement Target"
-msgstr "Ping"
+msgstr "Ankündigungsziel"
 
-#: forms.py:60
+#: forms.py:39
 msgid "Who do you want to ping?"
 msgstr "Wen möchtest Du pingen?"
 
-#: forms.py:64
+#: forms.py:43
 msgid "Announcement Channel"
-msgstr "Kanal"
+msgstr "Ankündigungskanal"
 
-#: forms.py:66
+#: forms.py:45
 msgid "Select a channel to send the announcement to automatically."
 msgstr "Wähle einen Kanal in dem die Ankündigung gesendet werden soll."
 
-#: forms.py:70
+#: forms.py:49
 msgid "Announcement Text"
 msgstr "Ankündigungstext"
 
-#: forms.py:76
-msgid "Your announcement…"
+#: forms.py:55
+msgid "Your announcement …"
 msgstr "Deine Ankündigung …"
 
 #: models.py:37
-msgid "You might want to install the Discord service first ..."
+msgid "You might want to install the Discord service first …"
 msgstr "Du solltest zunächst den Discord Service installieren …"
 
 #: models.py:44
@@ -69,7 +80,7 @@ msgstr ""
 msgid "This group has not been synced to Discord yet."
 msgstr "Diese Gruppe wurde bisher noch nicht zu Discord synchronisiert."
 
-#: models.py:81
+#: models.py:82
 msgid ""
 "Name of the Discord role to ping. (Note: This must be an Auth group that is "
 "synced to Discord.)"
@@ -77,59 +88,72 @@ msgstr ""
 "Name der Discord Rolle zum Pingen. (Hinweis: Dies muss eine Auth Gruppe sein "
 "die zu Discord synchronisiert wurde.)"
 
-#: models.py:92
+#: models.py:93
+msgid "Discord ID"
+msgstr "Discord ID"
+
+#: models.py:94
 msgid "ID of the Discord role to ping"
 msgstr "ID der Discord Rolle zum Pingen"
 
-#: models.py:100 models.py:183
-msgid "Restrict ping rights to the following group(s) ..."
-msgstr "Beschränkt die Ping-Rechte auf die folgende(n) Gruppe(n) ..."
+#: models.py:103 models.py:191
+msgid "Restrict ping rights to the following group(s) …"
+msgstr "Beschränkt die Ping-Rechte auf die folgende(n) Gruppe(n) …"
 
-#: models.py:107
+#: models.py:110 models.py:198
+msgid "Notes"
+msgstr "Notizen"
+
+#: models.py:111
 msgid "You can add notes about this configuration here if you want"
 msgstr ""
 "Wenn Du möchtest, kannst Du hier Anmerkungen zu dieser Konfiguration "
 "hinzufügen"
 
-#: models.py:114
+#: models.py:118 models.py:206
+msgid "Is enabled"
+msgstr "Ist aktiviert"
+
+#: models.py:119
 msgid "Whether this ping target is enabled or not"
-msgstr "Ist dieses Ping Ziel aktiv oder nicht"
+msgstr "Ist dieses Pingziel aktiv oder nicht"
 
-#: models.py:122
+#: models.py:127
 msgid "Discord Ping Target"
-msgstr "Discord Ping Ziel"
+msgstr "Discord Pingziel"
 
-#: models.py:123
+#: models.py:128
 msgid "Discord Ping Targets"
-msgstr "Discord Ping Ziele"
+msgstr "Discord Pingziele"
 
-#: models.py:163
+#: models.py:169
 msgid "Name of the channel this webhook posts to"
 msgstr "Name des Kanals in dem dieser Webhook postet"
 
-#: models.py:172
+#: models.py:179
 msgid ""
 "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
-msgstr "URL des Webhooks, z. B.: https://discord.com/api/webhooks/123456/abcdef"
+msgstr ""
+"URL des Webhooks, z. B.: https://discord.com/api/webhooks/123456/abcdef"
 
-#: models.py:190
+#: models.py:199
 msgid "You can add notes about this webhook here if you want"
 msgstr ""
 "Wenn Du möchtest, kannst Du hier Anmerkungen zu diesem Webhook hinzufügen"
 
-#: models.py:197
+#: models.py:207
 msgid "Whether this webhook is active or not"
 msgstr "Ist dieser Webhook aktiv oder nicht"
 
-#: models.py:205
+#: models.py:215
 msgid "Webhook"
 msgstr "Webhook"
 
-#: models.py:206
+#: models.py:216
 msgid "Webhooks"
 msgstr "Webhooks"
 
-#: models.py:222
+#: models.py:232
 msgid ""
 "Invalid webhook URL. The webhook URL you entered does not match any known "
 "format for a Discord webhook. Please check the webhook URL."
@@ -137,11 +161,6 @@ msgstr ""
 "Ungültige Webhook-URL. Die eingegebene Webhook-URL stimmt mit keinem "
 "bekannten Format für einen Discord-Webhook überein. Bitte überprüfe die "
 "Webhook-URL."
-
-#: templates/aa_discord_announcements/base.html:5
-#: templates/aa_discord_announcements/base.html:8
-msgid "Discord Announcements"
-msgstr "Discord Ankündigungen"
 
 #: templates/aa_discord_announcements/index.html:10
 msgid "Announcement Details"
@@ -172,7 +191,7 @@ msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr "Erfolg! Der Ankündigungstext wurde in die Zwischenablage kopiert."
 
 #: templates/aa_discord_announcements/partials/announcement/announcement.html:5
-msgid "No announcement created yet ..."
+msgid "No announcement created yet …"
 msgstr "Noch keine Ankündigung erstellt …"
 
 #: templates/aa_discord_announcements/partials/announcement/announcement.html:22
@@ -193,7 +212,7 @@ msgstr "Kein Ping"
 
 #: templates/aa_discord_announcements/partials/form/segments/announcement-targets.html:9
 msgid "Additionally configured announcement targets"
-msgstr "Zusätzlich konfigurierte Ping Ziele"
+msgstr "Zusätzlich konfigurierte Ankündigungsziele"
 
 #: views.py:154
 msgid "Form invalid. Please check your input."

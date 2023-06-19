@@ -34,7 +34,7 @@ def _get_discord_group_info(ping_target: Group) -> dict:
 
     if not discord_service_installed():
         raise ValidationError(
-            _("You might want to install the Discord service first ...")
+            _("You might want to install the Discord service first …")
         )
 
     try:
@@ -43,11 +43,11 @@ def _get_discord_group_info(ping_target: Group) -> dict:
         raise ValidationError(
             _("Are you sure you have your Discord linked to your Alliance Auth?")
         ) from http_error
-    else:
-        if not discord_group_info:
-            raise ValidationError(_("This group has not been synced to Discord yet."))
 
-        return discord_group_info
+    if not discord_group_info:
+        raise ValidationError(_("This group has not been synced to Discord yet."))
+
+    return discord_group_info
 
 
 class General(models.Model):
@@ -76,6 +76,7 @@ class PingTarget(models.Model):
         related_name="discord_announcement_pingtarget",
         on_delete=models.CASCADE,
         unique=True,
+        verbose_name=_("Group name"),
         help_text=(
             _(
                 "Name of the Discord role to ping. "
@@ -89,6 +90,7 @@ class PingTarget(models.Model):
         max_length=255,
         unique=True,
         blank=True,
+        verbose_name=_("Discord ID"),
         help_text=_("ID of the Discord role to ping"),
     )
 
@@ -97,20 +99,23 @@ class PingTarget(models.Model):
         Group,
         blank=True,
         related_name="discord_announcement_pingtarget_required_groups",
-        help_text=_("Restrict ping rights to the following group(s) ..."),
+        verbose_name=_("Group restrictions"),
+        help_text=_("Restrict ping rights to the following group(s) …"),
     )
 
     # Notes
     notes = models.TextField(
         default="",
         blank=True,
+        verbose_name=_("Notes"),
         help_text=_("You can add notes about this configuration here if you want"),
     )
 
-    # Is this group active
+    # Is this group active?
     is_enabled = models.BooleanField(
         default=True,
         db_index=True,
+        verbose_name=_("Is enabled"),
         help_text=_("Whether this ping target is enabled or not"),
     )
 
@@ -160,6 +165,7 @@ class Webhook(models.Model):
     name = models.CharField(
         max_length=255,
         unique=True,
+        verbose_name=_("Discord channel"),
         help_text=_("Name of the channel this webhook posts to"),
     )
 
@@ -167,6 +173,7 @@ class Webhook(models.Model):
     url = models.CharField(
         max_length=255,
         unique=True,
+        verbose_name=_("Webhook URL"),
         help_text=(
             _(
                 "URL of this webhook, e.g. "
@@ -180,20 +187,23 @@ class Webhook(models.Model):
         Group,
         blank=True,
         related_name="discord_announcement_webhook_required_groups",
-        help_text=_("Restrict ping rights to the following group(s) ..."),
+        verbose_name=_("Group restrictions"),
+        help_text=_("Restrict ping rights to the following group(s) …"),
     )
 
     # Webhook notes
     notes = models.TextField(
         default="",
         blank=True,
+        verbose_name=_("Notes"),
         help_text=_("You can add notes about this webhook here if you want"),
     )
 
-    # Is it enabled
+    # Is it enabled?
     is_enabled = models.BooleanField(
         default=True,
         db_index=True,
+        verbose_name=_("Is enabled"),
         help_text=_("Whether this webhook is active or not"),
     )
 

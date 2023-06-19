@@ -4,6 +4,7 @@ Settings for the admin backend
 
 # Django
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
 
 # AA Discord Announcements
 from aa_discord_announcements.models import PingTarget, Webhook
@@ -28,12 +29,14 @@ class PingTargetAdmin(admin.ModelAdmin):
     ordering = ("name",)
 
     @classmethod
-    @admin.display(description="Ping Target", ordering="name")
+    @admin.display(description=_("Group name"), ordering="name")
     def _name(cls, obj):
         return obj.name
 
     @classmethod
-    @admin.display(description="Restricted to", ordering="restricted_to_group__name")
+    @admin.display(
+        description=_("Group restrictions"), ordering="restricted_to_group__name"
+    )
     def _restricted_to_group(cls, obj):
         names = [x.name for x in obj.restricted_to_group.all().order_by("name")]
 
@@ -55,17 +58,19 @@ class WebhookAdmin(admin.ModelAdmin):
     ordering = ("name",)
 
     @classmethod
-    @admin.display(description="Channel Name", ordering="name")
+    @admin.display(description=_("Discord channel"), ordering="name")
     def _name(cls, obj):
         return obj.name
 
     @classmethod
-    @admin.display(description="Webhook URL", ordering="url")
+    @admin.display(description=_("Webhook URL"), ordering="url")
     def _url(cls, obj):
         return obj.url
 
     @classmethod
-    @admin.display(description="Restricted to", ordering="restricted_to_group__name")
+    @admin.display(
+        description=_("Group restrictions"), ordering="restricted_to_group__name"
+    )
     def _restricted_to_group(cls, obj):
         names = [x.name for x in obj.restricted_to_group.all().order_by("name")]
 
