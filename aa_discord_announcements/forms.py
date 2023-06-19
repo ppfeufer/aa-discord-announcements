@@ -27,27 +27,6 @@ def _get_mandatory_form_label_text(text: str) -> str:
     )
 
 
-def _get_discord_markdown_hint_text() -> str:
-    """
-    Get the formatted help text for any field that allows Discord Markdown
-    :return:
-    """
-
-    discord_helpdesk_url = (
-        "https://support.discord.com/hc/en-us/articles/210298617"
-        "-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline- "
-    )
-
-    discord_markdown_link_text = _("Discord Markdown")
-
-    discord_markdown_link = (
-        f'<a href="{discord_helpdesk_url}" target="_blank" rel="noopener noreferer">'
-        f"{discord_markdown_link_text}</a>"
-    )
-
-    return _(f"Hint: You can use {discord_markdown_link} to format the text.")
-
-
 class AnnouncementForm(forms.Form):
     """
     Announcement Form
@@ -73,8 +52,7 @@ class AnnouncementForm(forms.Form):
                 "rows": 10,
                 "cols": 20,
                 "input_type": "textarea",
-                "placeholder": _("Your announcement…"),
+                "placeholder": _("Your announcement …"),
             }
         ),
-        help_text=_get_discord_markdown_hint_text(),
     )

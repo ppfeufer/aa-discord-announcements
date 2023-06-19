@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-28 08:03+0200\n"
+"POT-Creation-Date: 2023-06-19 12:12+0200\n"
 "PO-Revision-Date: 2023-05-13 17:22+0000\n"
 "Last-Translator: Nikolay <nick.postnikov@gmail.com>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -45,39 +45,30 @@ msgstr "Вебхук URL"
 msgid "This field is mandatory"
 msgstr "Обязательное поле"
 
-#: forms.py:41
-msgid "Discord Markdown"
-msgstr "Форматирование для Discord"
-
-#: forms.py:48
-#, python-brace-format
-msgid "Hint: You can use {discord_markdown_link} to format the text."
-msgstr ""
-"Подсказка: Вы можете использовать {discord_markdown_link} для форматирования "
-"текста."
-
-#: forms.py:58
+#: forms.py:37
 msgid "Announcement Target"
 msgstr "Цель объявления"
 
-#: forms.py:60
+#: forms.py:39
 msgid "Who do you want to ping?"
 msgstr "Кого Вы хотите пинговать?"
 
-#: forms.py:64
+#: forms.py:43
 msgid "Announcement Channel"
 msgstr "Канал объявления"
 
-#: forms.py:66
+#: forms.py:45
 msgid "Select a channel to send the announcement to automatically."
 msgstr "Выберите канал для автоматической отправки объявлений."
 
-#: forms.py:70
+#: forms.py:49
 msgid "Announcement Text"
 msgstr "Текст объявления"
 
-#: forms.py:76
-msgid "Your announcement…"
+#: forms.py:55
+#, fuzzy
+#| msgid "Your announcement…"
+msgid "Your announcement …"
 msgstr "Ваше объявление…"
 
 #: models.py:37
