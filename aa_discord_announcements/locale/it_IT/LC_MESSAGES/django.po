@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-19 12:12+0200\n"
+"POT-Creation-Date: 2023-06-20 02:55+0200\n"
 "PO-Revision-Date: 2023-04-18 23:17+0000\n"
 "Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
 "Language-Team: Italian <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -39,31 +39,40 @@ msgstr ""
 msgid "Webhook URL"
 msgstr ""
 
-#: forms.py:20
+#: forms.py:21
 msgid "This field is mandatory"
 msgstr "Questo campo è obbligatorio"
 
-#: forms.py:37
-msgid "Announcement Target"
-msgstr ""
-
-#: forms.py:39
-msgid "Who do you want to ping?"
-msgstr ""
-
-#: forms.py:43
-msgid "Announcement Channel"
-msgstr ""
-
-#: forms.py:45
-msgid "Select a channel to send the announcement to automatically."
+#: forms.py:42
+msgid "Discord Markdown"
 msgstr ""
 
 #: forms.py:49
+#, python-brace-format
+msgid "Hint: You can use {discord_markdown_link} to format the text."
+msgstr ""
+
+#: forms.py:61
+msgid "Announcement Target"
+msgstr ""
+
+#: forms.py:63
+msgid "Who do you want to ping?"
+msgstr ""
+
+#: forms.py:67
+msgid "Announcement Channel"
+msgstr ""
+
+#: forms.py:69
+msgid "Select a channel to send the announcement to automatically."
+msgstr ""
+
+#: forms.py:73
 msgid "Announcement Text"
 msgstr ""
 
-#: forms.py:55
+#: forms.py:79
 msgid "Your announcement …"
 msgstr ""
 
