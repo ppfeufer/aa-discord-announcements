@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-20 02:55+0200\n"
-"PO-Revision-Date: 2023-06-19 10:18+0000\n"
-"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-discord-announcements/ru/>\n"
+"PO-Revision-Date: 2023-06-21 06:18+0000\n"
+"Last-Translator: Nikolay <nick.postnikov@gmail.com>\n"
+"Language-Team: Russian <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-discord-announcements/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,15 +46,15 @@ msgid "This field is mandatory"
 msgstr "Обязательное поле"
 
 #: forms.py:42
-#, fuzzy
-#| msgid "Discord channel"
 msgid "Discord Markdown"
-msgstr "Канал Discord"
+msgstr "Разметка Discord"
 
 #: forms.py:49
 #, python-brace-format
 msgid "Hint: You can use {discord_markdown_link} to format the text."
 msgstr ""
+"Подсказка: Вы можете использовать {discord_markdown_link} для форматирования "
+"текста."
 
 #: forms.py:61
 msgid "Announcement Target"
