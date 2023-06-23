@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-23 17:50+0200\n"
+"POT-Creation-Date: 2023-06-23 18:04+0200\n"
 "PO-Revision-Date: 2023-04-18 23:17+0000\n"
 "Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
 "Language-Team: Italian <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -109,7 +109,7 @@ msgid "ID of the Discord role to ping"
 msgstr ""
 
 #: models.py:103 models.py:191
-msgid "Restrict ping rights to the following group(s) …"
+msgid "Restrict ping rights to the following groups …"
 msgstr ""
 
 #: models.py:110 models.py:198
