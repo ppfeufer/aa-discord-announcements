@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 02:55+0200\n"
+"POT-Creation-Date: 2023-06-23 17:50+0200\n"
 "PO-Revision-Date: 2023-04-18 23:17+0000\n"
 "Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -37,6 +37,12 @@ msgstr ""
 
 #: admin.py:66 models.py:176
 msgid "Webhook URL"
+msgstr ""
+
+#. Translators: This is the app name and version, which will appear in the Django Backend
+#: apps.py:21
+#, python-brace-format
+msgid "Discord Announcements v{__version__}"
 msgstr ""
 
 #: forms.py:21
