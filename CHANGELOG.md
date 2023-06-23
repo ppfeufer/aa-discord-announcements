@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Hint for Discord Markdown formatting in announcement text field re-added, this
+  time it is translatable
+
 
 ## [1.2.1] - 2023-06-19
 
