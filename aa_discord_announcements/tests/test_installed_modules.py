@@ -10,6 +10,10 @@ from aa_discord_announcements.app_settings import discord_service_installed
 
 
 class TestModulesInstalled(TestCase):
+    """
+    Test for installed modules
+    """
+
     @classmethod
     def setUpClass(cls) -> None:
         """

@@ -105,7 +105,7 @@ class TestAccess(TestCase):
 
     def test_ajax_create_announcement_no_access(self):
         """
-        Test ajax call to create announcement available for
+        Test ajax call to create an announcement is not available for
         a user without access to it
         :return:
         """
@@ -123,7 +123,7 @@ class TestAccess(TestCase):
 
     def test_ajax_create_announcement_general(self):
         """
-        Test ajax call to create announcement for the current user
+        Test ajax call to create an announcement is available for the current user
         :return:
         """
 
@@ -140,7 +140,7 @@ class TestAccess(TestCase):
 
     def test_ajax_create_announcement_with_form_data(self):
         """
-        Test ajax call to create announcement for the current user with form data
+        Test ajax call to create an announcement for the current user with form data
         :return:
         """
 

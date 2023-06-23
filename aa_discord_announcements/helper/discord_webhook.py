@@ -17,7 +17,7 @@ from aa_discord_announcements.helper.announcement_context import (
 
 def send_to_discord_webhook(announcement_context: dict, user: User):
     """
-    Send announcement to a Discord webhook
+    Send the announcement to a Discord webhook
     :param announcement_context:
     :param user:
     :return:
