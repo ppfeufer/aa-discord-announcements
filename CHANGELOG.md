@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Hint for Discord Markdown formatting in announcement text field re-added, this
   time it is translatable
 
+### Removed
+
+- Pseudo plural from help texts in the models
+
 
 ## [1.2.1] - 2023-06-19
 
