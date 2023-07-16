@@ -39,7 +39,7 @@ class TestAccess(TestCase):
 
     def test_has_no_access(self):
         """
-        Test that a user without access get a 302
+        Test that a user without access gets a 302
         :return:
         """
 
@@ -54,7 +54,7 @@ class TestAccess(TestCase):
 
     def test_has_access(self):
         """
-        Test that a user with access get to see it
+        Test that a user with access gets to see it
         :return:
         """
 

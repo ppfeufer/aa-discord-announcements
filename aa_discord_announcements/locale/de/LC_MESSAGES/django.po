@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-19 12:12+0200\n"
-"PO-Revision-Date: 2023-06-19 10:18+0000\n"
+"POT-Creation-Date: 2023-06-23 18:04+0200\n"
+"PO-Revision-Date: 2023-06-28 14:37+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/de/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: __init__.py:12 templates/aa_discord_announcements/base.html:5
 #: templates/aa_discord_announcements/base.html:8
@@ -39,31 +39,47 @@ msgstr "Discord-Kanal"
 msgid "Webhook URL"
 msgstr "Webhook URL"
 
-#: forms.py:20
+#. Translators: This is the app name and version, which will appear in the Django Backend
+#: apps.py:21
+#, python-brace-format
+msgid "Discord Announcements v{__version__}"
+msgstr "Discord Announcements v{__version__}"
+
+#: forms.py:21
 msgid "This field is mandatory"
 msgstr "Dies ist ein Pflichtfeld"
 
-#: forms.py:37
+#: forms.py:42
+msgid "Discord Markdown"
+msgstr "Discord Markdown"
+
+#: forms.py:49
+#, python-brace-format
+msgid "Hint: You can use {discord_markdown_link} to format the text."
+msgstr ""
+"Hinweis: Du kannst {discord_markdown_link} nutzen um den Text zu formatieren."
+
+#: forms.py:61
 msgid "Announcement Target"
 msgstr "Ankündigungsziel"
 
-#: forms.py:39
+#: forms.py:63
 msgid "Who do you want to ping?"
 msgstr "Wen möchtest Du pingen?"
 
-#: forms.py:43
+#: forms.py:67
 msgid "Announcement Channel"
 msgstr "Ankündigungskanal"
 
-#: forms.py:45
+#: forms.py:69
 msgid "Select a channel to send the announcement to automatically."
 msgstr "Wähle einen Kanal in dem die Ankündigung gesendet werden soll."
 
-#: forms.py:49
+#: forms.py:73
 msgid "Announcement Text"
 msgstr "Ankündigungstext"
 
-#: forms.py:55
+#: forms.py:79
 msgid "Your announcement …"
 msgstr "Deine Ankündigung …"
 
@@ -97,8 +113,8 @@ msgid "ID of the Discord role to ping"
 msgstr "ID der Discord Rolle zum Pingen"
 
 #: models.py:103 models.py:191
-msgid "Restrict ping rights to the following group(s) …"
-msgstr "Beschränkt die Ping-Rechte auf die folgende(n) Gruppe(n) …"
+msgid "Restrict ping rights to the following groups …"
+msgstr "Beschränkt die Ping-Rechte auf die folgenden Gruppen …"
 
 #: models.py:110 models.py:198
 msgid "Notes"

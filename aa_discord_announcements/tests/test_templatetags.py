@@ -24,12 +24,12 @@ class TestVersionedStatic(TestCase):
         context = Context({"version": __version__})
         template_to_render = Template(
             "{% load aa_discord_announcements_versioned_static %}"
-            "{% aa_discord_announcements_static 'aa_discord_announcements/css/aa-discord-announcements.min.css' %}"
+            "{% aa_discord_announcements_static 'aa_discord_announcements/css/aa-discord-announcements.min.css' %}"  # pylint: disable=line-too-long
         )
 
         rendered_template = template_to_render.render(context)
 
         self.assertInHTML(
-            f'/static/aa_discord_announcements/css/aa-discord-announcements.min.css?v={context["version"]}',
+            f'/static/aa_discord_announcements/css/aa-discord-announcements.min.css?v={context["version"]}',  # pylint: disable=line-too-long
             rendered_template,
         )

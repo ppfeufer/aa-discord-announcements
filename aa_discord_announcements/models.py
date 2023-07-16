@@ -100,7 +100,7 @@ class PingTarget(models.Model):
         blank=True,
         related_name="discord_announcement_pingtarget_required_groups",
         verbose_name=_("Group restrictions"),
-        help_text=_("Restrict ping rights to the following group(s) …"),
+        help_text=_("Restrict ping rights to the following groups …"),
     )
 
     # Notes
@@ -188,7 +188,7 @@ class Webhook(models.Model):
         blank=True,
         related_name="discord_announcement_webhook_required_groups",
         verbose_name=_("Group restrictions"),
-        help_text=_("Restrict ping rights to the following group(s) …"),
+        help_text=_("Restrict ping rights to the following groups …"),
     )
 
     # Webhook notes

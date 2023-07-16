@@ -24,7 +24,7 @@ def create_fake_user(
     permissions: List[str] = None,
 ) -> User:
     """
-    Create a fake user incl. main character and (optional) permissions.
+    Create a fake user incl. Main character and (optional) permissions.
     """
 
     username = re.sub(r"[^\w\d@\.\+-]", "_", character_name)
