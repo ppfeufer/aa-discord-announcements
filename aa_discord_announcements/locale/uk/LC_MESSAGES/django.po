@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-23 18:04+0200\n"
-"PO-Revision-Date: 2023-07-26 12:39+0000\n"
-"Last-Translator: \"Andrii M.\" <elfleg0las88@gmail.com>\n"
+"PO-Revision-Date: 2023-07-27 15:39+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/uk/>\n"
 "Language: uk\n"
@@ -134,7 +134,6 @@ msgid "You can add notes about this configuration here if you want"
 msgstr "Ви можете додати примітки про цю конфігурацію тут, якщо хочете"
 
 #: models.py:118 models.py:206
-#, fuzzy
 msgid "Is enabled"
 msgstr "Дозволено"
 
