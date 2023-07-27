@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Bootstrap CSS fix
+- Footer to promote help with the app translation
 
 ### Changed
 
