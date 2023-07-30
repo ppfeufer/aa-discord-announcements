@@ -2,8 +2,13 @@
 
 {% load i18n %}
 
-{% block details %}
-    <div class="aa-discord-announcements row">
+{% block aa_discord_announcements_header %}
+    {% translate "Discord Announcements" as translated_header %}
+    {% include "aa_discord_announcements/partials/header/page-header.html" with header_text=translated_header %}
+{% endblock %}
+
+{% block aa_discord_announcements_body %}
+    <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">

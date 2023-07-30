@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-23 18:04+0200\n"
-"PO-Revision-Date: 2023-06-24 13:57+0000\n"
+"POT-Creation-Date: 2023-07-27 22:33+0200\n"
+"PO-Revision-Date: 2023-07-29 23:45+0000\n"
 "Last-Translator: Nikolay <nick.postnikov@gmail.com>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/ru/>\n"
@@ -18,10 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 #: __init__.py:12 templates/aa_discord_announcements/base.html:5
-#: templates/aa_discord_announcements/base.html:8
+#: templates/aa_discord_announcements/index.html:6
 msgid "Discord Announcements"
 msgstr "Объявления Discord"
 
@@ -176,15 +176,15 @@ msgstr ""
 "Некорректный URL вебхука. Введенный URL не совпадает с известными форматами "
 "вебхуков Discord. Пожалуйста, проверьте URL."
 
-#: templates/aa_discord_announcements/index.html:10
+#: templates/aa_discord_announcements/index.html:15
 msgid "Announcement Details"
 msgstr "Детали объявления"
 
-#: templates/aa_discord_announcements/index.html:21
+#: templates/aa_discord_announcements/index.html:26
 msgid "Formatted Announcement Text"
 msgstr "Отформатированный текст объявления"
 
-#: templates/aa_discord_announcements/index.html:41
+#: templates/aa_discord_announcements/index.html:46
 msgid ""
 "Mandatory information is missing.<br>To create an announcement, you need to "
 "fill out the following fields:<br>» Announcement Text"
@@ -192,7 +192,7 @@ msgstr ""
 "Отсутствует необходимая информация. <br>Для создания объявления необходимо "
 "заполнить следующие поля:<br>» Текст объявления"
 
-#: templates/aa_discord_announcements/index.html:44
+#: templates/aa_discord_announcements/index.html:49
 msgid ""
 "Error! Your announcement was not copied to your clipboard. Maybe your "
 "browser doesn&apos;t support this feature."
@@ -200,7 +200,7 @@ msgstr ""
 "Ошибка! Объявление не было скопировано в буфер обмена. Вероятно Ваш браузер "
 "не предоставляет такую функциональность."
 
-#: templates/aa_discord_announcements/index.html:45
+#: templates/aa_discord_announcements/index.html:50
 msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr "Успех! Объявление скопировано в буфер обмена."
 
@@ -211,6 +211,23 @@ msgstr "Объявлений нет …"
 #: templates/aa_discord_announcements/partials/announcement/announcement.html:22
 msgid "Copy Announcement Text"
 msgstr "Скопировать текст объявления"
+
+#: templates/aa_discord_announcements/partials/footer/app-translation-footer.html:4
+msgid "Join our team of translators!"
+msgstr "Присоединяйтесь к нашей команде переводчиков!"
+
+#: templates/aa_discord_announcements/partials/footer/app-translation-footer.html:7
+#, python-format
+msgid ""
+"\n"
+"            Do you want to help translate this app into your language or "
+"improve the existing translation? - %(weblate_link)s\n"
+"        "
+msgstr ""
+"\n"
+"            Вы хотите помочь перевести это приложение на ваш язык или "
+"улучшить текущий перевод? - %(weblate_link)s\n"
+"        "
 
 #: templates/aa_discord_announcements/partials/form/form.html:27
 msgid "Create Announcement"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-23 18:04+0200\n"
-"PO-Revision-Date: 2023-06-28 14:37+0000\n"
+"POT-Creation-Date: 2023-07-27 22:33+0200\n"
+"PO-Revision-Date: 2023-07-28 22:39+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/de/>\n"
@@ -16,10 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 #: __init__.py:12 templates/aa_discord_announcements/base.html:5
-#: templates/aa_discord_announcements/base.html:8
+#: templates/aa_discord_announcements/index.html:6
 msgid "Discord Announcements"
 msgstr "Discord-Ankündigungen"
 
@@ -178,15 +178,15 @@ msgstr ""
 "bekannten Format für einen Discord-Webhook überein. Bitte überprüfe die "
 "Webhook-URL."
 
-#: templates/aa_discord_announcements/index.html:10
+#: templates/aa_discord_announcements/index.html:15
 msgid "Announcement Details"
 msgstr "Ankündigung Details"
 
-#: templates/aa_discord_announcements/index.html:21
+#: templates/aa_discord_announcements/index.html:26
 msgid "Formatted Announcement Text"
 msgstr "Formatierter Text der Ankündigung"
 
-#: templates/aa_discord_announcements/index.html:41
+#: templates/aa_discord_announcements/index.html:46
 msgid ""
 "Mandatory information is missing.<br>To create an announcement, you need to "
 "fill out the following fields:<br>» Announcement Text"
@@ -194,7 +194,7 @@ msgstr ""
 "Pflichtangaben fehlen.<br>Um eine Ankündigung zu erstellen, müssen folgende "
 "Felder ausgefüllt sein:<br>» Ankündigungstext"
 
-#: templates/aa_discord_announcements/index.html:44
+#: templates/aa_discord_announcements/index.html:49
 msgid ""
 "Error! Your announcement was not copied to your clipboard. Maybe your "
 "browser doesn&apos;t support this feature."
@@ -202,7 +202,7 @@ msgstr ""
 "Fehler! Die Ankündigung wurde nicht in Ihre Zwischenablage kopiert. "
 "Möglicherweise unterstützt Dein Browser diese Funktion nicht."
 
-#: templates/aa_discord_announcements/index.html:45
+#: templates/aa_discord_announcements/index.html:50
 msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr "Erfolg! Der Ankündigungstext wurde in die Zwischenablage kopiert."
 
@@ -213,6 +213,23 @@ msgstr "Noch keine Ankündigung erstellt …"
 #: templates/aa_discord_announcements/partials/announcement/announcement.html:22
 msgid "Copy Announcement Text"
 msgstr "Kopiere Ankündigungstext"
+
+#: templates/aa_discord_announcements/partials/footer/app-translation-footer.html:4
+msgid "Join our team of translators!"
+msgstr "Tritt unserm Team von Übersetzern bei!"
+
+#: templates/aa_discord_announcements/partials/footer/app-translation-footer.html:7
+#, python-format
+msgid ""
+"\n"
+"            Do you want to help translate this app into your language or "
+"improve the existing translation? - %(weblate_link)s\n"
+"        "
+msgstr ""
+"\n"
+"            Du möchtest helfen diese App in Deine Sprache zu übersetzen oder "
+"die bestehende Übersetzung verbessern? - %(weblate_link)s\n"
+"        "
 
 #: templates/aa_discord_announcements/partials/form/form.html:27
 msgid "Create Announcement"
