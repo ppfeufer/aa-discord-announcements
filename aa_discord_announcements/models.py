@@ -132,7 +132,11 @@ class PingTarget(models.Model):
         return str(self.name)
 
     def save(
-        self, force_insert=False, force_update=False, using=None, update_fields=None
+        self,
+        force_insert=False,  # pylint: disable=unused-argument
+        force_update=False,  # pylint: disable=unused-argument
+        using=None,  # pylint: disable=unused-argument
+        update_fields=None,  # pylint: disable=unused-argument
     ):
         """
         Add the Discord group ID (if Discord service is active) and save the whole thing
