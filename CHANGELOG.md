@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [1.2.4] - 2023-08-13
+
+### Fixed
+
+- Bootstrap CSS fix
+
+### Changed
+
+- Translations updated
+
+
 ## [1.2.3] - 2023-07-30
 
 ### Added

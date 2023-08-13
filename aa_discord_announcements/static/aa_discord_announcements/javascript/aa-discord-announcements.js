@@ -57,7 +57,7 @@ $(document).ready(() => {
     };
 
     /**
-     * Show message when copy action was successful
+     * Show a message when copy action was successful
      *
      * @param {string} message
      * @param {string} element
@@ -73,7 +73,7 @@ $(document).ready(() => {
     };
 
     /**
-     * Show message when copy action was not successful
+     * Show a message when copy action was not successful
      *
      * @param {string} message
      * @param {string} element
