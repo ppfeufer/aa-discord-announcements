@@ -5,18 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## \[In Development\] - Unreleased
 
-## [In Development] - Unreleased
+## \[1.4.0\] - 2023-08-15
 
+### Added
 
-## [1.3.0] - 2023-08-15
+- Korean translation
+
+## \[1.3.0\] - 2023-08-15
 
 ### Added
 
 - Spanish translation
 
-
-## [1.2.4] - 2023-08-13
+## \[1.2.4\] - 2023-08-13
 
 ### Fixed
 
@@ -26,8 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Translations updated
 
-
-## [1.2.3] - 2023-07-30
+## \[1.2.3\] - 2023-07-30
 
 ### Added
 
@@ -38,8 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Ukrainian translation improved
 
-
-## [1.2.2] - 2023-07-16
+## \[1.2.2\] - 2023-07-16
 
 ### Added
 
@@ -50,8 +51,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Pseudo plural from help texts in the models
 
-
-## [1.2.1] - 2023-06-19
+## \[1.2.1\] - 2023-06-19
 
 ### Added
 
@@ -66,30 +66,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Non-translatable string from the announcement form
 
-
-## [1.2.0] - 2023-04-24
+## \[1.2.0\] - 2023-04-24
 
 ### Changed
 
 - Russian translation updated
 - Moved the build process to PEP 621 / pyproject.toml
 
-
-## [1.1.0] - 2023-04-16
+## \[1.1.0\] - 2023-04-16
 
 ### Added
 
 - Russian translation
 
-
-## [1.0.0] - 2023-04-13
+## \[1.0.0\] - 2023-04-13
 
 ### Added
 
 - German translation
 
-
-## [0.0.2] - 2022-09-18
+## \[0.0.2\] - 2022-09-18
 
 ### Added
 
@@ -99,8 +95,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Deprecated attributes from `style` and `script` tags
 
-
-## [0.0.1] - 2022-08-08
+## \[0.0.1\] - 2022-08-08
 
 ### Added
 
