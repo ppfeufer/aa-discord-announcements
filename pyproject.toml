@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "aa-discord-announcements"
-version = "1.4.0"
+version = "1.4.1"
 description = "Discord Announcements via Alliance Auth. Write announcements and manage who can write announcements on your corporation or alliance Discord through Alliance Auth."
 readme = "README.md"
 keywords = [
