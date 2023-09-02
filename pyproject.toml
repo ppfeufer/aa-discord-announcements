@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "aa-discord-announcements"
-version = "1.4.0"
+version = "1.4.1"
 description = "Discord Announcements via Alliance Auth. Write announcements and manage who can write announcements on your corporation or alliance Discord through Alliance Auth."
 readme = "README.md"
 keywords = [
@@ -28,7 +28,7 @@ classifiers = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
