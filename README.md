@@ -9,7 +9,7 @@
 [![Discord](https://img.shields.io/discord/790364535294132234?label=discord)](https://discord.gg/zmh52wnfvM)
 [![Checks](https://github.com/ppfeufer/aa-discord-announcements/actions/workflows/automated-checks.yml/badge.svg)](https://github.com/ppfeufer/aa-discord-announcements/actions/workflows/automated-checks.yml)
 [![codecov](https://codecov.io/gh/ppfeufer/aa-discord-announcements/branch/master/graph/badge.svg?token=9I6HQB6W6J)](https://codecov.io/gh/ppfeufer/aa-discord-announcements)
-[![Translation Status](https://weblate.ppfeufer.de/widgets/alliance-auth-apps/-/aa-discord-announcements/svg-badge.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
+[![Translation status](https://weblate.ppfeufer.de/widget/alliance-auth-apps/aa-discord-announcements/svg-badge.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/ppfeufer/aa-discord-announcements/blob/master/CODE_OF_CONDUCT.md)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N8CL1BY)
@@ -31,6 +31,9 @@ ______________________________________________________________________
     - [Step 3: Finalizing the Installation](#step-3-finalizing-the-installation)
     - [Step 4: Setting up Permission](#step-4-setting-up-permission)
     - [Step 5: Setting up the App](#step-5-setting-up-the-app)
+  - [Changelog](#changelog)
+  - [Translation Status](#translation-status)
+  - [Contributing](#contributing)
 
 <!-- mdformat-toc end -->
 
@@ -89,3 +92,26 @@ groups you would like to have access.
 In your admin backend you'll find a new section called `Discord Announcements`.
 This is where you set all your stuff up, like the webhooks you want to ping and who
 can ping them. It's pretty straight forward, so you shouldn't have any issues. Go nuts!
+
+## Changelog<a name="changelog"></a>
+
+See [CHANGELOG.md](https://github.com/ppfeufer/aa-discord-announcements/blob/master/CHANGELOG.md)
+
+## Translation Status<a name="translation-status"></a>
+
+[![Translation status](https://weblate.ppfeufer.de/widget/alliance-auth-apps/aa-discord-announcements/multi-auto.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
+
+Do you want to help translate this app into your language or improve the existing
+translation? - [Join our team of translators][weblate engage]!
+
+## Contributing<a name="contributing"></a>
+
+Do you want to contribute to this project? That's cool!
+
+Please make sure to read the [Contribution Guidelines].\
+(I promise, it's not much, just some basics)
+
+<!-- Links -->
+
+[contribution guidelines]: https://github.com/ppfeufer/aa-discord-announcements/blob/master/CONTRIBUTING.md "Contribution Guidelines"
+[weblate engage]: https://weblate.ppfeufer.de/engage/alliance-auth-apps/ "Weblate Translations"
