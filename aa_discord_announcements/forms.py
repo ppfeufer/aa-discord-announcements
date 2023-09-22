@@ -58,19 +58,19 @@ class AnnouncementForm(forms.Form):
 
     announcement_target = forms.CharField(
         required=False,
-        label=_("Announcement Target"),
+        label=_("Announcement target"),
         widget=forms.Select(choices={}),
         help_text=_("Who do you want to ping?"),
     )
     announcement_channel = forms.CharField(
         required=False,
-        label=_("Announcement Channel"),
+        label=_("Announcement channel"),
         widget=forms.Select(choices={}),
         help_text=_("Select a channel to send the announcement to automatically."),
     )
     announcement_text = forms.CharField(
         required=True,
-        label=_get_mandatory_form_label_text(_("Announcement Text")),
+        label=_get_mandatory_form_label_text(_("Announcement text")),
         widget=forms.Textarea(
             attrs={
                 "rows": 10,
