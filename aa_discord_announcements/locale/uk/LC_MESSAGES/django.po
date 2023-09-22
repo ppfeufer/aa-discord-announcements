@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-30 18:37+0200\n"
+"POT-Creation-Date: 2023-09-22 19:42+0200\n"
 "PO-Revision-Date: 2023-07-27 15:39+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -30,15 +30,15 @@ msgstr ""
 msgid "Group name"
 msgstr "Назва групи"
 
-#: admin.py:38 admin.py:72 models.py:102 models.py:190
+#: admin.py:38 admin.py:72 models.py:102 models.py:194
 msgid "Group restrictions"
 msgstr "Групові обмеження"
 
-#: admin.py:61 models.py:168
+#: admin.py:61 models.py:172
 msgid "Discord channel"
 msgstr "Канал діскорду"
 
-#: admin.py:66 models.py:176
+#: admin.py:66 models.py:180
 msgid "Webhook URL"
 msgstr "Веб-хук URL"
 
@@ -64,23 +64,29 @@ msgid "Hint: You can use {discord_markdown_link} to format the text."
 msgstr ""
 
 #: forms.py:61
-msgid "Announcement Target"
-msgstr ""
+#, fuzzy
+#| msgid "Announcement Text"
+msgid "Announcement target"
+msgstr "Текст оголошення"
 
 #: forms.py:63
 msgid "Who do you want to ping?"
 msgstr "Кого ви хочете пінгувати?"
 
 #: forms.py:67
-msgid "Announcement Channel"
-msgstr ""
+#, fuzzy
+#| msgid "Announcement Text"
+msgid "Announcement channel"
+msgstr "Текст оголошення"
 
 #: forms.py:69
 msgid "Select a channel to send the announcement to automatically."
 msgstr "Виберіть канал для автоматичного відправлення оголошення."
 
 #: forms.py:73
-msgid "Announcement Text"
+#, fuzzy
+#| msgid "Announcement Text"
+msgid "Announcement text"
 msgstr "Текст оголошення"
 
 #: forms.py:79
@@ -101,6 +107,10 @@ msgstr "Ви впевнені, що ваш Discord пов'язаний з ваш
 msgid "This group has not been synced to Discord yet."
 msgstr "Цю групу ще не синхронізовано з Discord."
 
+#: models.py:65
+msgid "Can access this app"
+msgstr ""
+
 #: models.py:82
 msgid ""
 "Name of the Discord role to ping. (Note: This must be an Auth group that is "
@@ -119,13 +129,13 @@ msgstr "Discord markdown"
 msgid "ID of the Discord role to ping"
 msgstr "Ідентифікатор ролі Discord для пінгування"
 
-#: models.py:103 models.py:191
+#: models.py:103 models.py:195
 #, fuzzy
 #| msgid "Restrict ping rights to the following group(s) …"
 msgid "Restrict ping rights to the following groups …"
 msgstr "Обмежити права на пінг для наступних груп …"
 
-#: models.py:110 models.py:198
+#: models.py:110 models.py:202
 msgid "Notes"
 msgstr ""
 
@@ -133,7 +143,7 @@ msgstr ""
 msgid "You can add notes about this configuration here if you want"
 msgstr "Ви можете додати примітки про цю конфігурацію тут, якщо хочете"
 
-#: models.py:118 models.py:206
+#: models.py:118 models.py:210
 msgid "Is enabled"
 msgstr "Дозволено"
 
@@ -142,41 +152,45 @@ msgid "Whether this ping target is enabled or not"
 msgstr ""
 
 #: models.py:127
-msgid "Discord Ping Target"
+#, fuzzy
+#| msgid "Discord Ping Target"
+msgid "Discord ping target"
 msgstr "Ціль для пінгу в Discord"
 
 #: models.py:128
-msgid "Discord Ping Targets"
+#, fuzzy
+#| msgid "Discord Ping Targets"
+msgid "Discord ping targets"
 msgstr "Цілі для пінгу в Discord"
 
-#: models.py:169
+#: models.py:173
 msgid "Name of the channel this webhook posts to"
 msgstr "Назва каналу, на який публікується цей веб-хук"
 
-#: models.py:179
+#: models.py:183
 msgid ""
 "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
 msgstr ""
 "URL-адреса цього веб-хука, наприклад, https://discord.com/api/"
 "webhooks/123456/abcdef"
 
-#: models.py:199
+#: models.py:203
 msgid "You can add notes about this webhook here if you want"
 msgstr "Ви можете додати примітки про цей вебхук тут, якщо хочете"
 
-#: models.py:207
+#: models.py:211
 msgid "Whether this webhook is active or not"
 msgstr "Активний цей вебхук чи ні"
 
-#: models.py:215
+#: models.py:219
 msgid "Webhook"
 msgstr "Веб-хук"
 
-#: models.py:216
+#: models.py:220
 msgid "Webhooks"
 msgstr "Веб-хуки"
 
-#: models.py:232
+#: models.py:236
 msgid ""
 "Invalid webhook URL. The webhook URL you entered does not match any known "
 "format for a Discord webhook. Please check the webhook URL."

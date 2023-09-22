@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-30 18:37+0200\n"
+"POT-Creation-Date: 2023-09-22 19:42+0200\n"
 "PO-Revision-Date: 2023-07-31 17:40+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Russian <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-discord-announcements/ru/>\n"
+"Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-discord-announcements/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,15 +29,15 @@ msgstr "Объявления Discord"
 msgid "Group name"
 msgstr "Название группы"
 
-#: admin.py:38 admin.py:72 models.py:102 models.py:190
+#: admin.py:38 admin.py:72 models.py:102 models.py:194
 msgid "Group restrictions"
 msgstr "Ограничения групп"
 
-#: admin.py:61 models.py:168
+#: admin.py:61 models.py:172
 msgid "Discord channel"
 msgstr "Канал Discord"
 
-#: admin.py:66 models.py:176
+#: admin.py:66 models.py:180
 msgid "Webhook URL"
 msgstr "Вебхук URL"
 
@@ -63,7 +63,9 @@ msgstr ""
 "текста."
 
 #: forms.py:61
-msgid "Announcement Target"
+#, fuzzy
+#| msgid "Announcement Target"
+msgid "Announcement target"
 msgstr "Цель объявления"
 
 #: forms.py:63
@@ -71,7 +73,9 @@ msgid "Who do you want to ping?"
 msgstr "Кого Вы хотите пинговать?"
 
 #: forms.py:67
-msgid "Announcement Channel"
+#, fuzzy
+#| msgid "Announcement Channel"
+msgid "Announcement channel"
 msgstr "Канал объявления"
 
 #: forms.py:69
@@ -79,7 +83,9 @@ msgid "Select a channel to send the announcement to automatically."
 msgstr "Выберите канал для автоматической отправки объявлений."
 
 #: forms.py:73
-msgid "Announcement Text"
+#, fuzzy
+#| msgid "Announcement Text"
+msgid "Announcement text"
 msgstr "Текст объявления"
 
 #: forms.py:79
@@ -98,6 +104,10 @@ msgstr "Вы уверены, что Ваш Discord связан с Вашим Al
 msgid "This group has not been synced to Discord yet."
 msgstr "Эта группа не была синхронизирована с Discord."
 
+#: models.py:65
+msgid "Can access this app"
+msgstr ""
+
 #: models.py:82
 msgid ""
 "Name of the Discord role to ping. (Note: This must be an Auth group that is "
@@ -114,11 +124,11 @@ msgstr "Идентификатор Discord"
 msgid "ID of the Discord role to ping"
 msgstr "ID роли Discord для пинга"
 
-#: models.py:103 models.py:191
+#: models.py:103 models.py:195
 msgid "Restrict ping rights to the following groups …"
 msgstr "Ограничить право пинговать для следующих групп …"
 
-#: models.py:110 models.py:198
+#: models.py:110 models.py:202
 msgid "Notes"
 msgstr "Примечания"
 
@@ -126,7 +136,7 @@ msgstr "Примечания"
 msgid "You can add notes about this configuration here if you want"
 msgstr "Здесь Вы можете добавить примечания для этой конфигурации"
 
-#: models.py:118 models.py:206
+#: models.py:118 models.py:210
 msgid "Is enabled"
 msgstr "Разрешен"
 
@@ -135,40 +145,44 @@ msgid "Whether this ping target is enabled or not"
 msgstr "Разрешена или нет цель пинга"
 
 #: models.py:127
-msgid "Discord Ping Target"
+#, fuzzy
+#| msgid "Discord Ping Target"
+msgid "Discord ping target"
 msgstr "Цель пинга Discrod"
 
 #: models.py:128
-msgid "Discord Ping Targets"
+#, fuzzy
+#| msgid "Discord Ping Targets"
+msgid "Discord ping targets"
 msgstr "Цели пинга Discord"
 
-#: models.py:169
+#: models.py:173
 msgid "Name of the channel this webhook posts to"
 msgstr "Название канала, в который вебхук отправляет сообщения"
 
-#: models.py:179
+#: models.py:183
 msgid ""
 "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
 msgstr ""
 "URL этого вебхука, например https://discord.com/api/webhooks/123456/abcdef"
 
-#: models.py:199
+#: models.py:203
 msgid "You can add notes about this webhook here if you want"
 msgstr "Здесь Вы можете добавить примечания для этого вебхука"
 
-#: models.py:207
+#: models.py:211
 msgid "Whether this webhook is active or not"
 msgstr "Активен или нет вебхук"
 
-#: models.py:215
+#: models.py:219
 msgid "Webhook"
 msgstr "Вебхук"
 
-#: models.py:216
+#: models.py:220
 msgid "Webhooks"
 msgstr "Вебхуки"
 
-#: models.py:232
+#: models.py:236
 msgid ""
 "Invalid webhook URL. The webhook URL you entered does not match any known "
 "format for a Discord webhook. Please check the webhook URL."
