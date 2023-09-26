@@ -62,7 +62,7 @@ class General(models.Model):
 
         managed = False
         default_permissions = ()
-        permissions = (("basic_access", "Can access this app"),)
+        permissions = (("basic_access", _("Can access this app")),)
 
 
 class PingTarget(models.Model):
@@ -124,8 +124,8 @@ class PingTarget(models.Model):
         DiscordPingTargets :: Meta
         """
 
-        verbose_name = _("Discord Ping Target")
-        verbose_name_plural = _("Discord Ping Targets")
+        verbose_name = _("Discord ping target")
+        verbose_name_plural = _("Discord ping targets")
         default_permissions = ()
 
     def __str__(self) -> str:
