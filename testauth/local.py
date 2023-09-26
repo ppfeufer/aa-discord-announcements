@@ -64,9 +64,7 @@ INSTALLED_APPS += [
 # Note:
 #   » The format is the same as in INSTALLED_APPS
 #   » The app developer must explicitly allow public views for his app
-APPS_WITH_PUBLIC_VIEWS = [
-    PACKAGE,
-]
+APPS_WITH_PUBLIC_VIEWS = []
 
 # ------------------------------------------------------------------------------------ #
 #
