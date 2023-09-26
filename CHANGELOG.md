@@ -7,9 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[1.4.2\] - 2023-09-26
+
 ### Fixed
 
-- Capitalization for translatable strings
+- Capitalization of translatable strings
+
+### Changed
+
+- Translations improved and updated
+- Test suite updated
 
 ## \[1.4.1\] - 2023-09-02
 
