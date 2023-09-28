@@ -41,6 +41,12 @@ dependencies = [
     "allianceauth-app-utils>=1.13",
     "dhooks-lite>=0.6.1",
 ]
+[project.optional-dependencies]
+tests-allianceauth-stable = [
+    "coverage",
+    "django-webtest",
+    "Faker",
+]
 [project.urls]
 Changelog = "https://github.com/ppfeufer/aa-discord-announcements/blob/master/CHANGELOG.md"
 Documentation = "https://github.com/ppfeufer/aa-discord-announcements/blob/master/README.md"
