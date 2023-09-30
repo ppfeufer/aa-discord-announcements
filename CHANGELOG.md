@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Fixed
+
+- Grammar in some translatable strings
+
 ## \[1.4.2\] - 2023-09-26
 
 ### Fixed
