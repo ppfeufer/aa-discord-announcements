@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-30 16:29+0200\n"
-"PO-Revision-Date: 2023-09-30 12:58+0000\n"
+"PO-Revision-Date: 2023-10-01 14:43+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: German <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-discord-announcements/de/>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-discord-announcements/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -189,22 +189,14 @@ msgstr ""
 "Webhook-URL."
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:15
-#, fuzzy
-#| msgid "Announcement Details"
 msgid "Announcement details"
-msgstr "Ankündigung Details"
+msgstr "Ankündigungsdetails"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:26
-#, fuzzy
-#| msgid "Formatted Announcement Text"
 msgid "Formatted announcement text"
 msgstr "Formatierter Text der Ankündigung"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:46
-#, fuzzy
-#| msgid ""
-#| "Mandatory information is missing.<br>To create an announcement, you need "
-#| "to fill out the following fields:<br>» Announcement Text"
 msgid ""
 "Mandatory information is missing.<br>To create an announcement, you need to "
 "fill out the following fields:<br>» Announcement text"
@@ -229,8 +221,6 @@ msgid "No announcement created yet …"
 msgstr "Noch keine Ankündigung erstellt …"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:22
-#, fuzzy
-#| msgid "Copy Announcement Text"
 msgid "Copy announcement text"
 msgstr "Kopiere Ankündigungstext"
 
@@ -247,8 +237,6 @@ msgid "Join our team of translators!"
 msgstr "Tritt unserm Team von Übersetzern bei!"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/form/form.html:27
-#, fuzzy
-#| msgid "Create Announcement"
 msgid "Create announcement"
 msgstr "Ankündigung erstellen"
 
@@ -257,8 +245,6 @@ msgid "None, just format it for me"
 msgstr "Keiner, einfach nur den Text formatieren"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/form/segments/announcement-targets.html:3
-#, fuzzy
-#| msgid "Don't Ping"
 msgid "Don't ping"
 msgstr "Nicht pingen"
 
