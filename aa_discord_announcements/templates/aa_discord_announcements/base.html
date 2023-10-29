@@ -2,7 +2,13 @@
 
 {% load i18n %}
 
-{% block page_title %}{% translate "Discord Announcements" %}{% endblock %}
+{% block page_title %}
+    {% translate "Discord Announcements" %}
+{% endblock %}
+
+{% block header_nav_brand %}
+    {% translate "Discord Announcements" %}
+{% endblock header_nav_brand %}
 
 {% block content %}
     <div class="aa-discord-announcements">
