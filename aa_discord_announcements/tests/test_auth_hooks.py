@@ -35,9 +35,10 @@ class TestHooks(TestCase):
         )
 
         cls.html_menu = f"""
-            <li>
-                <a class href="{reverse('aa_discord_announcements:index')}">
-                    <i class="far fa-bell fa-fw"></i> Discord Announcements
+            <li class="d-flex flex-wrap m-2 p-2 pt-0 pb-0 mt-0 mb-0 me-0 pe-0">
+                <i class="nav-link far fa-bell fa-fw fa-fw align-self-center me-3 "></i>
+                <a class="nav-link flex-fill align-self-center" href="{reverse('aa_discord_announcements:index')}">
+                    Discord Announcements
                 </a>
             </li>
         """
