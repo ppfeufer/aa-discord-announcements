@@ -37,7 +37,7 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dependencies = [
-    "allianceauth>=3",
+    "allianceauth>=4.0.0a3",
     "allianceauth-app-utils>=1.13",
     "dhooks-lite>=0.6.1",
 ]
