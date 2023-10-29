@@ -6,7 +6,6 @@ requires = [
 
 [project]
 name = "aa-discord-announcements"
-version = "1.4.2"
 description = "Discord Announcements via Alliance Auth. Write announcements and manage who can write announcements on your corporation or alliance Discord through Alliance Auth."
 readme = "README.md"
 keywords = [
@@ -36,6 +35,9 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
+dynamic = [
+    "version",
+]
 dependencies = [
     "allianceauth>=4.0.0a3",
     "allianceauth-app-utils>=1.13",
@@ -59,3 +61,6 @@ Tracker = "https://github.com/ppfeufer/aa-discord-announcements/issues"
 include = [
     "/aa_discord_announcements",
 ]
+
+[tool.hatch.version]
+path = "aa_discord_announcements/__init__.py"
