@@ -23,7 +23,7 @@ class TestVersionedStatic(TestCase):
 
         context = Context({"version": __version__})
         template_to_render = Template(
-            "{% load aa_discord_announcements_versioned_static %}"
+            "{% load aa_discord_announcements %}"
             "{% aa_discord_announcements_static 'aa_discord_announcements/css/aa-discord-announcements.min.css' %}"  # pylint: disable=line-too-long
         )
 
