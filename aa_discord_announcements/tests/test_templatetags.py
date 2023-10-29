@@ -12,7 +12,7 @@ from aa_discord_announcements import __version__
 
 class TestVersionedStatic(TestCase):
     """
-    Test aa_discord_announcements_versioned_static
+    Test aa_discord_announcements_static
     """
 
     def test_versioned_static(self):
