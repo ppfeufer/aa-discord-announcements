@@ -30,11 +30,15 @@ class TestAccess(TestCase):
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access aa_discord_announcements
-        cls.user_1001 = create_fake_user(1001, "Peter Parker")
+        cls.user_1001 = create_fake_user(
+            character_id=1001, character_name="Peter Parker"
+        )
 
         # User can access aa_discord_announcements
         cls.user_1002 = create_fake_user(
-            1002, "Bruce Wayne", permissions=["aa_discord_announcements.basic_access"]
+            character_id=1002,
+            character_name="Bruce Wayne",
+            permissions=["aa_discord_announcements.basic_access"],
         )
 
     def test_has_no_access(self):
@@ -44,13 +48,13 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1001)
+        self.client.force_login(user=self.user_1001)
 
         # when
-        res = self.client.get(reverse("aa_discord_announcements:index"))
+        res = self.client.get(path=reverse(viewname="aa_discord_announcements:index"))
 
         # then
-        self.assertEqual(res.status_code, HTTPStatus.FOUND)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.FOUND)
 
     def test_has_access(self):
         """
@@ -59,10 +63,10 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1002)
+        self.client.force_login(user=self.user_1002)
 
         # when
-        res = self.client.get(reverse("aa_discord_announcements:index"))
+        res = self.client.get(path=reverse(viewname="aa_discord_announcements:index"))
 
         # then
-        self.assertEqual(res.status_code, HTTPStatus.OK)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.OK)

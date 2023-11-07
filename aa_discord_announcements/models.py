@@ -34,18 +34,22 @@ def _get_discord_group_info(ping_target: Group) -> dict:
 
     if not discord_service_installed():
         raise ValidationError(
-            _("You might want to install the Discord service first …")
+            message=_("You might want to install the Discord service first …")
         )
 
     try:
         discord_group_info = DiscordUser.objects.group_to_role(group=ping_target)
     except HTTPError as http_error:
         raise ValidationError(
-            _("Are you sure you have your Discord linked to your Alliance Auth?")
+            message=_(
+                "Are you sure you have your Discord linked to your Alliance Auth?"
+            )
         ) from http_error
 
     if not discord_group_info:
-        raise ValidationError(_("This group has not been synced to Discord yet."))
+        raise ValidationError(
+            message=_("This group has not been synced to Discord yet.")
+        )
 
     return discord_group_info
 
@@ -72,7 +76,7 @@ class PingTarget(models.Model):
 
     # Discord group to ping
     name = models.OneToOneField(
-        Group,
+        to=Group,
         related_name="discord_announcement_pingtarget",
         on_delete=models.CASCADE,
         unique=True,
@@ -96,7 +100,7 @@ class PingTarget(models.Model):
 
     # Restrictions
     restricted_to_group = models.ManyToManyField(
-        Group,
+        to=Group,
         blank=True,
         related_name="discord_announcement_pingtarget_required_groups",
         verbose_name=_("Group restrictions"),
@@ -144,7 +148,7 @@ class PingTarget(models.Model):
 
         # Check if the Discord service is active
         if discord_service_installed():
-            discord_group_info = _get_discord_group_info(self.name)
+            discord_group_info = _get_discord_group_info(ping_target=self.name)
             self.discord_id = discord_group_info["id"]
 
         super().save()  # Call the "real" save() method.
@@ -155,7 +159,7 @@ class PingTarget(models.Model):
         if not, raise an error
         """
 
-        _get_discord_group_info(self.name)
+        _get_discord_group_info(ping_target=self.name)
 
         super().clean()
 
@@ -188,7 +192,7 @@ class Webhook(models.Model):
 
     # Restrictions
     restricted_to_group = models.ManyToManyField(
-        Group,
+        to=Group,
         blank=True,
         related_name="discord_announcement_webhook_required_groups",
         verbose_name=_("Group restrictions"),
@@ -230,9 +234,9 @@ class Webhook(models.Model):
         """
 
         # Check if it's a valid Discord webhook URL
-        if not re.match(DISCORD_WEBHOOK_REGEX, self.url):
+        if not re.match(pattern=DISCORD_WEBHOOK_REGEX, string=self.url):
             raise ValidationError(
-                _(
+                message=_(
                     "Invalid webhook URL. The webhook URL you entered does not match "
                     "any known format for a Discord webhook. Please check the "
                     "webhook URL."
