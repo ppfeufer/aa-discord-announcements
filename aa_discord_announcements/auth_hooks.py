@@ -21,9 +21,9 @@ class AaDiscordAnnouncementsMenuItem(
         # setup menu entry for sidebar
         MenuItemHook.__init__(
             self,
-            __title__,
-            "far fa-bell fa-fw",
-            "aa_discord_announcements:index",
+            text=__title__,
+            classes="far fa-bell",
+            url_name="aa_discord_announcements:index",
             navactive=["aa_discord_announcements:"],
         )
 
