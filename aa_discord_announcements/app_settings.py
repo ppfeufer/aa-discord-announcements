@@ -12,4 +12,4 @@ def discord_service_installed() -> bool:
     :return: bool
     """
 
-    return apps.is_installed("allianceauth.services.modules.discord")
+    return apps.is_installed(app_name="allianceauth.services.modules.discord")

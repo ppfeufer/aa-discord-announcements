@@ -30,11 +30,15 @@ class TestAccess(TestCase):
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access aa_discord_announcements
-        cls.user_1001 = create_fake_user(1001, "Peter Parker")
+        cls.user_1001 = create_fake_user(
+            character_id=1001, character_name="Peter Parker"
+        )
 
         # User can access aa_discord_announcements
         cls.user_1002 = create_fake_user(
-            1002, "Bruce Wayne", permissions=["aa_discord_announcements.basic_access"]
+            character_id=1002,
+            character_name="Bruce Wayne",
+            permissions=["aa_discord_announcements.basic_access"],
         )
 
     def test_ajax_get_announcement_targets_no_access(self):
@@ -45,15 +49,17 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1001)
+        self.client.force_login(user=self.user_1001)
 
         # when
         res = self.client.get(
-            reverse("aa_discord_announcements:ajax_get_announcement_targets")
+            path=reverse(
+                viewname="aa_discord_announcements:ajax_get_announcement_targets"
+            )
         )
 
         # then
-        self.assertEqual(res.status_code, HTTPStatus.FOUND)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.FOUND)
 
     def test_ajax_get_announcement_targets_general(self):
         """
@@ -62,15 +68,17 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1002)
+        self.client.force_login(user=self.user_1002)
 
         # when
         res = self.client.get(
-            reverse("aa_discord_announcements:ajax_get_announcement_targets")
+            path=reverse(
+                viewname="aa_discord_announcements:ajax_get_announcement_targets"
+            )
         )
 
         # then
-        self.assertEqual(res.status_code, HTTPStatus.OK)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.OK)
 
     def test_ajax_get_webhooks_no_access(self):
         """
@@ -80,13 +88,15 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1001)
+        self.client.force_login(user=self.user_1001)
 
         # when
-        res = self.client.get(reverse("aa_discord_announcements:ajax_get_webhooks"))
+        res = self.client.get(
+            path=reverse(viewname="aa_discord_announcements:ajax_get_webhooks")
+        )
 
         # then
-        self.assertEqual(res.status_code, HTTPStatus.FOUND)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.FOUND)
 
     def test_ajax_get_webhooks_general(self):
         """
@@ -95,13 +105,15 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1002)
+        self.client.force_login(user=self.user_1002)
 
         # when
-        res = self.client.get(reverse("aa_discord_announcements:ajax_get_webhooks"))
+        res = self.client.get(
+            path=reverse(viewname="aa_discord_announcements:ajax_get_webhooks")
+        )
 
         # then
-        self.assertEqual(res.status_code, HTTPStatus.OK)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.OK)
 
     def test_ajax_create_announcement_no_access(self):
         """
@@ -111,15 +123,15 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1001)
+        self.client.force_login(user=self.user_1001)
 
         # when
         res = self.client.get(
-            reverse("aa_discord_announcements:ajax_create_announcement")
+            path=reverse(viewname="aa_discord_announcements:ajax_create_announcement")
         )
 
         # then
-        self.assertEqual(res.status_code, HTTPStatus.FOUND)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.FOUND)
 
     def test_ajax_create_announcement_general(self):
         """
@@ -128,15 +140,15 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1002)
+        self.client.force_login(user=self.user_1002)
 
         # when
         res = self.client.get(
-            reverse("aa_discord_announcements:ajax_create_announcement")
+            path=reverse(viewname="aa_discord_announcements:ajax_create_announcement")
         )
 
         # then
-        self.assertEqual(res.status_code, HTTPStatus.OK)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.OK)
 
     def test_ajax_create_announcement_with_form_data(self):
         """
@@ -145,7 +157,8 @@ class TestAccess(TestCase):
         """
 
         # given
-        self.client.force_login(self.user_1002)
+        self.client.force_login(user=self.user_1002)
+
         form_data = {
             "announcement_target": "@here",
             "announcement_channel": "",
@@ -154,14 +167,15 @@ class TestAccess(TestCase):
 
         # when
         response = self.client.post(
-            reverse("aa_discord_announcements:ajax_create_announcement"), data=form_data
+            path=reverse(viewname="aa_discord_announcements:ajax_create_announcement"),
+            data=form_data,
         )
 
         # then
-        self.assertEqual(response.status_code, HTTPStatus.OK)
+        self.assertEqual(first=response.status_code, second=HTTPStatus.OK)
         self.assertTemplateUsed(
-            response,
-            "aa_discord_announcements/partials/announcement/copy-paste-text.html",
+            response=response,
+            template_name="aa_discord_announcements/partials/announcement/copy-paste-text.html",
         )
-        self.assertContains(response, "@here")
-        self.assertContains(response, "Borg to slaughter!")
+        self.assertContains(response=response, text="@here")
+        self.assertContains(response=response, text="Borg to slaughter!")

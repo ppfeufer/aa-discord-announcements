@@ -29,7 +29,7 @@ class TestModulesInstalled(TestCase):
         :return:
         """
 
-        self.assertFalse(discord_service_installed())
+        self.assertFalse(expr=discord_service_installed())
 
     @modify_settings(INSTALLED_APPS={"append": "allianceauth.services.modules.discord"})
     def test_for_discord_service_installed_when_installed(self):
@@ -38,4 +38,4 @@ class TestModulesInstalled(TestCase):
         :return:
         """
 
-        self.assertTrue(discord_service_installed())
+        self.assertTrue(expr=discord_service_installed())

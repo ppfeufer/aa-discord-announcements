@@ -34,13 +34,13 @@ logger = LoggerAddTag(get_extension_logger(__name__), __title__)
 
 
 @login_required
-@permission_required("aa_discord_announcements.basic_access")
+@permission_required(perm="aa_discord_announcements.basic_access")
 def index(request: WSGIRequest) -> HttpResponse:
     """
     Index view
     """
 
-    logger.info(f"Discord Announcements view called by user {request.user}")
+    logger.info(msg=f"Discord Announcements view called by user {request.user}")
 
     context = {
         "title": __title__,
@@ -54,11 +54,15 @@ def index(request: WSGIRequest) -> HttpResponse:
         "form": AnnouncementForm,
     }
 
-    return render(request, "aa_discord_announcements/index.html", context)
+    return render(
+        request=request,
+        template_name="aa_discord_announcements/index.html",
+        context=context,
+    )
 
 
 @login_required
-@permission_required("aa_discord_announcements.basic_access")
+@permission_required(perm="aa_discord_announcements.basic_access")
 def ajax_get_announcement_targets(request: WSGIRequest) -> HttpResponse:
     """
     Get announcement targets for the current user
@@ -66,7 +70,7 @@ def ajax_get_announcement_targets(request: WSGIRequest) -> HttpResponse:
     :return:
     """
 
-    logger.info(f"Getting announcement targets for user {request.user}")
+    logger.info(msg=f"Getting announcement targets for user {request.user}")
 
     additional_discord_announcement_targets = (
         PingTarget.objects.filter(
@@ -79,14 +83,14 @@ def ajax_get_announcement_targets(request: WSGIRequest) -> HttpResponse:
     )
 
     return render(
-        request,
-        "aa_discord_announcements/partials/form/segments/announcement-targets.html",
-        {"announcement_targets": additional_discord_announcement_targets},
+        request=request,
+        template_name="aa_discord_announcements/partials/form/segments/announcement-targets.html",
+        context={"announcement_targets": additional_discord_announcement_targets},
     )
 
 
 @login_required
-@permission_required("aa_discord_announcements.basic_access")
+@permission_required(perm="aa_discord_announcements.basic_access")
 def ajax_get_webhooks(request: WSGIRequest) -> HttpResponse:
     """
     Get webhooks for the current user
@@ -94,7 +98,7 @@ def ajax_get_webhooks(request: WSGIRequest) -> HttpResponse:
     :return:
     """
 
-    logger.info(f"Getting webhooks for user {request.user}")
+    logger.info(msg=f"Getting webhooks for user {request.user}")
 
     webhooks = (
         Webhook.objects.filter(
@@ -106,14 +110,14 @@ def ajax_get_webhooks(request: WSGIRequest) -> HttpResponse:
     )
 
     return render(
-        request,
-        "aa_discord_announcements/partials/form/segments/announcement-channel.html",
-        {"webhooks": webhooks},
+        request=request,
+        template_name="aa_discord_announcements/partials/form/segments/announcement-channel.html",
+        context={"webhooks": webhooks},
     )
 
 
 @login_required
-@permission_required("aa_discord_announcements.basic_access")
+@permission_required(perm="aa_discord_announcements.basic_access")
 def ajax_create_announcement(request: WSGIRequest) -> HttpResponse:
     """
     Create the announcement
@@ -125,10 +129,10 @@ def ajax_create_announcement(request: WSGIRequest) -> HttpResponse:
     success = False
 
     if request.method == "POST":
-        form = AnnouncementForm(request.POST)
+        form = AnnouncementForm(data=request.POST)
 
         if form.is_valid():
-            logger.info("Discord announcement received")
+            logger.info(msg="Discord announcement received")
 
             # Get ping context
             announcement_context = get_announcement_context_from_form_data(
@@ -141,13 +145,13 @@ def ajax_create_announcement(request: WSGIRequest) -> HttpResponse:
                     announcement_context=announcement_context, user=request.user
                 )
 
-            logger.info(f"Discord announcement created by user {request.user}")
+            logger.info(msg=f"Discord announcement created by user {request.user}")
 
             announcement_context["request"] = request
 
             context["announcement_context"] = render_to_string(
-                "aa_discord_announcements/partials/announcement/copy-paste-text.html",
-                announcement_context,
+                template_name="aa_discord_announcements/partials/announcement/copy-paste-text.html",
+                context=announcement_context,
             )
             success = True
         else:

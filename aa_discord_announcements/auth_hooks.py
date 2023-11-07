@@ -34,8 +34,8 @@ class AaDiscordAnnouncementsMenuItem(
         :return:
         """
 
-        if request.user.has_perm("aa_discord_announcements.basic_access"):
-            return MenuItemHook.render(self, request)
+        if request.user.has_perm(perm="aa_discord_announcements.basic_access"):
+            return MenuItemHook.render(self, request=request)
 
         return ""
 
@@ -57,4 +57,8 @@ def register_urls():
     :return:
     """
 
-    return UrlHook(urls, "aa_discord_announcements", r"^discord-announcements/")
+    return UrlHook(
+        urls=urls,
+        namespace="aa_discord_announcements",
+        base_url=r"^discord-announcements/",
+    )
