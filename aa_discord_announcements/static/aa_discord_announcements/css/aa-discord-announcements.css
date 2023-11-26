@@ -3,9 +3,9 @@
         display: block;
     }
 
-    .aa-discord-announcements-announcementtext {
+    .aa-discord-announcements-announcementtext > .card {
         position: sticky;
-        top: 1rem;
+        top: 1.5rem;
     }
 
     .aa-discord-announcements form label {
