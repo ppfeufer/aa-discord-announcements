@@ -15,15 +15,4 @@
     .aa-discord-announcements form label .form-field-required {
         font-weight: 700;
     }
-
-    .aa-discord-announcements-footer {
-        border-top: 1px solid rgb(236 240 241);
-        font-size: 85%;
-        margin-top: 1rem;
-        padding-top: 1rem;
-    }
-
-    .template-dark-mode .aa-discord-announcements-footer {
-        border-color: rgb(70 69 69);
-    }
 }
