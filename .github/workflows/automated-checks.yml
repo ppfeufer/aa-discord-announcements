@@ -28,7 +28,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version-file: 'pyproject.toml' # Read python version from a file pyproject.toml
+          python-version-file: 'pyproject.toml' # Read the Python version from the pyproject.toml file
 
       - name: Run Pre Commit Checks
         uses: pre-commit/action@v3.0.0
@@ -42,13 +42,11 @@ jobs:
     strategy:
       # Set Python and Django version to test for the stable release of AllianceAuth
       matrix:
-        # Remember to change the Python version for [upload-coverage] as well
         python-version:
           - '3.8'
           - '3.9'
           - '3.10'
           - '3.11'
-        # Remember to change the Django version for [upload-coverage] as well
         django-version:
           - '4.0'
         # MySQL versions to test against
