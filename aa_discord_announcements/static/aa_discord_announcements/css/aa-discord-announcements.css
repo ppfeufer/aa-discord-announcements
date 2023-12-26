@@ -5,7 +5,7 @@
 
     .aa-discord-announcements-announcementtext > .card {
         position: sticky;
-        top: 1.5rem;
+        top: 1rem;
     }
 
     .aa-discord-announcements form label {
