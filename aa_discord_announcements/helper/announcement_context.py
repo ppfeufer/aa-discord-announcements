@@ -56,13 +56,17 @@ def get_announcement_context_from_form_data(form_data: dict) -> dict:
 
     announcement_context = {
         "announcement_target": {
-            "group_id": int(announcement_target_group_id)
-            if announcement_target_group_id
-            else None,
+            "group_id": (
+                int(announcement_target_group_id)
+                if announcement_target_group_id
+                else None
+            ),
             "group_name": str(announcement_target_group_name),
-            "at_mention": str(announcement_target_at_mention)
-            if announcement_target_at_mention
-            else "",
+            "at_mention": (
+                str(announcement_target_at_mention)
+                if announcement_target_at_mention
+                else ""
+            ),
         },
         "announcement_channel": {"webhook": announcement_channel_webhook},
         "announcement_text": str(form_data["announcement_text"]),
