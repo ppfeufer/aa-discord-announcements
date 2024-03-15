@@ -41,11 +41,11 @@ class TestModels(TestCase):
         )
 
         # when
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(expected_exception=ValidationError):
             webhook.clean()
 
         with self.assertRaisesMessage(
-            ValidationError,
+            expected_exception=ValidationError,
             expected_message=(
                 "Invalid webhook URL. The webhook URL you entered does not match any "
                 "known format for a Discord webhook. Please check the "
@@ -65,11 +65,11 @@ class TestModels(TestCase):
         announcement_target = PingTarget(name=self.group, discord_id=123456789)
 
         # when
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(expected_exception=ValidationError):
             announcement_target.clean()
 
         with self.assertRaisesMessage(
-            ValidationError,
+            expected_exception=ValidationError,
             expected_message="You might want to install the Discord service first …",
         ):
             announcement_target.clean()
@@ -83,7 +83,7 @@ class TestModels(TestCase):
 
         ping_target = PingTarget(name=self.group)
 
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(expected_exception=ValidationError):
             ping_target.save()
 
     def test_should_return_ping_target_model_string_name(self):
@@ -95,7 +95,7 @@ class TestModels(TestCase):
 
         ping_target = PingTarget(name=self.group)
 
-        self.assertEqual(str(ping_target), self.group.name)
+        self.assertEqual(first=str(ping_target), second=self.group.name)
 
     def test_should_return_webhook_model_string_name(self):
         """
@@ -114,4 +114,4 @@ class TestModels(TestCase):
 
         webhook.save()
 
-        self.assertEqual(str(webhook), "Test Webhook")
+        self.assertEqual(first=str(webhook), second="Test Webhook")

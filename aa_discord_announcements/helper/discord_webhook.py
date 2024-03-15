@@ -23,7 +23,9 @@ def send_to_discord_webhook(announcement_context: dict, user: User):
     :return:
     """
 
-    discord_webhook = Webhook(announcement_context["announcement_channel"]["webhook"])
+    discord_webhook = Webhook(
+        url=announcement_context["announcement_channel"]["webhook"]
+    )
     webhook_announcement_context = get_webhook_announcement_context(
         announcement_context=announcement_context
     )
@@ -32,7 +34,7 @@ def send_to_discord_webhook(announcement_context: dict, user: User):
 
     message_footer = (
         f"_Sent by {author_eve_name} "
-        f"@ {dateformat.format(timezone.now(), 'Y-m-d H:i')} (Eve Time)_"
+        f"@ {dateformat.format(value=timezone.now(), format_string='Y-m-d H:i')} (Eve Time)_"
     )
     message_to_send = f"{message_body}\n\n{message_footer}"
 

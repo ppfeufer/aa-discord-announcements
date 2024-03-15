@@ -21,9 +21,9 @@ class AaDiscordAnnouncementsMenuItem(
         # setup menu entry for sidebar
         MenuItemHook.__init__(
             self,
-            __title__,
-            "far fa-bell fa-fw",
-            "aa_discord_announcements:index",
+            text=__title__,
+            classes="fa-regular fa-bell",
+            url_name="aa_discord_announcements:index",
             navactive=["aa_discord_announcements:"],
         )
 
@@ -34,8 +34,8 @@ class AaDiscordAnnouncementsMenuItem(
         :return:
         """
 
-        if request.user.has_perm("aa_discord_announcements.basic_access"):
-            return MenuItemHook.render(self, request)
+        if request.user.has_perm(perm="aa_discord_announcements.basic_access"):
+            return MenuItemHook.render(self, request=request)
 
         return ""
 
@@ -57,4 +57,8 @@ def register_urls():
     :return:
     """
 
-    return UrlHook(urls, "aa_discord_announcements", r"^discord-announcements/")
+    return UrlHook(
+        urls=urls,
+        namespace="aa_discord_announcements",
+        base_url=r"^discord-announcements/",
+    )

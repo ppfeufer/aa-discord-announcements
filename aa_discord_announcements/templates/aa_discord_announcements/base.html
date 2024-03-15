@@ -1,8 +1,14 @@
-{% extends "allianceauth/base.html" %}
+{% extends "allianceauth/base-bs5.html" %}
 
 {% load i18n %}
 
-{% block page_title %}{% translate "Discord Announcements" %}{% endblock %}
+{% block page_title %}
+    {% translate "Discord Announcements" %}
+{% endblock %}
+
+{% block header_nav_brand %}
+    {% translate "Discord Announcements" %}
+{% endblock header_nav_brand %}
 
 {% block content %}
     <div class="aa-discord-announcements">
@@ -14,7 +20,7 @@
             {% block aa_discord_announcements_body %}{% endblock %}
         </div>
 
-        <div class="aa-discord-announcements-footer">
+        <div class="aa-discord-announcements-footer mt-3 pt-3 border-top border-light">
             {% include "aa_discord_announcements/partials/footer/app-translation-footer.html" %}
         </div>
     </div>

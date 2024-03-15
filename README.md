@@ -26,7 +26,6 @@ ______________________________________________________________________
 
 - [AA Discord Announcements](#aa-discord-announcements)
   - [Installation](#installation)
-    - [⚠️ Important ⚠️](#%E2%9A%A0%EF%B8%8F-important-%E2%9A%A0%EF%B8%8F)
     - [Step 1: Install the App](#step-1-install-the-app)
     - [Step 2: Update Your AA Settings](#step-2-update-your-aa-settings)
     - [Step 3: Finalizing the Installation](#step-3-finalizing-the-installation)
@@ -42,15 +41,21 @@ ______________________________________________________________________
 
 ## Installation<a name="installation"></a>
 
-### ⚠️ Important ⚠️<a name="%E2%9A%A0%EF%B8%8F-important-%E2%9A%A0%EF%B8%8F"></a>
+> \[!NOTE\]
+>
+> **AA Discord Announcements >=2.0.0 needs at least Alliance Auth v4.0.0**.
+>
+> Please make sure to update your Alliance Auth instance _before_ you install this
+> module or update to the latest version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> The last version compatible with Alliance Auth v3 is `1.4.2`.
 
 This app is a plugin for Alliance Auth. If you don't have Alliance Auth running already,
 please install it first before proceeding.
-(See the official
-[AA installation guide](https://allianceauth.readthedocs.io/en/latest/installation/allianceauth.html)
-for details)
+(See the official [AA installation guide](https://allianceauth.readthedocs.io/en/latest/installation/allianceauth.html) for details)
 
-> **Note**
+> \[!NOTE\]
 >
 > You also want to make sure that you have the
 > [Discord service](https://allianceauth.readthedocs.io/en/latest/features/services/discord.html)

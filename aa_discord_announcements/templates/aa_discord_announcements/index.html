@@ -2,30 +2,25 @@
 
 {% load i18n %}
 
-{% block aa_discord_announcements_header %}
-    {% translate "Discord Announcements" as translated_header %}
-    {% include "aa_discord_announcements/partials/header/page-header.html" with header_text=translated_header %}
-{% endblock %}
-
 {% block aa_discord_announcements_body %}
     <div class="row">
         <div class="col-md-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <span class="panel-title">{% translate "Announcement details" %}</span>
+            <div class="card card-default">
+                <div class="card-header bg-default">
+                    <span class="card-title">{% translate "Announcement details" %}</span>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                     {% include "aa_discord_announcements/partials/form/form.html" %}
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 aa-discord-announcements-announcementtext">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <span class="panel-title">{% translate "Formatted announcement text" %}</span>
+            <div class="card card-default">
+                <div class="card-header bg-default">
+                    <span class="card-title">{% translate "Formatted announcement text" %}</span>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                     {% include "aa_discord_announcements/partials/announcement/announcement.html" %}
                 </div>
             </div>
