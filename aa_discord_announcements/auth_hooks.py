@@ -22,7 +22,7 @@ class AaDiscordAnnouncementsMenuItem(
         MenuItemHook.__init__(
             self,
             text=__title__,
-            classes="far fa-bell",
+            classes="fa-regular fa-bell",
             url_name="aa_discord_announcements:index",
             navactive=["aa_discord_announcements:"],
         )
