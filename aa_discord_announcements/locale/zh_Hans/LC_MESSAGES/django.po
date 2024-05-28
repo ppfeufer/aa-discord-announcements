@@ -5,13 +5,14 @@
 # Faer Yili <yilifaer@gmail.com>, 2024.
 # SAM_FPS <sam_fps@163.com>, 2024.
 # MxdHana <236833425@qq.com>, 2024.
+# Peter Pfeufer <info@ppfeufer.de>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 19:08+0100\n"
-"PO-Revision-Date: 2024-05-15 09:21+0000\n"
-"Last-Translator: MxdHana <236833425@qq.com>\n"
+"PO-Revision-Date: 2024-05-28 16:27+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: aa_discord_announcements/__init__.py:9
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
@@ -29,7 +30,7 @@ msgstr "Discord公告"
 
 #: aa_discord_announcements/admin.py:32 aa_discord_announcements/models.py:83
 msgid "Group name"
-msgstr "组别名称"
+msgstr "群组名称"
 
 #: aa_discord_announcements/admin.py:38 aa_discord_announcements/admin.py:72
 #: aa_discord_announcements/models.py:106
@@ -43,7 +44,7 @@ msgstr "Discord频道"
 
 #: aa_discord_announcements/admin.py:66 aa_discord_announcements/models.py:184
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "Webhooks（Web挂钩）URL"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: aa_discord_announcements/apps.py:21
