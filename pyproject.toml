@@ -14,7 +14,7 @@ keywords = [
     "discord",
     "eveonline",
 ]
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 authors = [
     { name = "Peter Pfeufer", email = "develop@ppfeufer.de" },
 ]
@@ -40,23 +40,21 @@ dynamic = [
     "version",
 ]
 dependencies = [
-    "allianceauth<5.0.0,>=4",
+    "allianceauth<5,>=4",
     "allianceauth-app-utils>=1.13",
     "dhooks-lite>=0.6.1",
 ]
-[project.optional-dependencies]
-tests-allianceauth-latest = [
+optional-dependencies.tests-allianceauth-latest = [
     "coverage",
     "django-webtest",
-    "Faker",
+    "faker",
 ]
-[project.urls]
-Changelog = "https://github.com/ppfeufer/aa-discord-announcements/blob/master/CHANGELOG.md"
-Documentation = "https://github.com/ppfeufer/aa-discord-announcements/blob/master/README.md"
-Donations = "https://ko-fi.com/ppfeufer"
-Homepage = "https://github.com/ppfeufer/aa-discord-announcements"
-Source = "https://github.com/ppfeufer/aa-discord-announcements.git"
-Tracker = "https://github.com/ppfeufer/aa-discord-announcements/issues"
+urls.Changelog = "https://github.com/ppfeufer/aa-discord-announcements/blob/master/CHANGELOG.md"
+urls.Documentation = "https://github.com/ppfeufer/aa-discord-announcements/blob/master/README.md"
+urls.Donations = "https://ko-fi.com/ppfeufer"
+urls.Homepage = "https://github.com/ppfeufer/aa-discord-announcements"
+urls.Source = "https://github.com/ppfeufer/aa-discord-announcements.git"
+urls.Tracker = "https://github.com/ppfeufer/aa-discord-announcements/issues"
 
 [tool.hatch.build]
 include = [
