@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Xrandier <xrandier@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 19:08+0100\n"
-"PO-Revision-Date: 2024-05-10 14:00+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-07-08 05:27+0000\n"
+"Last-Translator: Xrandier <xrandier@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/ja/>\n"
 "Language: ja\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: aa_discord_announcements/__init__.py:9
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
@@ -51,7 +50,7 @@ msgstr ""
 
 #: aa_discord_announcements/forms.py:21
 msgid "This field is mandatory"
-msgstr ""
+msgstr "必須"
 
 #: aa_discord_announcements/forms.py:42
 msgid "Discord Markdown"
@@ -133,7 +132,7 @@ msgstr ""
 #: aa_discord_announcements/models.py:122
 #: aa_discord_announcements/models.py:214
 msgid "Is enabled"
-msgstr ""
+msgstr "有効"
 
 #: aa_discord_announcements/models.py:123
 msgid "Whether this ping target is enabled or not"
