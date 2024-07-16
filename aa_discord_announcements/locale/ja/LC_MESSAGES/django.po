@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Xrandier <xrandier@gmail.com>, 2024.
+# Peter Pfeufer <info@ppfeufer.de>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 19:08+0100\n"
-"PO-Revision-Date: 2024-07-08 05:27+0000\n"
-"Last-Translator: Xrandier <xrandier@gmail.com>\n"
+"PO-Revision-Date: 2024-07-16 04:03+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/ja/>\n"
 "Language: ja\n"
@@ -50,7 +51,7 @@ msgstr ""
 
 #: aa_discord_announcements/forms.py:21
 msgid "This field is mandatory"
-msgstr "必須"
+msgstr "この欄は必須です"
 
 #: aa_discord_announcements/forms.py:42
 msgid "Discord Markdown"

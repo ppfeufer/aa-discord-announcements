@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 19:08+0100\n"
-"PO-Revision-Date: 2024-05-28 16:27+0000\n"
+"PO-Revision-Date: 2024-07-16 04:03+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/zh_Hans/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: aa_discord_announcements/__init__.py:9
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
@@ -54,7 +54,7 @@ msgstr "Discord公告{__version__}"
 
 #: aa_discord_announcements/forms.py:21
 msgid "This field is mandatory"
-msgstr "此字段为必填项"
+msgstr "这个字段是必填的"
 
 #: aa_discord_announcements/forms.py:42
 msgid "Discord Markdown"
