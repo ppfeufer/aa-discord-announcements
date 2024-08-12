@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-27 20:39+0200\n"
-"PO-Revision-Date: 2024-08-05 11:16+0000\n"
-"Last-Translator: Deleted User <noreply+44@weblate.org>\n"
+"PO-Revision-Date: 2024-08-06 11:28+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-discord-announcements/ja/>\n"
 "Language: ja\n"
@@ -135,7 +135,7 @@ msgstr ""
 #: aa_discord_announcements/models.py:124
 #: aa_discord_announcements/models.py:216
 msgid "Is enabled"
-msgstr "有効"
+msgstr "有効になっています"
 
 #: aa_discord_announcements/models.py:125
 msgid "Whether this ping target is enabled or not"
