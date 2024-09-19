@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-27 20:39+0200\n"
-"PO-Revision-Date: 2024-07-04 07:27+0000\n"
-"Last-Translator: Hexo <ghostcig@free.fr>\n"
-"Language-Team: French <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-discord-announcements/fr/>\n"
+"PO-Revision-Date: 2024-09-19 18:11+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
+"Language-Team: French <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-discord-announcements/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6.1\n"
+"X-Generator: Weblate 5.7.2\n"
 
 #: aa_discord_announcements/__init__.py:9
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
@@ -102,7 +102,6 @@ msgid "This group has not been synced to Discord yet."
 msgstr "Ce groupe n'a pas encore été synchronisé avec Discord."
 
 #: aa_discord_announcements/models.py:71
-#, fuzzy
 msgid "Can access this app"
 msgstr "Peut accéder à cette application"
 
