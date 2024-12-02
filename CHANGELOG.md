@@ -22,7 +22,7 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 > Critical content demanding immediate user attention due to potential risks.
 -->
 
-## \[In Development\] - Unreleased
+## [In Development] - Unreleased
 
 <!--
 Section Order:
@@ -35,14 +35,14 @@ Section Order:
 ### Security
 -->
 
-## \[2.2.1\] - 2024-11-01
+## [2.2.1] - 2024-11-01
 
 ### Changed
 
 - Italian translation improved
 - Ukrainian translation improved
 
-## \[2.2.0\] - 2024-09-16
+## [2.2.0] - 2024-09-16
 
 ### Changed
 
@@ -51,7 +51,7 @@ Section Order:
 - Japanese translation improved
 - Lingua codes updated to match Alliance Auth v4.3.1
 
-## \[2.1.0\] - 2024-07-27
+## [2.1.0] - 2024-07-27
 
 ### Added
 
@@ -67,21 +67,21 @@ Section Order:
 
 - Support for Python 3.8 and Python 3.9
 
-## \[2.0.2\] - 2024-06-03
+## [2.0.2] - 2024-06-03
 
 ### Changed
 
 - Chinese translations updated
 
-## \[2.0.1\] - 2024-05-16
+## [2.0.1] - 2024-05-16
 
 ### Changed
 
 - Translations updated
 
-## \[2.0.0\] - 2024-03-16
+## [2.0.0] - 2024-03-16
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0!**
 >
@@ -103,9 +103,9 @@ Section Order:
 
 - Compatibility to Alliance Auth v3
 
-## \[2.0.0-beta.1\] - 2024-02-18
+## [2.0.0-beta.1] - 2024-02-18
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0b1!**
 >
@@ -127,9 +127,9 @@ Section Order:
 
 - Compatibility to Alliance Auth v3
 
-## \[1.4.2\] - 2023-09-26
+## [1.4.2] - 2023-09-26
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This is the last version compatible with Alliance Auth v3.**
 
@@ -142,25 +142,25 @@ Section Order:
 - Translations improved and updated
 - Test suite updated
 
-## \[1.4.1\] - 2023-09-02
+## [1.4.1] - 2023-09-02
 
 ### Changed
 
 - Korean translation improved
 
-## \[1.4.0\] - 2023-08-29
+## [1.4.0] - 2023-08-29
 
 ### Added
 
 - Korean translation
 
-## \[1.3.0\] - 2023-08-15
+## [1.3.0] - 2023-08-15
 
 ### Added
 
 - Spanish translation
 
-## \[1.2.4\] - 2023-08-13
+## [1.2.4] - 2023-08-13
 
 ### Fixed
 
@@ -170,7 +170,7 @@ Section Order:
 
 - Translations updated
 
-## \[1.2.3\] - 2023-07-30
+## [1.2.3] - 2023-07-30
 
 ### Added
 
@@ -181,7 +181,7 @@ Section Order:
 
 - Ukrainian translation improved
 
-## \[1.2.2\] - 2023-07-16
+## [1.2.2] - 2023-07-16
 
 ### Added
 
@@ -192,7 +192,7 @@ Section Order:
 
 - Pseudo plural from help texts in the models
 
-## \[1.2.1\] - 2023-06-19
+## [1.2.1] - 2023-06-19
 
 ### Added
 
@@ -207,26 +207,26 @@ Section Order:
 
 - Non-translatable string from the announcement form
 
-## \[1.2.0\] - 2023-04-24
+## [1.2.0] - 2023-04-24
 
 ### Changed
 
 - Russian translation updated
 - Moved the build process to PEP 621 / pyproject.toml
 
-## \[1.1.0\] - 2023-04-16
+## [1.1.0] - 2023-04-16
 
 ### Added
 
 - Russian translation
 
-## \[1.0.0\] - 2023-04-13
+## [1.0.0] - 2023-04-13
 
 ### Added
 
 - German translation
 
-## \[0.0.2\] - 2022-09-18
+## [0.0.2] - 2022-09-18
 
 ### Added
 
@@ -236,7 +236,7 @@ Section Order:
 
 - Deprecated attributes from `style` and `script` tags
 
-## \[0.0.1\] - 2022-08-08
+## [0.0.1] - 2022-08-08
 
 ### Added
 
