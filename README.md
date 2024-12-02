@@ -41,7 +41,7 @@ ______________________________________________________________________
 
 ## Installation<a name="installation"></a>
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **AA Discord Announcements >=2.0.0 needs at least Alliance Auth v4.0.0**.
 >
@@ -55,7 +55,7 @@ This app is a plugin for Alliance Auth. If you don't have Alliance Auth running 
 please install it first before proceeding.
 (See the official [AA installation guide](https://allianceauth.readthedocs.io/en/latest/installation/allianceauth.html) for details)
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > You also want to make sure that you have the
 > [Discord service](https://allianceauth.readthedocs.io/en/latest/features/services/discord.html)
