@@ -37,6 +37,10 @@ Section Order:
 
 ## [2.2.2] - 2024-12-14
 
+### Added
+
+- Python 3.13 to the test matrix
+
 ### Changed
 
 - Translations updated
