@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Set own user agent for dhooks-lite
+
 ## [2.2.2] - 2024-12-14
 
 ### Added

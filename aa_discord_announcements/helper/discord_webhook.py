@@ -3,16 +3,26 @@ Handling Discord webhooks
 """
 
 # Third Party
-from dhooks_lite import Webhook
+from dhooks_lite import UserAgent, Webhook
 
 # Django
 from django.contrib.auth.models import User
 from django.utils import dateformat, timezone
 
 # AA Discord Announcements
+from aa_discord_announcements import __version__
+from aa_discord_announcements.constants import APP_NAME, GITHUB_URL
 from aa_discord_announcements.helper.announcement_context import (
     get_webhook_announcement_context,
 )
+
+
+def get_user_agent() -> UserAgent:
+    """
+    Set the user agent
+    """
+
+    return UserAgent(APP_NAME, GITHUB_URL, __version__)
 
 
 def send_to_discord_webhook(announcement_context: dict, user: User):
@@ -24,7 +34,8 @@ def send_to_discord_webhook(announcement_context: dict, user: User):
     """
 
     discord_webhook = Webhook(
-        url=announcement_context["announcement_channel"]["webhook"]
+        url=announcement_context["announcement_channel"]["webhook"],
+        user_agent=get_user_agent(),
     )
     webhook_announcement_context = get_webhook_announcement_context(
         announcement_context=announcement_context
