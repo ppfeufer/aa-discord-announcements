@@ -20,17 +20,24 @@ from aa_discord_announcements.helper.announcement_context import (
 def get_user_agent() -> UserAgent:
     """
     Set the user agent
+
+    :return: User agent
+    :rtype: UserAgent
     """
 
     return UserAgent(APP_NAME, GITHUB_URL, __version__)
 
 
-def send_to_discord_webhook(announcement_context: dict, user: User):
+def send_to_discord_webhook(announcement_context: dict, user: User) -> None:
     """
     Send the announcement to a Discord webhook
-    :param announcement_context:
-    :param user:
+
+    :param announcement_context: Announcement context
+    :type announcement_context: dict
+    :param user: User sending the announcement
+    :type user: User
     :return:
+    :rtype: None
     """
 
     discord_webhook = Webhook(
