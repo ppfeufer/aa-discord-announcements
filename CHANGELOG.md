@@ -37,6 +37,9 @@ Section Order:
 
 ### Changed
 
+- Use `django-sri` for Subresource Integrity hashes
+- Minimum requirements
+  - Alliance Auth >= 4.6.0
 - Make ajax call URLs an internal URLs
 - Set own user agent for dhooks-lite
 
