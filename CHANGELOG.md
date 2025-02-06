@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- Make ajax call URLs an internal URLs
 - Set own user agent for dhooks-lite
 
 ## [2.2.2] - 2024-12-14
