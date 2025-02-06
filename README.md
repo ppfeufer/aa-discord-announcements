@@ -22,18 +22,17 @@ alliance Discord through Alliance Auth.
 
 ______________________________________________________________________
 
-<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
+<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=2 -->
 
-- [AA Discord Announcements](#aa-discord-announcements)
-  - [Installation](#installation)
-    - [Step 1: Install the App](#step-1-install-the-app)
-    - [Step 2: Update Your AA Settings](#step-2-update-your-aa-settings)
-    - [Step 3: Finalizing the Installation](#step-3-finalizing-the-installation)
-    - [Step 4: Setting up Permission](#step-4-setting-up-permission)
-    - [Step 5: Setting up the App](#step-5-setting-up-the-app)
-  - [Changelog](#changelog)
-  - [Translation Status](#translation-status)
-  - [Contributing](#contributing)
+- [Installation](#installation)
+  - [Step 1: Install the App](#step-1-install-the-app)
+  - [Step 2: Update Your AA Settings](#step-2-update-your-aa-settings)
+  - [Step 3: Finalizing the Installation](#step-3-finalizing-the-installation)
+  - [Step 4: Setting up Permission](#step-4-setting-up-permission)
+  - [Step 5: Setting up the App](#step-5-setting-up-the-app)
+- [Changelog](#changelog)
+- [Translation Status](#translation-status)
+- [Contributing](#contributing)
 
 <!-- mdformat-toc end -->
 

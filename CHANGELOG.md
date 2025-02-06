@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [2.3.0] - 2025-02-06
+
 ### Changed
 
 - Use `django-sri` for Subresource Integrity hashes
