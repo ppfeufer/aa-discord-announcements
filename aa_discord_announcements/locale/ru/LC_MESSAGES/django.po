@@ -7,19 +7,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
-"Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/"
-"issues\n"
-"POT-Creation-Date: 2024-12-14 14:51+0100\n"
+"Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
+"POT-Creation-Date: 2025-03-06 16:04+0100\n"
 "PO-Revision-Date: 2024-11-09 11:25+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-discord-announcements/ru/>\n"
+"Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.8.3\n"
 
 #: aa_discord_announcements/__init__.py:9
@@ -63,9 +60,7 @@ msgstr "Разметка Discord"
 #: aa_discord_announcements/forms.py:49
 #, python-brace-format
 msgid "Hint: You can use {discord_markdown_link} to format the text."
-msgstr ""
-"Подсказка: Вы можете использовать {discord_markdown_link} для форматирования "
-"текста."
+msgstr "Подсказка: Вы можете использовать {discord_markdown_link} для форматирования текста."
 
 #: aa_discord_announcements/forms.py:61
 msgid "Announcement target"
@@ -108,12 +103,8 @@ msgid "Can access this app"
 msgstr "Имеет доступ к приложению"
 
 #: aa_discord_announcements/models.py:88
-msgid ""
-"Name of the Discord role to ping. (Note: This must be an Auth group that is "
-"synced to Discord.)"
-msgstr ""
-"Имя роли Discord для пинга. (Примечание: Это должна быть синхронизированная "
-"с Discord группа Auth.)"
+msgid "Name of the Discord role to ping. (Note: This must be an Auth group that is synced to Discord.)"
+msgstr "Имя роли Discord для пинга. (Примечание: Это должна быть синхронизированная с Discord группа Auth.)"
 
 #: aa_discord_announcements/models.py:99
 msgid "Discord ID"
@@ -159,10 +150,8 @@ msgid "Name of the channel this webhook posts to"
 msgstr "Название канала, в который вебхук отправляет сообщения"
 
 #: aa_discord_announcements/models.py:189
-msgid ""
-"URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
-msgstr ""
-"URL этого вебхука, например https://discord.com/api/webhooks/123456/abcdef"
+msgid "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
+msgstr "URL этого вебхука, например https://discord.com/api/webhooks/123456/abcdef"
 
 #: aa_discord_announcements/models.py:209
 msgid "You can add notes about this webhook here if you want"
@@ -181,12 +170,8 @@ msgid "Webhooks"
 msgstr "Вебхуки"
 
 #: aa_discord_announcements/models.py:242
-msgid ""
-"Invalid webhook URL. The webhook URL you entered does not match any known "
-"format for a Discord webhook. Please check the webhook URL."
-msgstr ""
-"Некорректный URL вебхука. Введенный URL не совпадает с известными форматами "
-"вебхуков Discord. Пожалуйста, проверьте URL."
+msgid "Invalid webhook URL. The webhook URL you entered does not match any known format for a Discord webhook. Please check the webhook URL."
+msgstr "Некорректный URL вебхука. Введенный URL не совпадает с известными форматами вебхуков Discord. Пожалуйста, проверьте URL."
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:10
 msgid "Announcement details"
@@ -197,20 +182,12 @@ msgid "Formatted announcement text"
 msgstr "Отформатированный текст анонса"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:41
-msgid ""
-"Mandatory information is missing.<br>To create an announcement, you need to "
-"fill out the following fields:<br>» Announcement text"
-msgstr ""
-"Отсутствует необходимая информация. <br>Для создания анонса необходимо "
-"заполнить следующие поля:<br>» Текст анонса"
+msgid "Mandatory information is missing.<br>To create an announcement, you need to fill out the following fields:<br>» Announcement text"
+msgstr "Отсутствует необходимая информация. <br>Для создания анонса необходимо заполнить следующие поля:<br>» Текст анонса"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:44
-msgid ""
-"Error! Your announcement was not copied to your clipboard. Maybe your "
-"browser doesn&apos;t support this feature."
-msgstr ""
-"Ошибка! Объявление не было скопировано в буфер обмена. Вероятно Ваш браузер "
-"не предоставляет такую функциональность."
+msgid "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn&apos;t support this feature."
+msgstr "Ошибка! Объявление не было скопировано в буфер обмена. Вероятно Ваш браузер не предоставляет такую функциональность."
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:45
 msgid "Success! Your announcement text has been copied to your clipboard."
@@ -225,12 +202,8 @@ msgid "Copy announcement text"
 msgstr "Скопировать текст анонса"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/footer/app-translation-footer.html:5
-msgid ""
-"Do you want to help translate this app into your language or improve the "
-"existing translation?"
-msgstr ""
-"Вы хотите помочь перевести это приложение на ваш язык или улучшить текущий "
-"перевод?"
+msgid "Do you want to help translate this app into your language or improve the existing translation?"
+msgstr "Вы хотите помочь перевести это приложение на ваш язык или улучшить текущий перевод?"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
