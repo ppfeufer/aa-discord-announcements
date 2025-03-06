@@ -25,9 +25,10 @@ logger = LoggerAddTag(my_logger=get_extension_logger(__name__), prefix=__title__
 def calculate_integrity_hash(relative_file_path: str) -> str:
     """
     Calculates the integrity hash for a given static file
+
     :param self:
     :type self:
-    :param relative_file_path: The file path relative to the `aa-discord-announcements/aa_discord_announcements/static/aa_discord_announcements` folder
+    :param relative_file_path: The file path relative to the `{APP_NAME}/{PACKAGE_NAME}/static/{PACKAGE_NAME}` folder
     :type relative_file_path: str
     :return: The integrity hash
     :rtype: str
