@@ -8,6 +8,7 @@ from django.test import TestCase, override_settings
 
 # AA Discord Announcements
 from aa_discord_announcements import __version__
+from aa_discord_announcements.constants import PACKAGE_NAME
 from aa_discord_announcements.helper.static_files import calculate_integrity_hash
 
 
@@ -35,11 +36,11 @@ class TestVersionedStatic(TestCase):
 
         rendered_template = template_to_render.render(context=context)
 
-        expected_static_css_src = f'/static/aa_discord_announcements/css/aa-discord-announcements.min.css?v={context["version"]}'
+        expected_static_css_src = f'/static/{PACKAGE_NAME}/css/aa-discord-announcements.min.css?v={context["version"]}'
         expected_static_css_src_integrity = calculate_integrity_hash(
             "css/aa-discord-announcements.min.css"
         )
-        expected_static_js_src = f'/static/aa_discord_announcements/javascript/aa-discord-announcements.min.js?v={context["version"]}'
+        expected_static_js_src = f'/static/{PACKAGE_NAME}/javascript/aa-discord-announcements.min.js?v={context["version"]}'
         expected_static_js_src_integrity = calculate_integrity_hash(
             "javascript/aa-discord-announcements.min.js"
         )
@@ -72,7 +73,7 @@ class TestVersionedStatic(TestCase):
 
         rendered_template = template_to_render.render(context=context)
 
-        expected_static_css_src = f'/static/aa_discord_announcements/css/aa-discord-announcements.min.css?v={context["version"]}'
+        expected_static_css_src = f'/static/{PACKAGE_NAME}/css/aa-discord-announcements.min.css?v={context["version"]}'
 
         self.assertIn(member=expected_static_css_src, container=rendered_template)
         self.assertNotIn(member="integrity=", container=rendered_template)
