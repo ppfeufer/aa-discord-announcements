@@ -154,14 +154,17 @@ $(document).ready(() => {
             return obj;
         }, {});
 
-        $.ajax({
-            url: discordAnnouncementsSettings.url.createAnnouncement,
-            type: 'post',
-            data: formData,
+        // Fetch API call to create the announcement
+        fetch(discordAnnouncementsSettings.url.createAnnouncement, {
+            method: 'POST',
             headers: {
+                'Content-Type': 'application/json',
                 'X-CSRFToken': inputCsrfMiddlewareToken.val()
             },
-            success: (data) => {
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
                 if (data.success === true) {
                     $('.aa-discord-announcements-no-announcement').hide('fast');
                     $('.aa-discord-announcements-announcement').show('fast');
@@ -188,8 +191,13 @@ $(document).ready(() => {
                         );
                     }
                 }
-            }
-        });
+            })
+            .catch(() => {
+                showError(
+                    'Something went wrong, no details given.',
+                    '.aa-discord-announcements-form-message'
+                );
+            });
     });
 
     /**

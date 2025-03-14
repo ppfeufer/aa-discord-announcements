@@ -129,7 +129,7 @@ def ajax_create_announcement(request: WSGIRequest) -> HttpResponse:
     context = {}
 
     if request.method == "POST":
-        form = AnnouncementForm(data=request.POST)
+        form = AnnouncementForm(data=json.loads(request.body))
 
         if form.is_valid():
             logger.info(msg="Discord announcement received")
