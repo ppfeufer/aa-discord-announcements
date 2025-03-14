@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.3.1\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2025-03-06 16:04+0100\n"
+"POT-Creation-Date: 2025-03-14 12:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,21 +23,21 @@ msgstr ""
 msgid "Discord Announcements"
 msgstr ""
 
-#: aa_discord_announcements/admin.py:32 aa_discord_announcements/models.py:85
+#: aa_discord_announcements/admin.py:31 aa_discord_announcements/models.py:85
 msgid "Group name"
 msgstr ""
 
-#: aa_discord_announcements/admin.py:38 aa_discord_announcements/admin.py:72
+#: aa_discord_announcements/admin.py:36 aa_discord_announcements/admin.py:64
 #: aa_discord_announcements/models.py:108
 #: aa_discord_announcements/models.py:200
 msgid "Group restrictions"
 msgstr ""
 
-#: aa_discord_announcements/admin.py:61 aa_discord_announcements/models.py:178
+#: aa_discord_announcements/admin.py:55 aa_discord_announcements/models.py:178
 msgid "Discord channel"
 msgstr ""
 
-#: aa_discord_announcements/admin.py:66 aa_discord_announcements/models.py:186
+#: aa_discord_announcements/admin.py:59 aa_discord_announcements/models.py:186
 msgid "Webhook URL"
 msgstr ""
 
@@ -47,11 +47,11 @@ msgstr ""
 msgid "Discord Announcements v{__version__}"
 msgstr ""
 
-#: aa_discord_announcements/forms.py:21
+#: aa_discord_announcements/forms.py:22
 msgid "This field is mandatory"
 msgstr ""
 
-#: aa_discord_announcements/forms.py:42
+#: aa_discord_announcements/forms.py:46
 msgid "Discord Markdown"
 msgstr ""
 
@@ -234,10 +234,10 @@ msgstr ""
 msgid "Additionally configured announcement targets"
 msgstr ""
 
-#: aa_discord_announcements/views.py:158
+#: aa_discord_announcements/views.py:156
 msgid "Form invalid. Please check your input."
 msgstr ""
 
-#: aa_discord_announcements/views.py:160
+#: aa_discord_announcements/views.py:159
 msgid "No form data submitted."
 msgstr ""

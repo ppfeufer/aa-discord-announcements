@@ -34,10 +34,11 @@ class AaDiscordAnnouncementsMenuItem(
         :return:
         """
 
-        if request.user.has_perm(perm="aa_discord_announcements.basic_access"):
-            return MenuItemHook.render(self, request=request)
-
-        return ""
+        return (
+            MenuItemHook.render(self, request=request)
+            if request.user.has_perm(perm="aa_discord_announcements.basic_access")
+            else ""
+        )
 
 
 @hooks.register("menu_item_hook")

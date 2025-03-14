@@ -121,12 +121,12 @@ def ajax_get_webhooks(request: WSGIRequest) -> HttpResponse:
 def ajax_create_announcement(request: WSGIRequest) -> HttpResponse:
     """
     Create the announcement
+
     :param request:
     :return:
     """
 
     context = {}
-    success = False
 
     if request.method == "POST":
         form = AnnouncementForm(data=request.POST)
@@ -147,18 +147,16 @@ def ajax_create_announcement(request: WSGIRequest) -> HttpResponse:
 
             logger.info(msg=f"Discord announcement created by user {request.user}")
 
-            announcement_context["request"] = request
-
             context["announcement_context"] = render_to_string(
                 template_name="aa_discord_announcements/partials/announcement/copy-paste-text.html",
                 context=announcement_context,
             )
-            success = True
+            context["success"] = True
         else:
             context["message"] = str(_("Form invalid. Please check your input."))
+            context["success"] = False
     else:
         context["message"] = str(_("No form data submitted."))
+        context["success"] = False
 
-    context["success"] = success
-
-    return HttpResponse(json.dumps(context), content_type="application/json")
+    return HttpResponse(content=json.dumps(context), content_type="application/json")
