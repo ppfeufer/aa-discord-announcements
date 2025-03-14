@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [2.4.0] - 2025-03-14
+
 ### Changed
 
 - Test coverage improved
