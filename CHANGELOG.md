@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- Test coverage improved
 - Use native fetch API instead of outdated AJAX
 - CSS cleanup
 - Python code refactored and simplified/optimized

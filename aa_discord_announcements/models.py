@@ -14,9 +14,18 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+# Alliance Auth
+from allianceauth.services.hooks import get_extension_logger
+
+# Alliance Auth (External Libs)
+from app_utils.logging import LoggerAddTag
+
 # AA Discord Announcements
+from aa_discord_announcements import __title__
 from aa_discord_announcements.app_settings import discord_service_installed
 from aa_discord_announcements.constants import DISCORD_WEBHOOK_REGEX
+
+logger = LoggerAddTag(get_extension_logger(__name__), __title__)
 
 if discord_service_installed():
     # Alliance Auth
@@ -31,6 +40,8 @@ def _get_discord_group_info(ping_target: Group) -> dict:
     :return:
     :rtype:
     """
+
+    logger.debug("Checking if Discord group info is available for %s", ping_target)
 
     if not discord_service_installed():
         raise ValidationError(
@@ -149,9 +160,11 @@ class PingTarget(models.Model):
         """
 
         # Check if the Discord service is active
-        if discord_service_installed():
-            discord_group_info = _get_discord_group_info(ping_target=self.name)
-            self.discord_id = discord_group_info["id"]
+        if not discord_service_installed():
+            raise ValidationError("Discord service is not installed")
+
+        discord_group_info = _get_discord_group_info(ping_target=self.name)
+        self.discord_id = discord_group_info["id"]
 
         super().save()  # Call the "real" save() method.
 

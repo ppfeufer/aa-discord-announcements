@@ -30,7 +30,7 @@ class PingTargetAdmin(admin.ModelAdmin):
 
     @admin.display(description=_("Group name"), ordering="name")
     def _name(self, obj):
-        return obj.name
+        return obj.name.name
 
     @admin.display(
         description=_("Group restrictions"), ordering="restricted_to_group__name"
