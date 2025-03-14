@@ -19,7 +19,7 @@ from aa_discord_announcements.helper.announcement_context import (
 
 def get_user_agent() -> UserAgent:
     """
-    Set the user agent
+    Set the user agent for dhooks_lite
 
     :return: User agent
     :rtype: UserAgent
@@ -36,7 +36,7 @@ def send_to_discord_webhook(announcement_context: dict, user: User) -> None:
     :type announcement_context: dict
     :param user: User sending the announcement
     :type user: User
-    :return:
+    :return: None
     :rtype: None
     """
 
@@ -44,19 +44,14 @@ def send_to_discord_webhook(announcement_context: dict, user: User) -> None:
         url=announcement_context["announcement_channel"]["webhook"],
         user_agent=get_user_agent(),
     )
-    webhook_announcement_context = get_webhook_announcement_context(
+    message_body = get_webhook_announcement_context(
         announcement_context=announcement_context
-    )
-    message_body = webhook_announcement_context["content"]
+    )["content"]
     author_eve_name = user.profile.main_character.character_name
 
-    message_footer = (
-        f"_Sent by {author_eve_name} "
-        f"@ {dateformat.format(value=timezone.now(), format_string='Y-m-d H:i')} (Eve Time)_"
+    message_to_send = (
+        f"{message_body}\n\n"
+        f"-# _Sent by {author_eve_name} @ {dateformat.format(value=timezone.now(), format_string='Y-m-d H:i')} (Eve Time)_"
     )
-    message_to_send = f"{message_body}\n\n{message_footer}"
 
-    discord_webhook.execute(
-        content=message_to_send,
-        wait_for_response=True,
-    )
+    discord_webhook.execute(content=message_to_send, wait_for_response=True)

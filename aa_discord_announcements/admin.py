@@ -28,22 +28,17 @@ class PingTargetAdmin(admin.ModelAdmin):
     readonly_fields = ("discord_id",)
     ordering = ("name",)
 
-    @classmethod
     @admin.display(description=_("Group name"), ordering="name")
-    def _name(cls, obj):
+    def _name(self, obj):
         return obj.name
 
-    @classmethod
     @admin.display(
         description=_("Group restrictions"), ordering="restricted_to_group__name"
     )
-    def _restricted_to_group(cls, obj):
+    def _restricted_to_group(self, obj):
         names = [x.name for x in obj.restricted_to_group.all().order_by("name")]
 
-        if names:
-            return ", ".join(names)
-
-        return None
+        return ", ".join(names) if names else None
 
 
 @admin.register(Webhook)
@@ -57,24 +52,18 @@ class WebhookAdmin(admin.ModelAdmin):
     filter_horizontal = ("restricted_to_group",)
     ordering = ("name",)
 
-    @classmethod
     @admin.display(description=_("Discord channel"), ordering="name")
-    def _name(cls, obj):
+    def _name(self, obj):
         return obj.name
 
-    @classmethod
     @admin.display(description=_("Webhook URL"), ordering="url")
-    def _url(cls, obj):
+    def _url(self, obj):
         return obj.url
 
-    @classmethod
     @admin.display(
         description=_("Group restrictions"), ordering="restricted_to_group__name"
     )
-    def _restricted_to_group(cls, obj):
+    def _restricted_to_group(self, obj):
         names = [x.name for x in obj.restricted_to_group.all().order_by("name")]
 
-        if names:
-            return ", ".join(names)
-
-        return None
+        return ", ".join(names) if names else None

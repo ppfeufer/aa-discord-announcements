@@ -12,6 +12,7 @@ from django.utils.translation import gettext_lazy as _
 def _get_mandatory_form_label_text(text: str) -> str:
     """
     Label text for mandatory form fields
+
     :param text:
     :type text:
     :return:
@@ -31,20 +32,19 @@ def _get_mandatory_form_label_text(text: str) -> str:
 def _get_discord_markdown_hint_text() -> str:
     """
     Get the formatted help text for any field that allows Discord Markdown
+
     :return:
     """
 
     discord_helpdesk_url = (
         "https://support.discord.com/hc/en-us/articles/210298617"
-        "-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline- "
+        "-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-"
     )
-
-    discord_markdown_link_text = _("Discord Markdown")
-    discord_markdown_link = (
-        f'<a href="{discord_helpdesk_url}" target="_blank" rel="noopener noreferer">'
-        f"{discord_markdown_link_text}</a>"
+    discord_markdown_link = format_lazy(
+        '<a href="{url}" target="_blank" rel="noopener noreferer">{text}</a>',
+        url=discord_helpdesk_url,
+        text=_("Discord Markdown"),
     )
-
     return format_lazy(
         _("Hint: You can use {discord_markdown_link} to format the text."),
         discord_markdown_link=discord_markdown_link,
