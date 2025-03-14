@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- CSS cleanup
 - Python code refactored and simplified/optimized
 
 ## [2.3.1] - 2025-03-06

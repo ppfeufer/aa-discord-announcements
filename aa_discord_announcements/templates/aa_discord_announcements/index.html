@@ -6,9 +6,10 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card card-default">
-                <div class="card-header bg-default">
-                    <span class="card-title">{% translate "Announcement details" %}</span>
+                <div class="card-header">
+                    <div class="card-title mb-0">{% translate "Announcement details" %}</div>
                 </div>
+
                 <div class="card-body">
                     {% include "aa_discord_announcements/partials/form/form.html" %}
                 </div>
@@ -17,9 +18,10 @@
 
         <div class="col-md-6 aa-discord-announcements-announcementtext">
             <div class="card card-default">
-                <div class="card-header bg-default">
-                    <span class="card-title">{% translate "Formatted announcement text" %}</span>
+                <div class="card-header">
+                    <div class="card-title mb-0">{% translate "Formatted announcement text" %}</div>
                 </div>
+
                 <div class="card-body">
                     {% include "aa_discord_announcements/partials/announcement/announcement.html" %}
                 </div>
