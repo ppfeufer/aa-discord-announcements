@@ -134,10 +134,14 @@ def ajax_create_announcement(request: WSGIRequest) -> HttpResponse:
         if form.is_valid():
             logger.info(msg="Discord announcement received")
 
+            logger.debug(msg=f"Announcement form data: {form.cleaned_data}")
+
             # Get ping context
             announcement_context = get_announcement_context_from_form_data(
                 form_data=form.cleaned_data
             )
+
+            logger.debug(msg=f"Announcement context: {announcement_context}")
 
             # If we have a Discord webhook, ping it
             if announcement_context["announcement_channel"]["webhook"]:
