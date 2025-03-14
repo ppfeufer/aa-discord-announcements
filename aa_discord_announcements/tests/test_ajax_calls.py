@@ -3,18 +3,21 @@ Test ajax calls
 """
 
 # Standard Library
+import json
 from http import HTTPStatus
+from unittest.mock import patch
 
 # Django
 from django.contrib.auth.models import Group
-from django.test import TestCase
+from django.test import RequestFactory, TestCase
 from django.urls import reverse
 
 # AA Discord Announcements
 from aa_discord_announcements.tests.utils import create_fake_user
+from aa_discord_announcements.views import ajax_create_announcement
 
 
-class TestAccess(TestCase):
+class TestAjaxCalls(TestCase):
     """
     Test access to ajax calls
     """
@@ -41,11 +44,19 @@ class TestAccess(TestCase):
             permissions=["aa_discord_announcements.basic_access"],
         )
 
+    def setUp(self):
+        """
+        Setup
+        """
+
+        self.factory = RequestFactory()
+
     def test_ajax_get_announcement_targets_no_access(self):
         """
-        Test ajax call to get announcement targets available for
-        the current user without access to it
+        Test ajax call to get announcement targets available for the current user without access to it
+
         :return:
+        :rtype:
         """
 
         # given
@@ -64,7 +75,9 @@ class TestAccess(TestCase):
     def test_ajax_get_announcement_targets_general(self):
         """
         Test ajax call to get announcement targets available for the current user
+
         :return:
+        :rtype:
         """
 
         # given
@@ -82,9 +95,10 @@ class TestAccess(TestCase):
 
     def test_ajax_get_webhooks_no_access(self):
         """
-        Test ajax call to get webhooks available for
-        the current user without access to it
+        Test ajax call to get webhooks available for the current user without access to it
+
         :return:
+        :rtype:
         """
 
         # given
@@ -101,7 +115,9 @@ class TestAccess(TestCase):
     def test_ajax_get_webhooks_general(self):
         """
         Test ajax call to get webhooks available for the current user
+
         :return:
+        :rtype:
         """
 
         # given
@@ -117,9 +133,10 @@ class TestAccess(TestCase):
 
     def test_ajax_create_announcement_no_access(self):
         """
-        Test ajax call to create an announcement is not available for
-        a user without access to it
+        Test ajax call to create an announcement is not available for a user without access to it
+
         :return:
+        :rtype:
         """
 
         # given
@@ -136,7 +153,9 @@ class TestAccess(TestCase):
     def test_ajax_create_announcement_general(self):
         """
         Test ajax call to create an announcement is available for the current user
+
         :return:
+        :rtype:
         """
 
         # given
@@ -150,32 +169,163 @@ class TestAccess(TestCase):
         # then
         self.assertEqual(first=res.status_code, second=HTTPStatus.OK)
 
-    def test_ajax_create_announcement_with_form_data(self):
+    @patch("aa_discord_announcements.views.get_announcement_context_from_form_data")
+    @patch("aa_discord_announcements.views.send_to_discord_webhook")
+    def test_creates_announcement_successfully_with_webhook(
+        self, mock_send_to_discord_webhook, mock_get_announcement_context
+    ):
         """
-        Test ajax call to create an announcement for the current user with form data
+        Test ajax call to create an announcement is successful with a webhook
+
+        :param mock_send_to_discord_webhook:
+        :type mock_send_to_discord_webhook:
+        :param mock_get_announcement_context:
+        :type mock_get_announcement_context:
         :return:
+        :rtype:
         """
 
-        # given
-        self.client.force_login(user=self.user_1002)
-
-        form_data = {
-            "announcement_target": "@here",
-            "announcement_channel": "",
-            "announcement_text": "Borg to slaughter!",
+        mock_get_announcement_context.return_value = {
+            "announcement_target": {
+                "group_id": None,
+                "group_name": None,
+                "at_mention": "@here",
+            },
+            "announcement_channel": {"webhook": True},
+            "announcement_text": "Borg to fight!",
         }
 
-        # when
+        self.client.force_login(user=self.user_1002)
+
+        form_data = json.dumps(
+            {
+                "announcement_target": "@here",
+                "announcement_channel": "1",
+                "announcement_text": "Borg to fight!",
+            }
+        )
         response = self.client.post(
             path=reverse(viewname="aa_discord_announcements:ajax_create_announcement"),
             data=form_data,
+            content_type="application/json",
         )
 
-        # then
+        print(
+            json.loads(response.content)
+        )  # Add this line to print the response content
+
         self.assertEqual(first=response.status_code, second=HTTPStatus.OK)
         self.assertTemplateUsed(
             response=response,
             template_name="aa_discord_announcements/partials/announcement/copy-paste-text.html",
         )
         self.assertContains(response=response, text="@here")
-        self.assertContains(response=response, text="Borg to slaughter!")
+        self.assertContains(response=response, text="Borg to fight!")
+
+        mock_send_to_discord_webhook.assert_called_once()
+
+    @patch("aa_discord_announcements.views.get_announcement_context_from_form_data")
+    @patch("aa_discord_announcements.views.send_to_discord_webhook")
+    def test_creates_announcement_successfully_without_webhook(
+        self, mock_send_to_discord_webhook, mock_get_announcement_context
+    ):
+        """
+        Test ajax call to create an announcement is successful without a webhook
+
+        :param mock_send_to_discord_webhook:
+        :type mock_send_to_discord_webhook:
+        :param mock_get_announcement_context:
+        :type mock_get_announcement_context:
+        :return:
+        :rtype:
+        """
+
+        mock_get_announcement_context.return_value = {
+            "announcement_target": {
+                "group_id": None,
+                "group_name": None,
+                "at_mention": "@here",
+            },
+            "announcement_channel": {"webhook": False},
+            "announcement_text": "Borg to fight!",
+        }
+
+        self.client.force_login(user=self.user_1002)
+
+        form_data = json.dumps(
+            {
+                "announcement_target": "@here",
+                "announcement_channel": "1",
+                "announcement_text": "Borg to fight!",
+            }
+        )
+        response = self.client.post(
+            path=reverse(viewname="aa_discord_announcements:ajax_create_announcement"),
+            data=form_data,
+            content_type="application/json",
+        )
+
+        print(
+            json.loads(response.content)
+        )  # Add this line to print the response content
+
+        self.assertEqual(first=response.status_code, second=HTTPStatus.OK)
+        self.assertTemplateUsed(
+            response=response,
+            template_name="aa_discord_announcements/partials/announcement/copy-paste-text.html",
+        )
+        self.assertContains(response=response, text="@here")
+        self.assertContains(response=response, text="Borg to fight!")
+
+        mock_send_to_discord_webhook.assert_not_called()
+
+    def test_form_invalid_returns_error(self):
+        """
+        Test ajax call to create an announcement returns an error if the form is invalid
+
+        :return:
+        :rtype:
+        """
+
+        request = self.factory.post(
+            path=reverse(viewname="aa_discord_announcements:ajax_create_announcement"),
+            data=json.dumps(
+                {
+                    "announcement_target": "800432143549333504",
+                    "announcement_channel": "1",
+                }
+            ),
+            content_type="application/json",
+        )
+        request.user = self.user_1002
+
+        response = ajax_create_announcement(request)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertFalse(json.loads(response.content)["success"])
+        self.assertEqual(
+            json.loads(response.content)["message"],
+            "Form invalid. Please check your input.",
+        )
+
+    def no_form_data_submitted_returns_error(self):
+        """
+        Test ajax call to create an announcement returns an error if no form data is submitted
+
+        :return:
+        :rtype:
+        """
+
+        request = self.factory.post(
+            path=reverse(viewname="aa_discord_announcements:ajax_create_announcement"),
+            content_type="application/json",
+        )
+        request.user = self.user_1002
+
+        response = ajax_create_announcement(request)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertFalse(json.loads(response.content)["success"])
+        self.assertEqual(
+            json.loads(response.content)["message"], "No form data submitted."
+        )
