@@ -210,10 +210,6 @@ class TestAjaxCalls(TestCase):
             content_type="application/json",
         )
 
-        print(
-            json.loads(response.content)
-        )  # Add this line to print the response content
-
         self.assertEqual(first=response.status_code, second=HTTPStatus.OK)
         self.assertTemplateUsed(
             response=response,
@@ -264,10 +260,6 @@ class TestAjaxCalls(TestCase):
             data=form_data,
             content_type="application/json",
         )
-
-        print(
-            json.loads(response.content)
-        )  # Add this line to print the response content
 
         self.assertEqual(first=response.status_code, second=HTTPStatus.OK)
         self.assertTemplateUsed(

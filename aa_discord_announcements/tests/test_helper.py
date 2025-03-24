@@ -297,7 +297,7 @@ class TestSendToDiscordWebhook(TestCase):
 
         # Use regex to match the dynamic timestamp
         expected_content_pattern = re.compile(
-            r"Test announcement content\n\n-# _Sent by TestCharacter @ \d{4}-\d{2}-\d{2} \d{2}:\d{2} \(Eve Time\)_"
+            r"Test announcement content\n\n-# _Sent by TestCharacter @ \d{4}-\d{2}-\d{2} \d{2}:\d{2} \(EVE time\)_"
         )
         actual_content = mock_execute.call_args[1]["content"]
         self.assertTrue(expected_content_pattern.match(actual_content))
@@ -375,6 +375,6 @@ class TestSendToDiscordWebhook(TestCase):
         send_to_discord_webhook(announcement_context, mock_user)
 
         mock_execute.assert_called_once_with(
-            content="\n\n-# _Sent by TestCharacter @ 2023-10-10 10:10 (Eve Time)_",
+            content="\n\n-# _Sent by TestCharacter @ 2023-10-10 10:10 (EVE time)_",
             wait_for_response=True,
         )

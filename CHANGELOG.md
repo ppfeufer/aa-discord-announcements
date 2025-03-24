@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Spelling (It's EVE time, not Eve time)
+
 ## [2.4.0] - 2025-03-14
 
 ### Changed

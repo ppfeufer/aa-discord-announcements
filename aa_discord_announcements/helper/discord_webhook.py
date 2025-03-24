@@ -51,7 +51,7 @@ def send_to_discord_webhook(announcement_context: dict, user: User) -> None:
 
     message_to_send = (
         f"{message_body}\n\n"
-        f"-# _Sent by {author_eve_name} @ {dateformat.format(value=timezone.now(), format_string='Y-m-d H:i')} (Eve Time)_"
+        f"-# _Sent by {author_eve_name} @ {dateformat.format(value=timezone.now(), format_string='Y-m-d H:i')} (EVE time)_"
     )
 
     discord_webhook.execute(content=message_to_send, wait_for_response=True)
