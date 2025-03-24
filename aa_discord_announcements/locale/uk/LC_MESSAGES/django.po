@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
 "POT-Creation-Date: 2025-03-14 18:30+0100\n"
-"PO-Revision-Date: 2025-03-08 12:17+0000\n"
+"PO-Revision-Date: 2025-03-23 09:24+0000\n"
 "Last-Translator: M <skrypets@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/uk/>\n"
 "Language: uk\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: aa_discord_announcements/__init__.py:9
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:10
 msgid "Discord Announcements"
-msgstr ""
+msgstr "Discord оголошення"
 
 #: aa_discord_announcements/admin.py:31 aa_discord_announcements/models.py:96
 msgid "Group name"
@@ -49,7 +49,7 @@ msgstr "Посилання вебхука"
 #: aa_discord_announcements/apps.py:21
 #, python-brace-format
 msgid "Discord Announcements v{__version__}"
-msgstr ""
+msgstr "Discord оголошення v{__version__}"
 
 #: aa_discord_announcements/forms.py:22
 msgid "This field is mandatory"
@@ -65,34 +65,26 @@ msgid "Hint: You can use {discord_markdown_link} to format the text."
 msgstr "Підказка: Ви можете використовувати {discord_markdown_link} для форматування тексту."
 
 #: aa_discord_announcements/forms.py:61
-#, fuzzy
-#| msgid "Announcement Text"
 msgid "Announcement target"
-msgstr "Текст оголошення"
+msgstr "Ціль оголошення (роль/група)"
 
 #: aa_discord_announcements/forms.py:63
 msgid "Who do you want to ping?"
 msgstr "Кого тегнути?"
 
 #: aa_discord_announcements/forms.py:67
-#, fuzzy
-#| msgid "Announcement Text"
 msgid "Announcement channel"
-msgstr "Текст оголошення"
+msgstr "Канал оголошення"
 
 #: aa_discord_announcements/forms.py:69
 msgid "Select a channel to send the announcement to automatically."
 msgstr "Виберіть канал для автоматичного відправлення оголошення."
 
 #: aa_discord_announcements/forms.py:73
-#, fuzzy
-#| msgid "Announcement Text"
 msgid "Announcement text"
 msgstr "Текст оголошення"
 
 #: aa_discord_announcements/forms.py:79
-#, fuzzy
-#| msgid "Your announcement…"
 msgid "Your announcement …"
 msgstr "Ваше оголошення…"
 
@@ -118,7 +110,7 @@ msgstr "Ім'я ролі Discord, яку потрібно пінгувати. (�
 
 #: aa_discord_announcements/models.py:110
 msgid "Discord ID"
-msgstr ""
+msgstr "Discord ID"
 
 #: aa_discord_announcements/models.py:111
 msgid "ID of the Discord role to ping"
@@ -145,7 +137,7 @@ msgstr "Дозволено"
 
 #: aa_discord_announcements/models.py:136
 msgid "Whether this ping target is enabled or not"
-msgstr ""
+msgstr "Чи ціль для пінгу активна"
 
 #: aa_discord_announcements/models.py:144
 msgid "Discord ping target"
@@ -184,38 +176,32 @@ msgid "Invalid webhook URL. The webhook URL you entered does not match any known
 msgstr "Недійсний URL вебхука. Вказаний вами URL не відповідає жодному з відомих форматів для Discord вебхука. Перевірте URL."
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:10
-#, fuzzy
-#| msgid "Announcement Text"
 msgid "Announcement details"
-msgstr "Текст оголошення"
+msgstr "Деталі оголошення"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:22
-#, fuzzy
-#| msgid "Announcement Text"
 msgid "Formatted announcement text"
-msgstr "Текст оголошення"
+msgstr "Відформатований текст оголошення"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:43
 msgid "Mandatory information is missing.<br>To create an announcement, you need to fill out the following fields:<br>» Announcement text"
-msgstr ""
+msgstr "Відсутня обов'язкова інформація.<br>Щоб створити оголошення, потрібно заповнити наступні поля:<br>» Текст оголошення"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:46
 msgid "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn&apos;t support this feature."
-msgstr ""
+msgstr "Помилка! Ваше оголошення не скопійоване у буфер обміну. Ваш бравзер не підтримує цю опцію."
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:47
 msgid "Success! Your announcement text has been copied to your clipboard."
-msgstr ""
+msgstr "Успіx! Ваше оголошення скопійоване у буфер обміну."
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:6
 msgid "No announcement created yet …"
-msgstr ""
+msgstr "Оголошення ще не створено…"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:23
-#, fuzzy
-#| msgid "Announcement Text"
 msgid "Copy announcement text"
-msgstr "Текст оголошення"
+msgstr "Скопіювати текст оголошення"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/footer/app-translation-footer.html:5
 msgid "Do you want to help translate this app into your language or improve the existing translation?"
@@ -226,10 +212,8 @@ msgid "Join our team of translators!"
 msgstr "Приєднуйтесь до нашої команди перекладачів!"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/form/form.html:22
-#, fuzzy
-#| msgid "Your announcement…"
 msgid "Create announcement"
-msgstr "Ваше оголошення…"
+msgstr "Створити оголошення"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/form/segments/announcement-channel.html:3
 msgid "None, just format it for me"
@@ -241,11 +225,11 @@ msgstr "Не пінгувати"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/form/segments/announcement-targets.html:9
 msgid "Additionally configured announcement targets"
-msgstr ""
+msgstr "Додатково налаштовані цілі оголошення"
 
 #: aa_discord_announcements/views.py:160
 msgid "Form invalid. Please check your input."
-msgstr "Форма невірна. Будь ласка, перевірте дані."
+msgstr "Форма невалідна. Будь ласка, перевірте ваші введені дані."
 
 #: aa_discord_announcements/views.py:163
 msgid "No form data submitted."
