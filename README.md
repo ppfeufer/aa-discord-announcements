@@ -25,11 +25,18 @@ ______________________________________________________________________
 <!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=2 -->
 
 - [Installation](#installation)
-  - [Step 1: Install the App](#step-1-install-the-app)
-  - [Step 2: Update Your AA Settings](#step-2-update-your-aa-settings)
-  - [Step 3: Finalizing the Installation](#step-3-finalizing-the-installation)
-  - [Step 4: Setting up Permission](#step-4-setting-up-permission)
-  - [Step 5: Setting up the App](#step-5-setting-up-the-app)
+  - [Bare Metal Installation](#bare-metal-installation)
+    - [Step 1: Install the App](#step-1-install-the-app)
+    - [Step 2: Update Your AA Settings](#step-2-update-your-aa-settings)
+    - [Step 3: Finalizing the Installation](#step-3-finalizing-the-installation)
+  - [Docker Installation](#docker-installation)
+    - [Step 1: Add the App](#step-1-add-the-app)
+    - [Step 2: Update Your AA Settings](#step-2-update-your-aa-settings-1)
+    - [Step 3: Build Auth and Restart Your Containers](#step-3-build-auth-and-restart-your-containers)
+    - [Step 4: Run Migrations and Collect Static Files](#step-4-run-migrations-and-collect-static-files)
+  - [Common Installation Steps](#common-installation-steps)
+    - [Setting up Permission](#setting-up-permission)
+    - [Setting up the App](#setting-up-the-app)
 - [Changelog](#changelog)
 - [Translation Status](#translation-status)
 - [Contributing](#contributing)
@@ -60,7 +67,9 @@ please install it first before proceeding.
 > [Discord service](https://allianceauth.readthedocs.io/en/latest/features/services/discord.html)
 > installed, configured and activated before installing this app.
 
-### Step 1: Install the App<a name="step-1-install-the-app"></a>
+### Bare Metal Installation<a name="bare-metal-installation"></a>
+
+#### Step 1: Install the App<a name="step-1-install-the-app"></a>
 
 Make sure you're in the virtual environment (venv) of your Alliance Auth installation.
 Then install the latest version:
@@ -69,13 +78,13 @@ Then install the latest version:
 pip install aa-discord-announcements
 ```
 
-### Step 2: Update Your AA Settings<a name="step-2-update-your-aa-settings"></a>
+#### Step 2: Update Your AA Settings<a name="step-2-update-your-aa-settings"></a>
 
 Configure your AA settings (`local.py`) as follows:
 
 - Add `"aa_discord_announcements",` to `INSTALLED_APPS`
 
-### Step 3: Finalizing the Installation<a name="step-3-finalizing-the-installation"></a>
+#### Step 3: Finalizing the Installation<a name="step-3-finalizing-the-installation"></a>
 
 Copy static files and run migrations
 
@@ -86,13 +95,46 @@ python manage.py migrate
 
 Restart your supervisor services for AA
 
-### Step 4: Setting up Permission<a name="step-4-setting-up-permission"></a>
+### Docker Installation<a name="docker-installation"></a>
+
+#### Step 1: Add the App<a name="step-1-add-the-app"></a>
+
+Add the app to your `conf/requirements.txt`
+
+```text
+aa-discord-announcements==2.4.1
+```
+
+#### Step 2: Update Your AA Settings<a name="step-2-update-your-aa-settings-1"></a>
+
+Configure your AA settings (`conf/local.py`) as follows:
+
+- Add `"aa_discord_announcements",` to `INSTALLED_APPS`
+
+#### Step 3: Build Auth and Restart Your Containers<a name="step-3-build-auth-and-restart-your-containers"></a>
+
+```shell
+docker compose build
+docker compose --env-file=.env up -d
+```
+
+#### Step 4: Run Migrations and Collect Static Files<a name="step-4-run-migrations-and-collect-static-files"></a>
+
+```shell
+docker compose exec allianceauth_gunicorn bash
+auth collectstatic
+auth migrate
+```
+
+### Common Installation Steps<a name="common-installation-steps"></a>
+
+#### Setting up Permission<a name="setting-up-permission"></a>
 
 Now you can set up permissions in Alliance Auth for your users.
 Add `aa_discord_announcements | general | Can access this app` to the states and/or
 groups you would like to have access.
 
-### Step 5: Setting up the App<a name="step-5-setting-up-the-app"></a>
+#### Setting up the App<a name="setting-up-the-app"></a>
 
 In your admin backend you'll find a new section called `Discord Announcements`.
 This is where you set all your stuff up, like the webhooks you want to ping and who
