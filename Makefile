@@ -51,6 +51,7 @@ prepare-release: graph_models pot
 	@echo "Preparing a release …"
 	@read -p "New Version Number: " new_version; \
 	sed -i "/__version__/c\__version__ = \"$$new_version\"" $(package)/__init__.py; \
+	sed -i "/$(appname)==/c\$(appname)==$$new_version" README.md; \
 	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
 	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
 #	subdircount=$$(find $(translation_directory) -mindepth 1 -maxdepth 1 -type d | wc -l); \
@@ -65,6 +66,7 @@ prepare-release: graph_models pot
 #		done; \
 #	fi;
 	@echo "Updated version in $(TEXT_BOLD)$(package)/__init__.py$(TEXT_BOLD_END)"
+	@echo "Updated version in $(TEXT_BOLD)README.md Docker installation instructions$(TEXT_BOLD_END)"
 
 # Help
 .PHONY: help
@@ -79,7 +81,7 @@ help::
 	@echo "  $(TEXT_UNDERLINE)General:$(TEXT_UNDERLINE_END)"
 	@echo "    graph_models              Create a graph of the models"
 	@echo "    help                      Show this help message"
-	@echo "    prepare-release           Prepare a release and update the version in '$(package)/__init__.py'."
+	@echo "    prepare-release           Prepare a release and update the version in '$(package)/__init__.py' and 'README.md' Docker install instructions."
 	@echo "                              Please make sure to update the 'CHANGELOG.md' file accordingly."
 	@echo ""
 
