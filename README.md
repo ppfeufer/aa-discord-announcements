@@ -47,16 +47,6 @@ ______________________________________________________________________
 
 ## Installation<a name="installation"></a>
 
-> [!NOTE]
->
-> **AA Discord Announcements >=2.0.0 needs at least Alliance Auth v4.0.0**.
->
-> Please make sure to update your Alliance Auth instance _before_ you install this
-> module or update to the latest version, otherwise an update to Alliance Auth will
-> be pulled in unsupervised.
->
-> The last version compatible with Alliance Auth v3 is `1.4.2`.
-
 This app is a plugin for Alliance Auth. If you don't have Alliance Auth running already,
 please install it first before proceeding.
 (See the official [AA installation guide](https://allianceauth.readthedocs.io/en/latest/installation/allianceauth.html) for details)
