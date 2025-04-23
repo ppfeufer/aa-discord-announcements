@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [2.4.2] - 2025-04-23
+
 ### Added
 
 - Docker install instructions to [README.md](https://github.com/ppfeufer/aa-discord-announcements#docker-installation)
