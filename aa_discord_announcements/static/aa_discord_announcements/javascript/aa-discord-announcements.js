@@ -19,14 +19,33 @@ $(document).ready(() => {
     /* Functions
     --------------------------------------------------------------------------------- */
     /**
+     * Get data from a given ajax URL
+     *
+     * @param {string} url The URL to query
+     * @returns {Promise<string>}
+     */
+    const getDataFromAjaxUrl = async (url) => {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            const message = `Error ${response.status}: ${response.statusText}`;
+
+            throw new Error(message);
+        }
+
+        return await response.text();
+    };
+
+    /**
      * Get the additional Discord ping targets for the current user
      */
     const getAnnouncementTargetsForCurrentUser = () => {
-        $.ajax({
-            url: discordAnnouncementsSettings.url.getAnnouncementTargets,
-            success: (data) => {
-                $(selectAnnouncementTarget).html(data);
+        getDataFromAjaxUrl(discordAnnouncementsSettings.url.getAnnouncementTargets).then((announcementTargets) => {
+            if (announcementTargets !== '') {
+                $(selectAnnouncementTarget).html(announcementTargets);
             }
+        }).catch((error) => {
+            console.error('Error fetching announcement targets:', error);
         });
     };
 
@@ -34,11 +53,12 @@ $(document).ready(() => {
      * Get webhooks for current user
      */
     const getWebhooksForCurrentUser = () => {
-        $.ajax({
-            url: discordAnnouncementsSettings.url.getAnnouncementWebhooks,
-            success: (data) => {
-                $(selectAnnouncementChannel).html(data);
+        getDataFromAjaxUrl(discordAnnouncementsSettings.url.getAnnouncementWebhooks).then((announcementWebhooks) => {
+            if (announcementWebhooks !== '') {
+                $(selectAnnouncementChannel).html(announcementWebhooks);
             }
+        }).catch((error) => {
+            console.error('Error fetching announcement webhooks:', error);
         });
     };
 
