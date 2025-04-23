@@ -39,6 +39,10 @@ Section Order:
 
 - Docker install instructions to [README.md](https://github.com/ppfeufer/aa-discord-announcements#docker-installation)
 
+### Changed
+
+- Switch to Fetch API instead of XMLHttpRequest to get the dropdown information
+
 ## [2.4.1] - 2025-04-09
 
 ### Fixed
