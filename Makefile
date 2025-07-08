@@ -58,7 +58,7 @@ prepare-release: graph_models pot
 	@echo ""
 	@echo "Preparing a release …"
 	@read -p "New Version Number: " new_version; \
-	sed -i "/__version__/c\__version__ = \"$$new_version\"" $(package)/__init__.py; \
+	sed -i "/__version__ = /c\__version__ = \"$$new_version\"" $(package)/__init__.py; \
 	sed -i "/$(appname)==/c\$(appname)==$$new_version" README.md; \
 	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
 	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
