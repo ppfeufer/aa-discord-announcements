@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023, 2024.
+# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023, 2024, 2025.
 # Zigor Fernandez Moreno <sietehierros@gmail.com>, 2023, 2024.
 # Geovanny David Morales De la cruz <moralesgeovanny1996@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2025-06-03 10:21+0200\n"
-"PO-Revision-Date: 2024-11-09 11:25+0000\n"
+"POT-Creation-Date: 2025-08-04 21:32+0200\n"
+"PO-Revision-Date: 2025-07-29 20:18+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #: aa_discord_announcements/__init__.py:9
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
@@ -63,8 +63,6 @@ msgid "Hint: You can use {discord_markdown_link} to format the text."
 msgstr "Pista: Puedes usar {discord_markdown_link} para dar formato al texto."
 
 #: aa_discord_announcements/forms.py:61
-#, fuzzy
-#| msgid "Announcement Target"
 msgid "Announcement target"
 msgstr "Destino del anuncio"
 
@@ -73,8 +71,6 @@ msgid "Who do you want to ping?"
 msgstr "¿A quién quieres hacer ping?"
 
 #: aa_discord_announcements/forms.py:67
-#, fuzzy
-#| msgid "Announcement Channel"
 msgid "Announcement channel"
 msgstr "Canal del anuncio"
 
@@ -83,8 +79,6 @@ msgid "Select a channel to send the announcement to automatically."
 msgstr "Seleccione un canal para enviar el anuncio automáticamente."
 
 #: aa_discord_announcements/forms.py:73
-#, fuzzy
-#| msgid "Announcement Text"
 msgid "Announcement text"
 msgstr "Texto del anuncio"
 
@@ -144,14 +138,10 @@ msgid "Whether this ping target is enabled or not"
 msgstr "Si el destino de este ping está habilitado o no"
 
 #: aa_discord_announcements/models.py:144
-#, fuzzy
-#| msgid "Discord Ping Target"
 msgid "Discord ping target"
 msgstr "Destino del Ping de Discord"
 
 #: aa_discord_announcements/models.py:145
-#, fuzzy
-#| msgid "Discord Ping Targets"
 msgid "Discord ping targets"
 msgstr "Destinos del Ping de Discord"
 
@@ -184,20 +174,14 @@ msgid "Invalid webhook URL. The webhook URL you entered does not match any known
 msgstr "URL de webhook no válida. La URL del webhook que ingresó no coincide con ningún formato conocido para un webhook de Discord. Compruebe la URL del webhook."
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:10
-#, fuzzy
-#| msgid "Announcement Details"
 msgid "Announcement details"
 msgstr "Detalles del anuncio"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:22
-#, fuzzy
-#| msgid "Formatted Announcement Text"
 msgid "Formatted announcement text"
 msgstr "Formato del Texto del Anuncio"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:43
-#, fuzzy
-#| msgid "Mandatory information is missing.<br>To create an announcement, you need to fill out the following fields:<br>» Announcement Text"
 msgid "Mandatory information is missing.<br>To create an announcement, you need to fill out the following fields:<br>» Announcement text"
 msgstr "Falta información obligatoria.<br>Para crear un anuncio, debe completar los siguientes campos:<br>» Texto del anuncio"
 
@@ -214,8 +198,6 @@ msgid "No announcement created yet …"
 msgstr "Aún no se ha creado ningún anuncio…"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:23
-#, fuzzy
-#| msgid "Copy Announcement Text"
 msgid "Copy announcement text"
 msgstr "Copiar el Texto del Anuncio"
 
@@ -228,8 +210,6 @@ msgid "Join our team of translators!"
 msgstr "¡Únete a nuestro equipo de traductores!"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/form/form.html:22
-#, fuzzy
-#| msgid "Create Announcement"
 msgid "Create announcement"
 msgstr "Crear un Anuncio"
 
@@ -238,8 +218,6 @@ msgid "None, just format it for me"
 msgstr "Ninguno, solo formatéalo para mí"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/form/segments/announcement-targets.html:3
-#, fuzzy
-#| msgid "Don't Ping"
 msgid "Don't ping"
 msgstr "No hacer Ping"
 
