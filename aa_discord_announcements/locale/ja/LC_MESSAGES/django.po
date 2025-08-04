@@ -2,16 +2,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Xrandier <xrandier@gmail.com>, 2024.
-# Peter Pfeufer <info@ppfeufer.de>, 2024.
+# Peter Pfeufer <info@ppfeufer.de>, 2024, 2025.
 # Deleted User <noreply+44@weblate.org>, 2024.
 # SiO4 <hohoit0078@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2025-06-03 10:21+0200\n"
-"PO-Revision-Date: 2025-06-28 08:30+0000\n"
-"Last-Translator: SiO4 <hohoit0078@gmail.com>\n"
+"POT-Creation-Date: 2025-08-04 21:32+0200\n"
+"PO-Revision-Date: 2025-07-29 20:23+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -76,8 +76,9 @@ msgid "Announcement channel"
 msgstr "通知チャンネル"
 
 #: aa_discord_announcements/forms.py:69
+#, fuzzy
 msgid "Select a channel to send the announcement to automatically."
-msgstr ""
+msgstr "通知を自動で転送する対象を選んでください。"
 
 #: aa_discord_announcements/forms.py:73
 msgid "Announcement text"
