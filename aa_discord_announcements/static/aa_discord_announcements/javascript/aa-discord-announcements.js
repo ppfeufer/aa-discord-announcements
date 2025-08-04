@@ -183,8 +183,8 @@ $(document).ready(() => {
             },
             body: JSON.stringify(formData)
         })
-            .then(response => response.json())
-            .then(data => {
+            .then((response) => response.json())
+            .then((data) => {
                 if (data.success === true) {
                     $('.aa-discord-announcements-no-announcement').hide('fast');
                     $('.aa-discord-announcements-announcement').show('fast');
