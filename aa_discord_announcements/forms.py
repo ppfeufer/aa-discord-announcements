@@ -13,10 +13,10 @@ def _get_mandatory_form_label_text(text: str) -> str:
     """
     Label text for mandatory form fields
 
-    :param text:
-    :type text:
-    :return:
-    :rtype:
+    :param text: The text to be displayed in the label
+    :type text: str
+    :return: The formatted label text with a required marker
+    :rtype: str
     """
 
     required_text = _("This field is mandatory")
@@ -31,9 +31,10 @@ def _get_mandatory_form_label_text(text: str) -> str:
 
 def _get_discord_markdown_hint_text() -> str:
     """
-    Get the formatted help text for any field that allows Discord Markdown
+    Get the formatted help text for any field that allows Discord Markdown formatting.
 
-    :return:
+    :return: The formatted help text with a link to Discord's Markdown guide
+    :rtype: str
     """
 
     discord_helpdesk_url = (
@@ -70,7 +71,7 @@ class AnnouncementForm(forms.Form):
     )
     announcement_text = forms.CharField(
         required=True,
-        label=_get_mandatory_form_label_text(_("Announcement text")),
+        label=_get_mandatory_form_label_text(str(_("Announcement text"))),
         widget=forms.Textarea(
             attrs={
                 "rows": 10,
