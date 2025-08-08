@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2025-08-04 21:32+0200\n"
+"POT-Creation-Date: 2025-08-08 10:09+0200\n"
 "PO-Revision-Date: 2024-11-09 11:25+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/ru/>\n"
@@ -53,36 +53,36 @@ msgstr "Объявления Discord v{__version__}"
 msgid "This field is mandatory"
 msgstr "Обязательное поле"
 
-#: aa_discord_announcements/forms.py:46
+#: aa_discord_announcements/forms.py:47
 msgid "Discord Markdown"
 msgstr "Разметка Discord"
 
-#: aa_discord_announcements/forms.py:49
+#: aa_discord_announcements/forms.py:50
 #, python-brace-format
 msgid "Hint: You can use {discord_markdown_link} to format the text."
 msgstr "Подсказка: Вы можете использовать {discord_markdown_link} для форматирования текста."
 
-#: aa_discord_announcements/forms.py:61
+#: aa_discord_announcements/forms.py:62
 msgid "Announcement target"
 msgstr "Цель объявления"
 
-#: aa_discord_announcements/forms.py:63
+#: aa_discord_announcements/forms.py:64
 msgid "Who do you want to ping?"
 msgstr "Кого Вы хотите пинговать?"
 
-#: aa_discord_announcements/forms.py:67
+#: aa_discord_announcements/forms.py:68
 msgid "Announcement channel"
 msgstr "Канал объявления"
 
-#: aa_discord_announcements/forms.py:69
+#: aa_discord_announcements/forms.py:70
 msgid "Select a channel to send the announcement to automatically."
 msgstr "Выберите канал для автоматической отправки объявлений."
 
-#: aa_discord_announcements/forms.py:73
+#: aa_discord_announcements/forms.py:74
 msgid "Announcement text"
 msgstr "Текст объявления"
 
-#: aa_discord_announcements/forms.py:79
+#: aa_discord_announcements/forms.py:80
 msgid "Your announcement …"
 msgstr "Ваше объявление …"
 
@@ -181,15 +181,17 @@ msgstr "Детали анонса"
 msgid "Formatted announcement text"
 msgstr "Отформатированный текст анонса"
 
-#: aa_discord_announcements/templates/aa_discord_announcements/index.html:43
+#: aa_discord_announcements/templates/aa_discord_announcements/index.html:32
 msgid "Mandatory information is missing.<br>To create an announcement, you need to fill out the following fields:<br>» Announcement text"
 msgstr "Отсутствует необходимая информация. <br>Для создания анонса необходимо заполнить следующие поля:<br>» Текст анонса"
 
-#: aa_discord_announcements/templates/aa_discord_announcements/index.html:46
-msgid "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn&apos;t support this feature."
+#: aa_discord_announcements/templates/aa_discord_announcements/index.html:33
+#, fuzzy
+#| msgid "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn&apos;t support this feature."
+msgid "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn't support this feature."
 msgstr "Ошибка! Объявление не было скопировано в буфер обмена. Вероятно Ваш браузер не предоставляет такую функциональность."
 
-#: aa_discord_announcements/templates/aa_discord_announcements/index.html:47
+#: aa_discord_announcements/templates/aa_discord_announcements/index.html:34
 msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr "Успех! Объявление скопировано в буфер обмена."
 
