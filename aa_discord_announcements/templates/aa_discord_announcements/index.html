@@ -17,7 +17,7 @@
         </div>
 
         <div class="col-md-6 aa-discord-announcements-announcementtext">
-            <div class="card card-default">
+            <div class="card card-default position-sticky" style="top: 1rem;">
                 <div class="card-header">
                     <div class="card-title mb-0">{% translate "Formatted announcement text" %}</div>
                 </div>
@@ -53,8 +53,4 @@
 {% block extra_javascript %}
     {% include "bundles/clipboard-js.html" %}
     {% include "aa_discord_announcements/bundles/discord-announcements-js.html" %}
-{% endblock %}
-
-{% block extra_css %}
-    {% include "aa_discord_announcements/bundles/discord-announcements-css.html" %}
 {% endblock %}

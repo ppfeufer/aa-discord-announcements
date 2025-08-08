@@ -39,6 +39,10 @@ Section Order:
 
 - Fetch API usage refactored
 
+### Removed
+
+- App CSS in favor of Bootstrap 5 classes
+
 ## [2.5.2] - 2025-08-04
 
 ### Changed
