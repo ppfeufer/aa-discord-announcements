@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [2.5.3] - 2025-08-08
+
 ### Changed
 
 - JS translation handling improved
