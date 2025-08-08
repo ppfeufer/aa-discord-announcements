@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- JS translation handling improved
 - Fetch API usage refactored
 
 ### Removed

@@ -29,22 +29,25 @@
         </div>
     </div>
 
+    {% translate "Mandatory information is missing.<br>To create an announcement, you need to fill out the following fields:<br>» Announcement text" as l10nMissingFields %}
+    {% translate "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn't support this feature." as l10nCopyToClipboardError %}
+    {% translate "Success! Your announcement text has been copied to your clipboard." as l10nCopyToClipboardSuccess %}
+
     <script>
         const discordAnnouncementsSettings = {
             url: {
                 createAnnouncement: '{% url "aa_discord_announcements:ajax_create_announcement" %}',
                 getAnnouncementTargets: '{% url "aa_discord_announcements:ajax_get_announcement_targets" %}',
                 getAnnouncementWebhooks: '{% url "aa_discord_announcements:ajax_get_webhooks" %}'
-            }
-        };
-
-        const discordAnnouncementsTranslations = {
-            error: {
-                missingFields: '{% translate "Mandatory information is missing.<br>To create an announcement, you need to fill out the following fields:<br>» Announcement text" %}'
             },
-            copyToClipboard: {
-                error: '{% translate "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn&apos;t support this feature." %}',
-                success: '{% translate "Success! Your announcement text has been copied to your clipboard." %}'
+            translation: {
+                error: {
+                    missingFields: '{{ l10nMissingFields|escapejs }}'
+                },
+                copyToClipboard: {
+                    error: '{{ l10nCopyToClipboardError|escapejs }}',
+                    success: '{{ l10nCopyToClipboardSuccess|escapejs }}'
+                }
             }
         };
     </script>
