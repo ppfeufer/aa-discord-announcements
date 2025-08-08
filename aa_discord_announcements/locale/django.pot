@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.5.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2025-08-04 21:32+0200\n"
+"POT-Creation-Date: 2025-08-08 10:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,36 +51,36 @@ msgstr ""
 msgid "This field is mandatory"
 msgstr ""
 
-#: aa_discord_announcements/forms.py:46
+#: aa_discord_announcements/forms.py:47
 msgid "Discord Markdown"
 msgstr ""
 
-#: aa_discord_announcements/forms.py:49
+#: aa_discord_announcements/forms.py:50
 #, python-brace-format
 msgid "Hint: You can use {discord_markdown_link} to format the text."
 msgstr ""
 
-#: aa_discord_announcements/forms.py:61
+#: aa_discord_announcements/forms.py:62
 msgid "Announcement target"
 msgstr ""
 
-#: aa_discord_announcements/forms.py:63
+#: aa_discord_announcements/forms.py:64
 msgid "Who do you want to ping?"
 msgstr ""
 
-#: aa_discord_announcements/forms.py:67
+#: aa_discord_announcements/forms.py:68
 msgid "Announcement channel"
 msgstr ""
 
-#: aa_discord_announcements/forms.py:69
+#: aa_discord_announcements/forms.py:70
 msgid "Select a channel to send the announcement to automatically."
 msgstr ""
 
-#: aa_discord_announcements/forms.py:73
+#: aa_discord_announcements/forms.py:74
 msgid "Announcement text"
 msgstr ""
 
-#: aa_discord_announcements/forms.py:79
+#: aa_discord_announcements/forms.py:80
 msgid "Your announcement …"
 msgstr ""
 
