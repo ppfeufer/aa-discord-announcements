@@ -1,4 +1,4 @@
-/* global ClipboardJS, discordAnnouncementsSettings, discordAnnouncementsTranslations */
+/* global ClipboardJS, discordAnnouncementsSettings */
 
 $(document).ready(() => {
     'use strict';
@@ -250,7 +250,7 @@ $(document).ready(() => {
          */
         clipboardFleetPingData.on('success', (e) => {
             showSuccess(
-                discordAnnouncementsTranslations.copyToClipboard.success,
+                discordAnnouncementsSettings.translation.copyToClipboard.success,
                 '.aa-discord-announcements-announcement-copyresult'
             );
 
@@ -263,7 +263,7 @@ $(document).ready(() => {
          */
         clipboardFleetPingData.on('error', () => {
             showError(
-                discordAnnouncementsTranslations.copyToClipboard.error,
+                discordAnnouncementsSettings.translation.copyToClipboard.error,
                 '.aa-discord-announcements-announcement-copyresult'
             );
 
@@ -290,7 +290,7 @@ $(document).ready(() => {
 
         if (announcementFormMandatoryFields.includes('')) {
             showError(
-                discordAnnouncementsTranslations.error.missingFields,
+                discordAnnouncementsSettings.translation.error.missingFields,
                 '.aa-discord-announcements-form-message'
             );
 
