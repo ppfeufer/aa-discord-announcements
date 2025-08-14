@@ -35,11 +35,14 @@ Section Order:
 ### Security
 -->
 
+## [2.6.0] - 2025-08-14
+
 ### Changed
 
 - Use AA framework JS functions
 - Minimum requirements
   - Alliance Auth >= 4.9.0
+- Translations updated
 
 ## [2.5.3] - 2025-08-08
 
