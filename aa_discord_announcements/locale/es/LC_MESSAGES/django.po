@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2025-08-08 10:09+0200\n"
-"PO-Revision-Date: 2025-07-29 20:18+0000\n"
+"POT-Creation-Date: 2025-08-14 06:04+0200\n"
+"PO-Revision-Date: 2025-08-08 14:19+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/es/>\n"
 "Language: es\n"
@@ -186,8 +186,6 @@ msgid "Mandatory information is missing.<br>To create an announcement, you need 
 msgstr "Falta información obligatoria.<br>Para crear un anuncio, debe completar los siguientes campos:<br>» Texto del anuncio"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:33
-#, fuzzy
-#| msgid "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn&apos;t support this feature."
 msgid "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn't support this feature."
 msgstr "¡Error! Su anuncio no se copió en su portapapeles. Tal vez su navegador no admita esta función."
 
