@@ -4,10 +4,10 @@ App config
 
 # Django
 from django.apps import AppConfig
-from django.utils.translation import gettext_lazy as _
+from django.utils.text import format_lazy
 
 # AA Discord Announcements
-from aa_discord_announcements import __version__
+from aa_discord_announcements import __title_translated__, __version__
 
 
 class AaDiscordAnnouncementsConfig(AppConfig):
@@ -17,5 +17,6 @@ class AaDiscordAnnouncementsConfig(AppConfig):
 
     name = "aa_discord_announcements"
     label = "aa_discord_announcements"
-    # Translators: This is the app name and version, which will appear in the Django Backend
-    verbose_name = _(f"Discord Announcements v{__version__}")
+    verbose_name = format_lazy(
+        "{app_title} v{version}", app_title=__title_translated__, version=__version__
+    )
