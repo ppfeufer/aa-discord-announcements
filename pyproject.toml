@@ -49,11 +49,13 @@ optional-dependencies.tests-allianceauth-latest = [
     "faker",
 ]
 urls.Changelog = "https://github.com/ppfeufer/aa-discord-announcements/blob/master/CHANGELOG.md"
+urls.Codecov = "https://codecov.io/gh/ppfeufer/aa-discord-announcements"
+urls.Discord = "https://discord.gg/fjnHAmk"
 urls.Documentation = "https://github.com/ppfeufer/aa-discord-announcements/blob/master/README.md"
-urls.Donations = "https://ko-fi.com/ppfeufer"
-urls.Homepage = "https://github.com/ppfeufer/aa-discord-announcements"
-urls.Source = "https://github.com/ppfeufer/aa-discord-announcements.git"
+urls.Donation = "https://ko-fi.com/ppfeufer"
+urls.GitHub = "https://github.com/ppfeufer/aa-discord-announcements"
 urls.Tracker = "https://github.com/ppfeufer/aa-discord-announcements/issues"
+urls.Translation = "https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/"
 
 [tool.hatch.build]
 include = [
