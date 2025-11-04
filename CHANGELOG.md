@@ -36,9 +36,15 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.6.2] - 2025-11-04
+
 ### Fixed
 
 - Django `makemessages` doesn't seem to recognize f-strings anymore
+
+### Changed
+
+- Translations updated
 
 ## [2.6.1] - 2025-09-02
 
@@ -393,6 +399,7 @@ Section Order:
 [2.5.3]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.5.2...v2.5.3 "v2.5.3"
 [2.6.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.5.3...v2.6.0 "v2.6.0"
 [2.6.1]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.6.0...v2.6.1 "v2.6.1"
-[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.6.1...HEAD "In Development"
+[2.6.2]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.6.1...v2.6.2 "v2.6.2"
+[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.6.2...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
