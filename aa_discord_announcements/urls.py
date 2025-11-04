@@ -9,7 +9,7 @@ from django.urls import include, path
 from aa_discord_announcements import views
 from aa_discord_announcements.constants import INTERNAL_URL_PREFIX
 
-app_name: str = "aa_discord_announcements"
+app_name: str = "aa_discord_announcements"  # pylint: disable=invalid-name
 
 # Ajax URLs
 ajax_urls = path(
