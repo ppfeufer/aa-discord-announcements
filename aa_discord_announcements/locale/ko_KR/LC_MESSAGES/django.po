@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2025-08-14 06:04+0200\n"
-"PO-Revision-Date: 2025-04-28 07:24+0000\n"
+"POT-Creation-Date: 2025-11-04 09:31+0100\n"
+"PO-Revision-Date: 2025-10-25 13:23+0000\n"
 "Last-Translator: SiO4 <hohoit0078@gmail.com>\n"
 "Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/ko/>\n"
 "Language: ko_KR\n"
@@ -18,9 +18,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.11.1\n"
+"X-Generator: Weblate 5.14\n"
 
-#: aa_discord_announcements/__init__.py:9
+#: aa_discord_announcements/__init__.py:10
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:10
 msgid "Discord Announcements"
@@ -43,12 +43,6 @@ msgstr "디스코드 채널"
 #: aa_discord_announcements/admin.py:59 aa_discord_announcements/models.py:199
 msgid "Webhook URL"
 msgstr "웹훅 URL"
-
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_discord_announcements/apps.py:21
-#, python-brace-format
-msgid "Discord Announcements v{__version__}"
-msgstr "디스코드 공지 v{__version__}"
 
 #: aa_discord_announcements/forms.py:22
 msgid "This field is mandatory"
@@ -242,8 +236,12 @@ msgstr "추가된 공지 역할"
 
 #: aa_discord_announcements/views.py:160
 msgid "Form invalid. Please check your input."
-msgstr "잘못된 양식. 내용을 확인해 주세요."
+msgstr "잘못된 양식입니다. 내용을 확인해 주세요."
 
 #: aa_discord_announcements/views.py:163
 msgid "No form data submitted."
-msgstr "양식 데이터가 없습니다."
+msgstr "데이터 양식이 없습니다."
+
+#, python-brace-format
+#~ msgid "Discord Announcements v{__version__}"
+#~ msgstr "디스코드 공지 v{__version__}"
