@@ -7,14 +7,14 @@ from http import HTTPStatus
 
 # Django
 from django.contrib.auth.models import Group
-from django.test import TestCase
 from django.urls import reverse
 
 # AA Discord Announcements
+from aa_discord_announcements.tests import BaseTestCase
 from aa_discord_announcements.tests.utils import create_fake_user
 
 
-class TestAccess(TestCase):
+class TestAccess(BaseTestCase):
     """
     Test access to the module
     """

@@ -2,16 +2,14 @@
 Test cases for the `aa_discord_announcements.helper.discord_webhook` module.
 """
 
-# Standard Library
-from unittest import TestCase
-
 # AA Discord Announcements
 from aa_discord_announcements import __version__
 from aa_discord_announcements.constants import APP_NAME, GITHUB_URL
 from aa_discord_announcements.helper.discord_webhook import get_user_agent
+from aa_discord_announcements.tests import BaseTestCase
 
 
-class TestUserAgent(TestCase):
+class TestUserAgent(BaseTestCase):
     """
     Test cases for the `UserAgent` class
     """

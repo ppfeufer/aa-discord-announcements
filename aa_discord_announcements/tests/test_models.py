@@ -12,7 +12,6 @@ from requests.exceptions import HTTPError
 from django.contrib.auth.models import Group
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
-from django.test import TestCase
 
 # AA Discord Announcements
 from aa_discord_announcements.models import (
@@ -21,9 +20,10 @@ from aa_discord_announcements.models import (
     Webhook,
     _get_discord_group_info,
 )
+from aa_discord_announcements.tests import BaseTestCase
 
 
-class TestGetDiscordGroupInfo(TestCase):
+class TestGetDiscordGroupInfo(BaseTestCase):
     """
     Test _get_discord_group_info function
     """
@@ -125,7 +125,7 @@ class TestGetDiscordGroupInfo(TestCase):
             _get_discord_group_info(mock_group)
 
 
-class TestGeneralModel(TestCase):
+class TestGeneralModel(BaseTestCase):
     """
     Test General model
     """
@@ -167,7 +167,7 @@ class TestGeneralModel(TestCase):
         self.assertEqual(general._meta.default_permissions, ())
 
 
-class TestPingTargetModel(TestCase):
+class TestPingTargetModel(BaseTestCase):
     """
     Test the PingTarget model
     """
@@ -329,7 +329,7 @@ class TestPingTargetModel(TestCase):
         self.assertEqual(first=str(ping_target), second=group.name)
 
 
-class TestWebhookModel(TestCase):
+class TestWebhookModel(BaseTestCase):
     """
     Test the Webhook model
     """
