@@ -4,14 +4,14 @@ from unittest.mock import patch
 # Django
 from django.contrib import admin
 from django.contrib.auth.models import Group
-from django.test import TestCase
 
 # AA Discord Announcements
 from aa_discord_announcements.admin import PingTargetAdmin, WebhookAdmin
 from aa_discord_announcements.models import PingTarget, Webhook
+from aa_discord_announcements.tests import BaseTestCase
 
 
-class TestPingTargetAdmin(TestCase):
+class TestPingTargetAdmin(BaseTestCase):
     """
     Test the PingTargetAdmin class
     """
@@ -77,7 +77,7 @@ class TestPingTargetAdmin(TestCase):
         self.assertIsNone(admin_instance._restricted_to_group(ping_target))
 
 
-class TestWebhookAdmin(TestCase):
+class TestWebhookAdmin(BaseTestCase):
     """
     Test the WebhookAdmin class
     """

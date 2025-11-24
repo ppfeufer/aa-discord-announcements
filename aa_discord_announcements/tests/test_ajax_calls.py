@@ -9,15 +9,16 @@ from unittest.mock import patch
 
 # Django
 from django.contrib.auth.models import Group
-from django.test import RequestFactory, TestCase
+from django.test import RequestFactory
 from django.urls import reverse
 
 # AA Discord Announcements
+from aa_discord_announcements.tests import BaseTestCase
 from aa_discord_announcements.tests.utils import create_fake_user
 from aa_discord_announcements.views import ajax_create_announcement
 
 
-class TestAjaxCalls(TestCase):
+class TestAjaxCalls(BaseTestCase):
     """
     Test access to ajax calls
     """

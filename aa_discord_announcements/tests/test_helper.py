@@ -4,7 +4,6 @@ from unittest.mock import Mock, patch
 
 # Django
 from django.contrib.auth.models import Group, User
-from django.test import TestCase
 
 # AA Discord Announcements
 from aa_discord_announcements.helper.announcement_context import (
@@ -13,9 +12,10 @@ from aa_discord_announcements.helper.announcement_context import (
 )
 from aa_discord_announcements.helper.discord_webhook import send_to_discord_webhook
 from aa_discord_announcements.models import PingTarget, Webhook
+from aa_discord_announcements.tests import BaseTestCase
 
 
-class TestAnnouncementContext(TestCase):
+class TestAnnouncementContext(BaseTestCase):
     """
     Test the get_announcement_context_from_form_data function
     """
@@ -164,7 +164,7 @@ class TestAnnouncementContext(TestCase):
         self.assertEqual(context["announcement_text"], "Test announcement")
 
 
-class TestWebhookAnnouncementContext(TestCase):
+class TestWebhookAnnouncementContext(BaseTestCase):
     """
     Test the get_webhook_announcement_context function
     """
@@ -255,7 +255,7 @@ class TestWebhookAnnouncementContext(TestCase):
         self.assertEqual(result["content"], "")
 
 
-class TestSendToDiscordWebhook(TestCase):
+class TestSendToDiscordWebhook(BaseTestCase):
     """
     Test the send_to_discord_webhook function
     """

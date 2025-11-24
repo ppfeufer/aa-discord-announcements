@@ -3,13 +3,14 @@ Test checks for installed modules we might use
 """
 
 # Django
-from django.test import TestCase, modify_settings
+from django.test import modify_settings
 
 # AA Discord Announcements
 from aa_discord_announcements.app_settings import discord_service_installed
+from aa_discord_announcements.tests import BaseTestCase
 
 
-class TestModulesInstalled(TestCase):
+class TestModulesInstalled(BaseTestCase):
     """
     Test for installed modules
     """

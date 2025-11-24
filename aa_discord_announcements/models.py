@@ -17,15 +17,13 @@ from django.utils.translation import gettext_lazy as _
 # Alliance Auth
 from allianceauth.services.hooks import get_extension_logger
 
-# Alliance Auth (External Libs)
-from app_utils.logging import LoggerAddTag
-
 # AA Discord Announcements
 from aa_discord_announcements import __title__
 from aa_discord_announcements.app_settings import discord_service_installed
 from aa_discord_announcements.constants import DISCORD_WEBHOOK_REGEX
+from aa_discord_announcements.providers import AppLogger
 
-logger = LoggerAddTag(get_extension_logger(__name__), __title__)
+logger = AppLogger(get_extension_logger(__name__), __title__)
 
 if discord_service_installed():
     # Alliance Auth

@@ -3,16 +3,17 @@ Test the settings
 """
 
 # Django
-from django.test import TestCase, modify_settings, override_settings
+from django.test import modify_settings, override_settings
 
 # AA Discord Announcements
 from aa_discord_announcements.app_settings import (
     debug_enabled,
     discord_service_installed,
 )
+from aa_discord_announcements.tests import BaseTestCase
 
 
-class TestSettings(TestCase):
+class TestSettings(BaseTestCase):
     """
     Test the settings
     """

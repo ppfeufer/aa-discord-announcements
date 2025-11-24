@@ -17,10 +17,6 @@ from django.utils.translation import gettext_lazy as _
 # Alliance Auth
 from allianceauth.services.hooks import get_extension_logger
 
-# Alliance Auth (External Libs)
-from app_utils.logging import LoggerAddTag
-from app_utils.urls import site_absolute_url
-
 # AA Discord Announcements
 from aa_discord_announcements import __title__
 from aa_discord_announcements.forms import AnnouncementForm
@@ -29,8 +25,9 @@ from aa_discord_announcements.helper.announcement_context import (
 )
 from aa_discord_announcements.helper.discord_webhook import send_to_discord_webhook
 from aa_discord_announcements.models import PingTarget, Webhook
+from aa_discord_announcements.providers import AppLogger
 
-logger = LoggerAddTag(get_extension_logger(__name__), __title__)
+logger = AppLogger(get_extension_logger(__name__), __title__)
 
 
 @login_required
@@ -49,7 +46,6 @@ def index(request: WSGIRequest) -> HttpResponse:
             | Q(restricted_to_group__isnull=True),
             is_enabled=True,
         ).exists(),
-        "site_url": site_absolute_url(),
         "main_character": request.user.profile.main_character,
         "form": AnnouncementForm,
     }
