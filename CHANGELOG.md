@@ -36,6 +36,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.7.0] - 2025-12-02
+
+### Changed
+
+- Translations updated
+
 ### Removed
 
 - `allianceauth-app-utils` as dependency
@@ -404,6 +410,7 @@ Section Order:
 [2.6.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.5.3...v2.6.0 "v2.6.0"
 [2.6.1]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.6.0...v2.6.1 "v2.6.1"
 [2.6.2]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.6.1...v2.6.2 "v2.6.2"
-[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.6.2...HEAD "In Development"
+[2.7.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.6.2...v2.7.0 "v2.7.0"
+[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.7.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
