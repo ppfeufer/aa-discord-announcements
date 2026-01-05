@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2025-12-02 02:32+0100\n"
-"PO-Revision-Date: 2025-11-24 13:11+0000\n"
+"POT-Creation-Date: 2026-01-05 19:22+0100\n"
+"PO-Revision-Date: 2025-12-03 08:17+0000\n"
 "Last-Translator: Dexsar <dexsar.paf@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/ja/>\n"
 "Language: ja\n"
@@ -71,7 +71,6 @@ msgid "Announcement channel"
 msgstr "通知チャンネル"
 
 #: aa_discord_announcements/forms.py:70
-#, fuzzy
 msgid "Select a channel to send the announcement to automatically."
 msgstr "通知を自動で転送する対象を選んでください。"
 
@@ -128,7 +127,7 @@ msgstr "この設定に関するメモをここに追加できます（任意）
 #: aa_discord_announcements/models.py:133
 #: aa_discord_announcements/models.py:227
 msgid "Is enabled"
-msgstr "有効になっています"
+msgstr "有効です"
 
 #: aa_discord_announcements/models.py:134
 msgid "Whether this ping target is enabled or not"
@@ -148,11 +147,11 @@ msgstr "このウェブフックが投稿するチャネル名"
 
 #: aa_discord_announcements/models.py:200
 msgid "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
-msgstr ""
+msgstr "このWebhookのURL、例：https://discord.com/api/webhooks/123456/abcdef"
 
 #: aa_discord_announcements/models.py:220
 msgid "You can add notes about this webhook here if you want"
-msgstr ""
+msgstr "必要に応じて、このWebhookに関するメモをここに追加できます"
 
 #: aa_discord_announcements/models.py:228
 msgid "Whether this webhook is active or not"
