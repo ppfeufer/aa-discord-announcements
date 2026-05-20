@@ -25,9 +25,9 @@ from aa_discord_announcements.helper.announcement_context import (
 )
 from aa_discord_announcements.helper.discord_webhook import send_to_discord_webhook
 from aa_discord_announcements.models import PingTarget, Webhook
-from aa_discord_announcements.providers import AppLogger
+from aa_discord_announcements.providers.applogger import AppLogger
 
-logger = AppLogger(get_extension_logger(__name__), __title__)
+logger = AppLogger(get_extension_logger(__name__))
 
 
 @login_required

@@ -37,6 +37,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Providers are now modular
+
 ## [2.7.3] - 2026-05-05
 
 ### Changed

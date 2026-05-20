@@ -18,12 +18,11 @@ from django.utils.translation import gettext_lazy as _
 from allianceauth.services.hooks import get_extension_logger
 
 # AA Discord Announcements
-from aa_discord_announcements import __title__
 from aa_discord_announcements.app_settings import discord_service_installed
 from aa_discord_announcements.constants import DISCORD_WEBHOOK_REGEX
-from aa_discord_announcements.providers import AppLogger
+from aa_discord_announcements.providers.applogger import AppLogger
 
-logger = AppLogger(get_extension_logger(__name__), __title__)
+logger = AppLogger(get_extension_logger(__name__))
 
 if discord_service_installed():
     # Alliance Auth
