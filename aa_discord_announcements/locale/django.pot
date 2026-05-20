@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.7.3\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2026-05-20 10:33+0200\n"
+"POT-Creation-Date: 2026-05-20 10:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,11 +75,11 @@ msgid "Announcement text"
 msgstr ""
 
 #: aa_discord_announcements/forms.py:80
-msgid "Your announcement …"
+msgid "Your announcement…"
 msgstr ""
 
 #: aa_discord_announcements/models.py:45
-msgid "You might want to install the Discord service first …"
+msgid "You might want to install the Discord service first…"
 msgstr ""
 
 #: aa_discord_announcements/models.py:55
@@ -110,7 +110,7 @@ msgstr ""
 
 #: aa_discord_announcements/models.py:117
 #: aa_discord_announcements/models.py:211
-msgid "Restrict ping rights to the following groups …"
+msgid "Restrict ping rights to the following groups…"
 msgstr ""
 
 #: aa_discord_announcements/models.py:124
@@ -195,7 +195,7 @@ msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr ""
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:6
-msgid "No announcement created yet …"
+msgid "No announcement created yet…"
 msgstr ""
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:23
