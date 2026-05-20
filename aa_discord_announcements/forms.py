@@ -77,7 +77,7 @@ class AnnouncementForm(forms.Form):
                 "rows": 10,
                 "cols": 20,
                 "input_type": "textarea",
-                "placeholder": _("Your announcement …"),
+                "placeholder": _("Your announcement…"),
             }
         ),
         help_text=_get_discord_markdown_hint_text(),

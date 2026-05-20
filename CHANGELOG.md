@@ -37,6 +37,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Grammar - no space before ellipsis
+
 ### Changed
 
 - Providers are now modular
