@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023, 2024, 2025.
+# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023, 2024, 2025, 2026.
 # Zigor Fernandez Moreno <sietehierros@gmail.com>, 2023, 2024.
 # Geovanny David Morales De la cruz <moralesgeovanny1996@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2026-05-05 13:35+0200\n"
-"PO-Revision-Date: 2025-08-08 14:19+0000\n"
+"POT-Creation-Date: 2026-06-02 10:06+0200\n"
+"PO-Revision-Date: 2026-05-20 09:11+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.5\n"
 
 #: aa_discord_announcements/__init__.py:10
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
@@ -25,21 +25,21 @@ msgstr ""
 msgid "Discord Announcements"
 msgstr "Anuncios de Discord"
 
-#: aa_discord_announcements/admin.py:31 aa_discord_announcements/models.py:94
+#: aa_discord_announcements/admin.py:31 aa_discord_announcements/models.py:93
 msgid "Group name"
 msgstr "Nombre del grupo"
 
 #: aa_discord_announcements/admin.py:36 aa_discord_announcements/admin.py:64
-#: aa_discord_announcements/models.py:117
-#: aa_discord_announcements/models.py:211
+#: aa_discord_announcements/models.py:116
+#: aa_discord_announcements/models.py:210
 msgid "Group restrictions"
 msgstr "Restricciones de grupo"
 
-#: aa_discord_announcements/admin.py:55 aa_discord_announcements/models.py:189
+#: aa_discord_announcements/admin.py:55 aa_discord_announcements/models.py:188
 msgid "Discord channel"
 msgstr "Canal de Discord"
 
-#: aa_discord_announcements/admin.py:59 aa_discord_announcements/models.py:197
+#: aa_discord_announcements/admin.py:59 aa_discord_announcements/models.py:196
 msgid "Webhook URL"
 msgstr "URL del webhook"
 
@@ -77,93 +77,93 @@ msgid "Announcement text"
 msgstr "Texto del anuncio"
 
 #: aa_discord_announcements/forms.py:80
-msgid "Your announcement …"
-msgstr "Tu anuncio …"
+msgid "Your announcement…"
+msgstr "Tu anuncio…"
 
-#: aa_discord_announcements/models.py:46
-msgid "You might want to install the Discord service first …"
-msgstr "Es posible que desee instalar primero el servicio de Discord …"
+#: aa_discord_announcements/models.py:45
+msgid "You might want to install the Discord service first…"
+msgstr "Es posible que desee instalar primero el servicio de Discord…"
 
-#: aa_discord_announcements/models.py:56
+#: aa_discord_announcements/models.py:55
 msgid "Are you sure you have your Discord linked to your Alliance Auth?"
 msgstr "¿Está seguro de que tiene su Discord vinculado a su Alliance Auth?"
 
-#: aa_discord_announcements/models.py:62
+#: aa_discord_announcements/models.py:61
 msgid "This group has not been synced to Discord yet."
 msgstr "Este grupo aún no se ha sincronizado con Discord."
 
-#: aa_discord_announcements/models.py:80
+#: aa_discord_announcements/models.py:79
 msgid "Can access this app"
 msgstr "Puede acceder esta aplicacion"
 
-#: aa_discord_announcements/models.py:97
+#: aa_discord_announcements/models.py:96
 msgid "Name of the Discord role to ping. (Note: This must be an Auth group that is synced to Discord.)"
 msgstr "Nombre del rol de Discord para hacer ping. (Nota: debe ser un grupo de autenticación sincronizado con Discord.)"
 
-#: aa_discord_announcements/models.py:108
+#: aa_discord_announcements/models.py:107
 msgid "Discord ID"
 msgstr "ID de Discord"
 
-#: aa_discord_announcements/models.py:109
+#: aa_discord_announcements/models.py:108
 msgid "ID of the Discord role to ping"
 msgstr "ID del rol de Discord para hacer ping"
 
-#: aa_discord_announcements/models.py:118
-#: aa_discord_announcements/models.py:212
-msgid "Restrict ping rights to the following groups …"
+#: aa_discord_announcements/models.py:117
+#: aa_discord_announcements/models.py:211
+msgid "Restrict ping rights to the following groups…"
 msgstr "Restringir los derechos de ping a los siguientes grupos…"
 
-#: aa_discord_announcements/models.py:125
-#: aa_discord_announcements/models.py:219
+#: aa_discord_announcements/models.py:124
+#: aa_discord_announcements/models.py:218
 msgid "Notes"
 msgstr "Notas"
 
-#: aa_discord_announcements/models.py:126
+#: aa_discord_announcements/models.py:125
 msgid "You can add notes about this configuration here if you want"
 msgstr "Puede agregar aquí notas sobre esta configuración si lo desea"
 
-#: aa_discord_announcements/models.py:133
-#: aa_discord_announcements/models.py:227
+#: aa_discord_announcements/models.py:132
+#: aa_discord_announcements/models.py:226
 msgid "Is enabled"
 msgstr "Está habilitado"
 
-#: aa_discord_announcements/models.py:134
+#: aa_discord_announcements/models.py:133
 msgid "Whether this ping target is enabled or not"
 msgstr "Si el destino de este ping está habilitado o no"
 
-#: aa_discord_announcements/models.py:142
+#: aa_discord_announcements/models.py:141
 msgid "Discord ping target"
 msgstr "Destino del Ping de Discord"
 
-#: aa_discord_announcements/models.py:143
+#: aa_discord_announcements/models.py:142
 msgid "Discord ping targets"
 msgstr "Destinos del Ping de Discord"
 
-#: aa_discord_announcements/models.py:190
+#: aa_discord_announcements/models.py:189
 msgid "Name of the channel this webhook posts to"
 msgstr "Nombre del canal en el que publica este webhook"
 
-#: aa_discord_announcements/models.py:200
+#: aa_discord_announcements/models.py:199
 msgid "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
 msgstr "URL de este webhook, p.ej. https://discord.com/api/webhooks/123456/abcdef"
 
-#: aa_discord_announcements/models.py:220
+#: aa_discord_announcements/models.py:219
 msgid "You can add notes about this webhook here if you want"
 msgstr "Puede agregar aquí notas sobre este webhook si lo desea"
 
-#: aa_discord_announcements/models.py:228
+#: aa_discord_announcements/models.py:227
 msgid "Whether this webhook is active or not"
 msgstr "Si este webhook está activo o no"
 
-#: aa_discord_announcements/models.py:236
+#: aa_discord_announcements/models.py:235
 msgid "Webhook"
 msgstr "Webhook"
 
-#: aa_discord_announcements/models.py:237
+#: aa_discord_announcements/models.py:236
 msgid "Webhooks"
 msgstr "Webhooks"
 
-#: aa_discord_announcements/models.py:253
+#: aa_discord_announcements/models.py:252
 msgid "Invalid webhook URL. The webhook URL you entered does not match any known format for a Discord webhook. Please check the webhook URL."
 msgstr "URL de webhook no válida. La URL del webhook que ingresó no coincide con ningún formato conocido para un webhook de Discord. Compruebe la URL del webhook."
 
@@ -188,7 +188,7 @@ msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr "¡Éxito! El texto de su anuncio se ha copiado en su portapapeles."
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:6
-msgid "No announcement created yet …"
+msgid "No announcement created yet…"
 msgstr "Aún no se ha creado ningún anuncio…"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:23
