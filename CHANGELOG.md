@@ -37,6 +37,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.8.0] - 2026-06-02
+
 ### Fixed
 
 - Grammar - no space before ellipsis
@@ -44,6 +46,7 @@ Section Order:
 ### Changed
 
 - Providers are now modular
+- Translations updated
 
 ## [2.7.3] - 2026-05-05
 
@@ -445,6 +448,7 @@ Section Order:
 [2.7.1]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.7.0...v2.7.1 "v2.7.1"
 [2.7.2]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.7.1...v2.7.2 "v2.7.2"
 [2.7.3]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.7.2...v2.7.3 "v2.7.3"
-[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.7.3...HEAD "In Development"
+[2.8.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.7.3...v2.8.0 "v2.8.0"
+[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.8.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
