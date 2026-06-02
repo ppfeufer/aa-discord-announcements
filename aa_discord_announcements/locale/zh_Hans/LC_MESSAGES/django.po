@@ -5,22 +5,22 @@
 # Faer Yili <yilifaer@gmail.com>, 2024.
 # SAM_FPS <sam_fps@163.com>, 2024.
 # MxdHana <236833425@qq.com>, 2024.
-# Peter Pfeufer <info@ppfeufer.de>, 2024, 2025.
+# Peter Pfeufer <info@ppfeufer.de>, 2024, 2025, 2026.
 # LichenKass <yuanchengwei_sz@163.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2026-05-05 13:35+0200\n"
-"PO-Revision-Date: 2025-12-21 13:32+0000\n"
-"Last-Translator: LichenKass <yuanchengwei_sz@163.com>\n"
+"POT-Creation-Date: 2026-06-02 10:06+0200\n"
+"PO-Revision-Date: 2026-05-20 09:11+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Chinese (Simplified Han script) <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 2026.5\n"
 
 #: aa_discord_announcements/__init__.py:10
 #: aa_discord_announcements/templates/aa_discord_announcements/base.html:6
@@ -28,21 +28,21 @@ msgstr ""
 msgid "Discord Announcements"
 msgstr "Discord公告"
 
-#: aa_discord_announcements/admin.py:31 aa_discord_announcements/models.py:94
+#: aa_discord_announcements/admin.py:31 aa_discord_announcements/models.py:93
 msgid "Group name"
 msgstr "群组名称"
 
 #: aa_discord_announcements/admin.py:36 aa_discord_announcements/admin.py:64
-#: aa_discord_announcements/models.py:117
-#: aa_discord_announcements/models.py:211
+#: aa_discord_announcements/models.py:116
+#: aa_discord_announcements/models.py:210
 msgid "Group restrictions"
 msgstr "组别限制"
 
-#: aa_discord_announcements/admin.py:55 aa_discord_announcements/models.py:189
+#: aa_discord_announcements/admin.py:55 aa_discord_announcements/models.py:188
 msgid "Discord channel"
 msgstr "Discord频道"
 
-#: aa_discord_announcements/admin.py:59 aa_discord_announcements/models.py:197
+#: aa_discord_announcements/admin.py:59 aa_discord_announcements/models.py:196
 msgid "Webhook URL"
 msgstr "Webhooks（Web挂钩）URL"
 
@@ -80,93 +80,93 @@ msgid "Announcement text"
 msgstr "公告文本"
 
 #: aa_discord_announcements/forms.py:80
-msgid "Your announcement …"
+msgid "Your announcement…"
 msgstr "您的公告…"
 
-#: aa_discord_announcements/models.py:46
-msgid "You might want to install the Discord service first …"
+#: aa_discord_announcements/models.py:45
+msgid "You might want to install the Discord service first…"
 msgstr "您可能想要先安装Discord服务…"
 
-#: aa_discord_announcements/models.py:56
+#: aa_discord_announcements/models.py:55
 msgid "Are you sure you have your Discord linked to your Alliance Auth?"
 msgstr "您确定您的Discord已经连接到你的联盟Auth了吗?"
 
-#: aa_discord_announcements/models.py:62
+#: aa_discord_announcements/models.py:61
 msgid "This group has not been synced to Discord yet."
 msgstr "这个群组还没有同步到Discord。"
 
-#: aa_discord_announcements/models.py:80
+#: aa_discord_announcements/models.py:79
 msgid "Can access this app"
 msgstr "能够访问此应用程序"
 
-#: aa_discord_announcements/models.py:97
+#: aa_discord_announcements/models.py:96
 msgid "Name of the Discord role to ping. (Note: This must be an Auth group that is synced to Discord.)"
 msgstr "要ping的Discord对象名称。（注意：这必须是一个与Discord同步的Auth群组。）"
 
-#: aa_discord_announcements/models.py:108
+#: aa_discord_announcements/models.py:107
 msgid "Discord ID"
 msgstr "Discord用户名"
 
-#: aa_discord_announcements/models.py:109
+#: aa_discord_announcements/models.py:108
 msgid "ID of the Discord role to ping"
 msgstr "要ping的Discord用户组的ID"
 
-#: aa_discord_announcements/models.py:118
-#: aa_discord_announcements/models.py:212
-msgid "Restrict ping rights to the following groups …"
+#: aa_discord_announcements/models.py:117
+#: aa_discord_announcements/models.py:211
+msgid "Restrict ping rights to the following groups…"
 msgstr "将ping权限限制到以下群组…"
 
-#: aa_discord_announcements/models.py:125
-#: aa_discord_announcements/models.py:219
+#: aa_discord_announcements/models.py:124
+#: aa_discord_announcements/models.py:218
 msgid "Notes"
 msgstr "笔记"
 
-#: aa_discord_announcements/models.py:126
+#: aa_discord_announcements/models.py:125
 msgid "You can add notes about this configuration here if you want"
 msgstr "如果您愿意，可以在这里添加关于此配置的注释"
 
-#: aa_discord_announcements/models.py:133
-#: aa_discord_announcements/models.py:227
+#: aa_discord_announcements/models.py:132
+#: aa_discord_announcements/models.py:226
 msgid "Is enabled"
 msgstr "已启用"
 
-#: aa_discord_announcements/models.py:134
+#: aa_discord_announcements/models.py:133
 msgid "Whether this ping target is enabled or not"
 msgstr "此ping对象是否启用"
 
-#: aa_discord_announcements/models.py:142
+#: aa_discord_announcements/models.py:141
 msgid "Discord ping target"
 msgstr "Discord ping对象"
 
-#: aa_discord_announcements/models.py:143
+#: aa_discord_announcements/models.py:142
 msgid "Discord ping targets"
 msgstr "Discord ping对象"
 
-#: aa_discord_announcements/models.py:190
+#: aa_discord_announcements/models.py:189
 msgid "Name of the channel this webhook posts to"
 msgstr "此webhook发布到的频道名称"
 
-#: aa_discord_announcements/models.py:200
+#: aa_discord_announcements/models.py:199
 msgid "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
 msgstr "此webhook的URL，例如https://discord.com/api/webhooks/123456/abcdef"
 
-#: aa_discord_announcements/models.py:220
+#: aa_discord_announcements/models.py:219
 msgid "You can add notes about this webhook here if you want"
 msgstr "如果你愿意，你可以在这里添加关于这个webhook的注释"
 
-#: aa_discord_announcements/models.py:228
+#: aa_discord_announcements/models.py:227
 msgid "Whether this webhook is active or not"
 msgstr "该webhook是否启用"
 
-#: aa_discord_announcements/models.py:236
+#: aa_discord_announcements/models.py:235
 msgid "Webhook"
 msgstr "Webhook（Web挂钩）"
 
-#: aa_discord_announcements/models.py:237
+#: aa_discord_announcements/models.py:236
 msgid "Webhooks"
 msgstr "Webhooks（Web挂钩）"
 
-#: aa_discord_announcements/models.py:253
+#: aa_discord_announcements/models.py:252
 msgid "Invalid webhook URL. The webhook URL you entered does not match any known format for a Discord webhook. Please check the webhook URL."
 msgstr "无效的Webhook URL。您输入的Webhook URL与Discord Webhook的任何已知格式都不匹配。请检查Webhook URL。"
 
@@ -191,7 +191,7 @@ msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr "成功！您的公告文本已复制到剪贴板。"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:6
-msgid "No announcement created yet …"
+msgid "No announcement created yet…"
 msgstr "还没有发布公告…"
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:23
