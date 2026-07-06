@@ -93,7 +93,7 @@ Restart your supervisor services for AA
 Add the app to your `conf/requirements.txt`
 
 ```text
-aa-discord-announcements==3.0.0
+aa-discord-announcements==3.0.1
 ```
 
 #### Step 2: Update Your AA Settings<a name="step-2-update-your-aa-settings-1"></a>
