@@ -19,7 +19,7 @@ django_locales = \
 # Create or update translation template (.pot file)
 .PHONY: pot
 pot: check-python-venv
-	@echo "Creating or updating .pot file…"
+	@echo "Creating or updating .pot file …"
 	@django-admin makemessages \
 		--locale en \
 		--keep-pot \
@@ -27,9 +27,9 @@ pot: check-python-venv
 		--ignore 'node_modules/*' \
 		--ignore 'testauth/*' \
 		--ignore 'runtests.py'
-	@current_app_version=$$(pip show $(appname) | grep 'Version: ' | awk '{print $$NF}'); \
-	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $(translation_template); \
-	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template);
+#	@current_app_version=$$(pip show $(appname) | grep 'Version: ' | awk '{print $$NF}');
+#	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $(translation_template); \
+#	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template);
 
 # Add a new translation
 .PHONY: add-translation
@@ -43,13 +43,13 @@ add-translation: check-python-venv
 		--ignore 'node_modules/*' \
 		--ignore 'testauth/*' \
 		--ignore 'runtests.py'; \
-	current_app_version=$$(pip show $(appname) | grep 'Version: ' | awk '{print $$NF}'); \
-	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $(translation_template); \
-	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
-	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $(translation_directory)/$$language_code/$(translation_file_relative_path); \
-	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_directory)/$$language_code/$(translation_file_relative_path); \
+#	current_app_version=$$(pip show $(appname) | grep 'Version: ' | awk '{print $$NF}'); \
+#	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $(translation_template); \
+#	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
+#	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $(translation_directory)/$$language_code/$(translation_file_relative_path); \
+#	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_directory)/$$language_code/$(translation_file_relative_path); \
 	echo "New translation added for $$language_code"; \
-	echo "Please remember to add '--locale $$language_code \' to the 'translations' target in the Makefile";
+	echo "Please remember to add '--locale $$language_code \' to the 'django_locales' target in the Makefile";
 
 # Greate or update translation files
 .PHONY: translations
@@ -61,20 +61,20 @@ translations: check-python-venv
 		--ignore 'node_modules/*' \
 		--ignore 'testauth/*' \
 		--ignore 'runtests.py'
-	@current_app_version=$$(pip show $(appname) | grep 'Version: ' | awk '{print $$NF}'); \
-	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $(translation_template); \
-	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
-	subdircount=$$(find $(translation_directory) -mindepth 1 -maxdepth 1 -type d | wc -l); \
-	if [[ $$subdircount -gt 1 ]]; then \
-		for path in $(translation_directory)/*/; do \
-			[ -d "$$path/LC_MESSAGES" ] || continue; \
-			if [[ -f "$$path/$(translation_file_relative_path)" ]] \
-				then \
-					sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $$path/$(translation_file_relative_path); \
-					sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $$path/$(translation_file_relative_path); \
-			fi; \
-		done; \
-	fi;
+#	@current_app_version=$$(pip show $(appname) | grep 'Version: ' | awk '{print $$NF}'); \
+#	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $(translation_template); \
+#	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
+#	subdircount=$$(find $(translation_directory) -mindepth 1 -maxdepth 1 -type d | wc -l); \
+#	if [[ $$subdircount -gt 1 ]]; then \
+#		for path in $(translation_directory)/*/; do \
+#			[ -d "$$path/LC_MESSAGES" ] || continue; \
+#			if [[ -f "$$path/$(translation_file_relative_path)" ]] \
+#				then \
+#					sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$current_app_version\\\n\"" $$path/$(translation_file_relative_path); \
+#					sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $$path/$(translation_file_relative_path); \
+#			fi; \
+#		done; \
+#	fi;
 
 # Compile translation files
 .PHONY: compile-translations
@@ -94,6 +94,11 @@ migrations: check-python-venv check-myauth-path
 	@echo "Creating or updating migrations"
 	@python $(myauth_path)/manage.py makemigrations $(package)
 
+.PHONY: showmigrations
+showmigrations: check-python-venv check-myauth-path
+	@echo "Showing migrations"
+	@python $(myauth_path)/manage.py showmigrations $(package)
+
 # Help message
 .PHONY: help
 help::
@@ -101,6 +106,7 @@ help::
 	@echo "    Migration Handling:"
 	@echo "      migrate                   Migrate all database changes"
 	@echo "      migrations                Create or update migrations"
+	@echo "      showmigrations            Show migrations"
 	@echo ""
 	@echo "    Translation Handling:"
 	@echo "      add-translation           Add a new translation"
