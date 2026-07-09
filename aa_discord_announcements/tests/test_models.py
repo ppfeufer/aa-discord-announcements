@@ -9,9 +9,11 @@ from unittest.mock import Mock, patch
 from requests.exceptions import HTTPError
 
 # Django
-from django.contrib.auth.models import Group
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
+
+# Alliance Auth
+from allianceauth.groupmanagement.models import Group
 
 # AA Discord Announcements
 from aa_discord_announcements.models import (

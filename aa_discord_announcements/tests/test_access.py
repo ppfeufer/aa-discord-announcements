@@ -6,8 +6,10 @@ Test checks for access to aa_discord_announcements
 from http import HTTPStatus
 
 # Django
-from django.contrib.auth.models import Group
 from django.urls import reverse
+
+# Alliance Auth
+from allianceauth.groupmanagement.models import Group
 
 # AA Discord Announcements
 from aa_discord_announcements.tests import BaseTestCase

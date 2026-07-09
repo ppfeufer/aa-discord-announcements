@@ -8,9 +8,11 @@ from http import HTTPStatus
 from unittest.mock import patch
 
 # Django
-from django.contrib.auth.models import Group
 from django.test import RequestFactory
 from django.urls import reverse
+
+# Alliance Auth
+from allianceauth.groupmanagement.models import Group
 
 # AA Discord Announcements
 from aa_discord_announcements.tests import BaseTestCase
