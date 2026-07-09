@@ -37,6 +37,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.1.0] - 2026-07-09
+
 > [!IMPORTANT]
 >
 > **This version needs Alliance Auth v5.2.0 or newer!**
@@ -485,6 +487,7 @@ Section Order:
 [2.8.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.7.3...v2.8.0 "v2.8.0"
 [3.0.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v2.8.0...v3.0.0 "v3.0.0"
 [3.0.1]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.0.0...v3.0.1 "v3.0.1"
-[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.0.1...HEAD "In Development"
+[3.1.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.0.1...v3.1.0 "v3.1.0"
+[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"

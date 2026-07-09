@@ -93,7 +93,7 @@ Restart your supervisor services for AA
 Add the app to your `conf/requirements.txt`
 
 ```text
-aa-discord-announcements==3.0.1
+aa-discord-announcements==3.1.0
 ```
 
 #### Step 2: Update Your AA Settings<a name="step-2-update-your-aa-settings-1"></a>
@@ -137,7 +137,7 @@ See [CHANGELOG.md](https://github.com/ppfeufer/aa-discord-announcements/blob/mas
 
 ## Translation Status<a name="translation-status"></a>
 
-[![Translation status](https://weblate.ppfeufer.de/widget/alliance-auth-apps/aa-discord-announcements/multi-auto.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
+[![Translation status](https://weblate.ppfeufer.de/widget/alliance-auth-apps/aa-discord-announcements/matrix-auto.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
 
 Do you want to help translate this app into your language or improve the existing
 translation? - [Join our team of translators][weblate engage]!
