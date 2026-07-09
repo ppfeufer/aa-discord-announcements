@@ -6,8 +6,10 @@ Handling Discord webhooks
 from dhooks_lite import UserAgent, Webhook
 
 # Django
-from django.contrib.auth.models import User
 from django.utils import dateformat, timezone
+
+# Alliance Auth
+from allianceauth.authentication.models import User
 
 # AA Discord Announcements
 from aa_discord_announcements import __version__

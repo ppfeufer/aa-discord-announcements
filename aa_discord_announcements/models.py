@@ -9,12 +9,12 @@ import re
 from requests.exceptions import HTTPError
 
 # Django
-from django.contrib.auth.models import Group
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 # Alliance Auth
+from allianceauth.groupmanagement.models import Group
 from allianceauth.services.hooks import get_extension_logger
 
 # AA Discord Announcements

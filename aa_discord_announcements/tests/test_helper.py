@@ -2,8 +2,9 @@
 import re
 from unittest.mock import Mock, patch
 
-# Django
-from django.contrib.auth.models import Group, User
+# Alliance Auth
+from allianceauth.authentication.models import User
+from allianceauth.groupmanagement.models import Group
 
 # AA Discord Announcements
 from aa_discord_announcements.helper.announcement_context import (
