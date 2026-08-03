@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2026-07-06 20:37+0200\n"
+"POT-Creation-Date: 2026-08-03 20:50+0200\n"
 "PO-Revision-Date: 2026-07-06 18:49+0000\n"
 "Last-Translator: \"Andrii M.\" <elfleg0las88@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/uk/>\n"
@@ -230,7 +230,3 @@ msgstr "Форма невалідна. Будь ласка, перевірте �
 #: aa_discord_announcements/views.py:159
 msgid "No form data submitted."
 msgstr "Не подано жодних даних."
-
-#, python-brace-format
-#~ msgid "Discord Announcements v{__version__}"
-#~ msgstr "Оголошення Дискорду v{__version__}"
