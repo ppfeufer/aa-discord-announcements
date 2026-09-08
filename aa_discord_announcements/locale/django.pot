@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: AA Discord Announcements 3.1.1\n"
-"Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-discord-announcements/issues\n"
-"POT-Creation-Date: 2026-08-03 20:50+0200\n"
+"Project-Id-Version: AA Discord Announcements\n"
+"Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/\n"
+"POT-Creation-Date: 2026-09-08 15:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,9 +95,7 @@ msgid "Can access this app"
 msgstr ""
 
 #: aa_discord_announcements/models.py:96
-msgid ""
-"Name of the Discord role to ping. (Note: This must be an Auth group that is "
-"synced to Discord.)"
+msgid "Name of the Discord role to ping. (Note: This must be an Auth group that is synced to Discord.)"
 msgstr ""
 
 #: aa_discord_announcements/models.py:107
@@ -144,8 +142,7 @@ msgid "Name of the channel this webhook posts to"
 msgstr ""
 
 #: aa_discord_announcements/models.py:199
-msgid ""
-"URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
+msgid "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
 msgstr ""
 
 #: aa_discord_announcements/models.py:219
@@ -165,9 +162,7 @@ msgid "Webhooks"
 msgstr ""
 
 #: aa_discord_announcements/models.py:252
-msgid ""
-"Invalid webhook URL. The webhook URL you entered does not match any known "
-"format for a Discord webhook. Please check the webhook URL."
+msgid "Invalid webhook URL. The webhook URL you entered does not match any known format for a Discord webhook. Please check the webhook URL."
 msgstr ""
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:10
@@ -179,15 +174,11 @@ msgid "Formatted announcement text"
 msgstr ""
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:32
-msgid ""
-"Mandatory information is missing.<br>To create an announcement, you need to "
-"fill out the following fields:<br>» Announcement text"
+msgid "Mandatory information is missing.<br>To create an announcement, you need to fill out the following fields:<br>» Announcement text"
 msgstr ""
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:33
-msgid ""
-"Error! Your announcement was not copied to your clipboard. Maybe your "
-"browser doesn't support this feature."
+msgid "Error! Your announcement was not copied to your clipboard. Maybe your browser doesn't support this feature."
 msgstr ""
 
 #: aa_discord_announcements/templates/aa_discord_announcements/index.html:34
@@ -203,9 +194,7 @@ msgid "Copy announcement text"
 msgstr ""
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/footer/app-translation-footer.html:5
-msgid ""
-"Do you want to help translate this app into your language or improve the "
-"existing translation?"
+msgid "Do you want to help translate this app into your language or improve the existing translation?"
 msgstr ""
 
 #: aa_discord_announcements/templates/aa_discord_announcements/partials/footer/app-translation-footer.html:8

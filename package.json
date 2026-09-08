@@ -1,5 +1,6 @@
 {
-    "name": "aa-discord-announcements",
+    "name": "@ppfeufer/aa-discord-announcements",
+    "version": "3.1.1",
     "type": "module",
     "devDependencies": {
         "@eslint/js": "^10.0.1",
