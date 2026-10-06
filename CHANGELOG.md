@@ -37,6 +37,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.1.2] - 2026-10-06
+
+### Changed
+
+- Translations updated
+
 ## [3.1.1] - 2026-08-03
 
 ### Changed
@@ -495,6 +501,7 @@ Section Order:
 [3.0.1]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.0.0...v3.0.1 "v3.0.1"
 [3.1.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.0.1...v3.1.0 "v3.1.0"
 [3.1.1]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.0...v3.1.1 "v3.1.1"
-[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.1...HEAD "In Development"
+[3.1.2]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.1...v3.1.2 "v3.1.2"
+[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.2...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
