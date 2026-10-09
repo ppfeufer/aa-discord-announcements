@@ -1,5 +1,4 @@
-{% load django_bootstrap5 %}
-{% load i18n %}
+{% load django_bootstrap5 i18n %}
 
 <form id="aa-discord-announcements-form" class="form-horizontal">
     {% csrf_token %}
@@ -9,7 +8,7 @@
 
         <!-- announcement_channel -->
         {% if webhooks_configured %}
-            {% bootstrap_field form.announcement_channel  %}
+            {% bootstrap_field form.announcement_channel %}
         {% endif %}
 
         <!-- announcement_text -->
