@@ -26,13 +26,13 @@ class BaseTestCase(TestCase):
     """
 
     @classmethod
-    def setUpClass(cls):
+    def setUpClass(cls: "BaseTestCase") -> None:
         cls.socket_original = socket.socket
         socket.socket = cls.guard
         return super().setUpClass()
 
     @classmethod
-    def tearDownClass(cls):
+    def tearDownClass(cls: "BaseTestCase") -> None:
         socket.socket = cls.socket_original
         return super().tearDownClass()
 

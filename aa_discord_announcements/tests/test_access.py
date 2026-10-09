@@ -22,7 +22,7 @@ class TestAccess(BaseTestCase):
     """
 
     @classmethod
-    def setUpClass(cls) -> None:
+    def setUpClass(cls: "TestAccess") -> None:
         """
         Set up groups and users
         """
@@ -43,7 +43,7 @@ class TestAccess(BaseTestCase):
             permissions=["aa_discord_announcements.basic_access"],
         )
 
-    def test_has_no_access(self):
+    def test_has_no_access(self: "TestAccess") -> None:
         """
         Test that a user without access gets a 302
         :return:
@@ -58,7 +58,7 @@ class TestAccess(BaseTestCase):
         # then
         self.assertEqual(first=res.status_code, second=HTTPStatus.FOUND)
 
-    def test_has_access(self):
+    def test_has_access(self: "TestAccess") -> None:
         """
         Test that a user with access gets to see it
         :return:

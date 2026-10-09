@@ -14,7 +14,7 @@ class TestUserAgent(BaseTestCase):
     Test cases for the `UserAgent` class
     """
 
-    def test_create_useragent(self):
+    def test_create_useragent(self: "TestUserAgent") -> None:
         """
         Test creating a user agent
 
@@ -28,7 +28,7 @@ class TestUserAgent(BaseTestCase):
         self.assertEqual(first=obj.url, second=GITHUB_URL)
         self.assertEqual(first=obj.version, second=__version__)
 
-    def test_useragent_str(self):
+    def test_useragent_str(self: "TestUserAgent") -> None:
         """
         Test the string representation of the user agent
 

@@ -2,12 +2,21 @@
 Hook into AA
 """
 
+__lazy_modules__ = ["django.core.handlers.wsgi"]
+
+# Standard Library
+from typing import TYPE_CHECKING
+
 # Alliance Auth
 from allianceauth import hooks
 from allianceauth.services.hooks import MenuItemHook, UrlHook
 
 # AA Discord Announcements
 from aa_discord_announcements import __title__, urls
+
+if TYPE_CHECKING:
+    # Django
+    from django.core.handlers.wsgi import WSGIRequest
 
 
 class AaDiscordAnnouncementsMenuItem(
@@ -17,8 +26,11 @@ class AaDiscordAnnouncementsMenuItem(
     This class ensures only authorized users will see the menu entry
     """
 
-    def __init__(self):
-        # setup menu entry for sidebar
+    def __init__(self: "AaDiscordAnnouncementsMenuItem"):
+        """
+        Initialize the menu item with the appropriate properties.
+        """
+
         MenuItemHook.__init__(
             self,
             text=__title__,
@@ -27,11 +39,12 @@ class AaDiscordAnnouncementsMenuItem(
             navactive=["aa_discord_announcements:"],
         )
 
-    def render(self, request):
+    def render(self: "AaDiscordAnnouncementsMenuItem", request: "WSGIRequest"):
         """
-        Check if the user has the permission to view this app
-        :param request:
-        :return:
+        Render the menu item if the user has the required permission.
+
+        :param request: The WSGI request object containing user information.
+        :return: The rendered menu item or an empty string if the user lacks permission.
         """
 
         return (
@@ -45,7 +58,8 @@ class AaDiscordAnnouncementsMenuItem(
 def register_menu():
     """
     Register our menu item
-    :return:
+
+    :return: The menu item hook instance.
     """
 
     return AaDiscordAnnouncementsMenuItem()
@@ -55,7 +69,8 @@ def register_menu():
 def register_urls():
     """
     Register our base url
-    :return:
+
+    :return: The URL hook instance.
     """
 
     return UrlHook(

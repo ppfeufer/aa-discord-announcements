@@ -2,11 +2,20 @@
 The forms
 """
 
+__lazy_modules__ = ["django.utils.functional"]
+
+# Standard Library
+from typing import TYPE_CHECKING
+
 # Django
 from django import forms
 from django.utils.safestring import mark_safe
 from django.utils.text import format_lazy
 from django.utils.translation import gettext_lazy as _
+
+if TYPE_CHECKING:
+    # Django
+    from django.utils.functional import _StrPromise
 
 
 def _get_mandatory_form_label_text(text: str) -> str:
@@ -29,12 +38,12 @@ def _get_mandatory_form_label_text(text: str) -> str:
     )
 
 
-def _get_discord_markdown_hint_text() -> str:
+def _get_discord_markdown_hint_text() -> "_StrPromise":
     """
     Get the formatted help text for any field that allows Discord Markdown formatting.
 
     :return: The formatted help text with a link to Discord's Markdown guide
-    :rtype: str
+    :rtype: _StrPromise
     """
 
     discord_helpdesk_url = (
