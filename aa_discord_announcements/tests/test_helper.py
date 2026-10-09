@@ -1,6 +1,6 @@
 # Standard Library
 import re
-from unittest.mock import Mock, patch
+from unittest.mock import MagicMock, Mock, patch
 
 # Alliance Auth
 from allianceauth.authentication.models import User
@@ -22,7 +22,7 @@ class TestAnnouncementContext(BaseTestCase):
     """
 
     @classmethod
-    def setUpClass(cls) -> None:
+    def setUpClass(cls: "TestAnnouncementContext") -> None:
         """
         Set up groups and users
         """
@@ -34,8 +34,10 @@ class TestAnnouncementContext(BaseTestCase):
     @patch("aa_discord_announcements.models.PingTarget.objects.get")
     @patch("aa_discord_announcements.models.Webhook.objects.get")
     def test_gets_announcement_context_with_here_mention(
-        self, mock_get_webhook, mock_get_ping_target
-    ):
+        self: "TestAnnouncementContext",
+        mock_get_webhook: MagicMock,
+        mock_get_ping_target: MagicMock,
+    ) -> None:
         """
         Test the get_announcement_context_from_form_data function with @here mention
 
@@ -65,8 +67,10 @@ class TestAnnouncementContext(BaseTestCase):
     @patch("aa_discord_announcements.models.PingTarget.objects.get")
     @patch("aa_discord_announcements.models.Webhook.objects.get")
     def test_gets_announcement_context_with_custom_target(
-        self, mock_get_webhook, mock_get_ping_target
-    ):
+        self: "TestAnnouncementContext",
+        mock_get_webhook: MagicMock,
+        mock_get_ping_target: MagicMock,
+    ) -> None:
         """
         Test the get_announcement_context_from_form_data function with a custom ping target
 
@@ -104,8 +108,10 @@ class TestAnnouncementContext(BaseTestCase):
     @patch("aa_discord_announcements.models.PingTarget.objects.get")
     @patch("aa_discord_announcements.models.Webhook.objects.get")
     def test_handles_nonexistent_custom_target(
-        self, mock_get_webhook, mock_get_ping_target
-    ):
+        self: "TestAnnouncementContext",
+        mock_get_webhook: MagicMock,
+        mock_get_ping_target: MagicMock,
+    ) -> None:
         """
         Test the get_announcement_context_from_form_data function with a nonexistent custom target
 
@@ -138,7 +144,11 @@ class TestAnnouncementContext(BaseTestCase):
 
     @patch("aa_discord_announcements.models.PingTarget.objects.get")
     @patch("aa_discord_announcements.models.Webhook.objects.get")
-    def test_handles_nonexistent_webhook(self, mock_get_webhook, mock_get_ping_target):
+    def test_handles_nonexistent_webhook(
+        self: "TestAnnouncementContext",
+        mock_get_webhook: MagicMock,
+        mock_get_ping_target: MagicMock,
+    ) -> None:
         """
         Test the get_announcement_context_from_form_data function with a nonexistent webhook
 
@@ -170,7 +180,9 @@ class TestWebhookAnnouncementContext(BaseTestCase):
     Test the get_webhook_announcement_context function
     """
 
-    def test_returns_correct_context_with_group_id(self):
+    def test_returns_correct_context_with_group_id(
+        self: "TestWebhookAnnouncementContext",
+    ) -> None:
         """
         Test the get_webhook_announcement_context function with a group ID
 
@@ -187,7 +199,9 @@ class TestWebhookAnnouncementContext(BaseTestCase):
 
         self.assertEqual(result["content"], "<@&123456789>\n\nTest announcement")
 
-    def test_returns_correct_context_with_at_here(self):
+    def test_returns_correct_context_with_at_here(
+        self: "TestWebhookAnnouncementContext",
+    ) -> None:
         """
         Test the get_webhook_announcement_context function with an @here mention
 
@@ -204,7 +218,9 @@ class TestWebhookAnnouncementContext(BaseTestCase):
 
         self.assertEqual(result["content"], "@here\n\nTest announcement")
 
-    def test_handles_empty_announcement_text(self):
+    def test_handles_empty_announcement_text(
+        self: "TestWebhookAnnouncementContext",
+    ) -> None:
         """
         Test the get_webhook_announcement_context function with an empty announcement text
 
@@ -221,7 +237,9 @@ class TestWebhookAnnouncementContext(BaseTestCase):
 
         self.assertEqual(result["content"], "<@&123456789>")
 
-    def test_handles_empty_announcement_target(self):
+    def test_handles_empty_announcement_target(
+        self: "TestWebhookAnnouncementContext",
+    ) -> None:
         """
         Test the get_webhook_announcement_context function with an empty announcement target
 
@@ -238,7 +256,7 @@ class TestWebhookAnnouncementContext(BaseTestCase):
 
         self.assertEqual(result["content"], "\n\nTest announcement")
 
-    def test_handles_empty_context(self):
+    def test_handles_empty_context(self: "TestWebhookAnnouncementContext") -> None:
         """
         Test the get_webhook_announcement_context function with an empty context
 
@@ -267,8 +285,11 @@ class TestSendToDiscordWebhook(BaseTestCase):
     )
     @patch("aa_discord_announcements.helper.discord_webhook.get_user_agent")
     def test_sends_announcement_successfully(
-        self, mock_get_user_agent, mock_get_webhook_announcement_context, mock_execute
-    ):
+        self: "TestSendToDiscordWebhook",
+        mock_get_user_agent: MagicMock,
+        mock_get_webhook_announcement_context: MagicMock,
+        mock_execute: MagicMock,
+    ) -> None:
         """
         Test the send_to_discord_webhook function sending an announcement successfully
 
@@ -312,8 +333,11 @@ class TestSendToDiscordWebhook(BaseTestCase):
     )
     @patch("aa_discord_announcements.helper.discord_webhook.get_user_agent")
     def test_handles_missing_webhook_url(
-        self, mock_get_user_agent, mock_get_webhook_announcement_context, mock_execute
-    ):
+        self: "TestSendToDiscordWebhook",
+        mock_get_user_agent: MagicMock,
+        mock_get_webhook_announcement_context: MagicMock,
+        mock_execute: MagicMock,
+    ) -> None:
         """
         Test the send_to_discord_webhook function handles a missing webhook URL
 
@@ -348,8 +372,11 @@ class TestSendToDiscordWebhook(BaseTestCase):
     )
     @patch("aa_discord_announcements.helper.discord_webhook.get_user_agent")
     def handles_empty_announcement_text(
-        self, mock_get_user_agent, mock_get_webhook_announcement_context, mock_execute
-    ):
+        self: "TestSendToDiscordWebhook",
+        mock_get_user_agent: MagicMock,
+        mock_get_webhook_announcement_context: MagicMock,
+        mock_execute: MagicMock,
+    ) -> None:
         """
         Test the send_to_discord_webhook function handles an empty announcement text
 

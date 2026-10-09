@@ -2,12 +2,14 @@
 The views
 """
 
+__lazy_modules__ = ["django.core.handlers.wsgi"]
+
 # Standard Library
 import json
+from typing import TYPE_CHECKING
 
 # Django
 from django.contrib.auth.decorators import login_required, permission_required
-from django.core.handlers.wsgi import WSGIRequest
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -29,10 +31,14 @@ from aa_discord_announcements.providers.applogger import AppLogger
 
 logger = AppLogger(get_extension_logger(__name__))
 
+if TYPE_CHECKING:
+    # Django
+    from django.core.handlers.wsgi import WSGIRequest
+
 
 @login_required
 @permission_required(perm="aa_discord_announcements.basic_access")
-def index(request: WSGIRequest) -> HttpResponse:
+def index(request: "WSGIRequest") -> HttpResponse:
     """
     Index view
     """
@@ -59,7 +65,7 @@ def index(request: WSGIRequest) -> HttpResponse:
 
 @login_required
 @permission_required(perm="aa_discord_announcements.basic_access")
-def ajax_get_announcement_targets(request: WSGIRequest) -> HttpResponse:
+def ajax_get_announcement_targets(request: "WSGIRequest") -> HttpResponse:
     """
     Get announcement targets for the current user
     :param request:
@@ -87,7 +93,7 @@ def ajax_get_announcement_targets(request: WSGIRequest) -> HttpResponse:
 
 @login_required
 @permission_required(perm="aa_discord_announcements.basic_access")
-def ajax_get_webhooks(request: WSGIRequest) -> HttpResponse:
+def ajax_get_webhooks(request: "WSGIRequest") -> HttpResponse:
     """
     Get webhooks for the current user
     :param request:
@@ -114,7 +120,7 @@ def ajax_get_webhooks(request: WSGIRequest) -> HttpResponse:
 
 @login_required
 @permission_required(perm="aa_discord_announcements.basic_access")
-def ajax_create_announcement(request: WSGIRequest) -> HttpResponse:
+def ajax_create_announcement(request: "WSGIRequest") -> HttpResponse:
     """
     Create the announcement
 

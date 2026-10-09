@@ -1,5 +1,5 @@
 # Standard Library
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 # Django
 from django.contrib import admin
@@ -22,7 +22,9 @@ class TestPingTargetAdmin(BaseTestCase):
         "aa_discord_announcements.models._get_discord_group_info",
         return_value={"id": "123456789"},
     )
-    def test_displays_correct_name(self, mock_get_discord_group_info):
+    def test_displays_correct_name(
+        self: "TestPingTargetAdmin", mock_get_discord_group_info: MagicMock
+    ) -> None:
         """
         Test that the name is displayed correctly in the admin
 
@@ -42,7 +44,9 @@ class TestPingTargetAdmin(BaseTestCase):
         "aa_discord_announcements.models._get_discord_group_info",
         return_value={"id": "123456789"},
     )
-    def test_displays_correct_group_restrictions(self, mock_get_discord_group_info):
+    def test_displays_correct_group_restrictions(
+        self: "TestPingTargetAdmin", mock_get_discord_group_info: MagicMock
+    ) -> None:
         """
         Test that the group restrictions are displayed correctly in the admin
 
@@ -63,8 +67,8 @@ class TestPingTargetAdmin(BaseTestCase):
         return_value={"id": "123456789"},
     )
     def test_displays_no_group_restrictions_when_none(
-        self, mock_get_discord_group_info
-    ):
+        self: "TestPingTargetAdmin", mock_get_discord_group_info: MagicMock
+    ) -> None:
         """
         Test that no group restrictions are displayed when there are none
 
@@ -88,7 +92,9 @@ class TestWebhookAdmin(BaseTestCase):
         "aa_discord_announcements.models._get_discord_group_info",
         return_value={"id": "123456789"},
     )
-    def test_displays_correct_name(self, mock_get_discord_group_info):
+    def test_displays_correct_name(
+        self: "TestWebhookAdmin", mock_get_discord_group_info: MagicMock
+    ) -> None:
         """
         Test that the name is displayed correctly in the admin
 
@@ -111,7 +117,9 @@ class TestWebhookAdmin(BaseTestCase):
         "aa_discord_announcements.models._get_discord_group_info",
         return_value={"id": "123456789"},
     )
-    def test_displays_correct_url(self, mock_get_discord_group_info):
+    def test_displays_correct_url(
+        self: "TestWebhookAdmin", mock_get_discord_group_info: MagicMock
+    ) -> None:
         """
         Test that the URL is displayed correctly in the admin
 
@@ -137,7 +145,9 @@ class TestWebhookAdmin(BaseTestCase):
         "aa_discord_announcements.models._get_discord_group_info",
         return_value={"id": "123456789"},
     )
-    def test_displays_correct_group_restrictions(self, mock_get_discord_group_info):
+    def test_displays_correct_group_restrictions(
+        self: "TestWebhookAdmin", mock_get_discord_group_info: MagicMock
+    ) -> None:
         """
         Test that the group restrictions are displayed correctly in the admin
 
@@ -165,8 +175,8 @@ class TestWebhookAdmin(BaseTestCase):
         return_value={"id": "123456789"},
     )
     def test_displays_no_group_restrictions_when_none(
-        self, mock_get_discord_group_info
-    ):
+        self: "TestWebhookAdmin", mock_get_discord_group_info: MagicMock
+    ) -> None:
         """
         Test that no group restrictions are displayed when there are none
 

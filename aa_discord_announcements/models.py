@@ -32,6 +32,7 @@ if discord_service_installed():
 def _get_discord_group_info(ping_target: Group) -> dict:
     """
     Get Discord group info or raise an error
+
     :param ping_target:
     :type ping_target:
     :return:
@@ -147,13 +148,19 @@ class PingTarget(models.Model):
 
     def save(
         self,
-        force_insert=False,  # pylint: disable=unused-argument
-        force_update=False,  # pylint: disable=unused-argument
-        using=None,  # pylint: disable=unused-argument
-        update_fields=None,  # pylint: disable=unused-argument
+        force_insert: bool = False,  # pylint: disable=unused-argument
+        force_update: bool = False,  # pylint: disable=unused-argument
+        using: str | None = None,  # pylint: disable=unused-argument
+        update_fields: list[str] | None = None,  # pylint: disable=unused-argument
     ):
         """
         Add the Discord group ID (if Discord service is active) and save the whole thing
+
+        :param force_insert:
+        :param force_update:
+        :param using:
+        :param update_fields:
+        :return:
         """
 
         # Check if the Discord service is active
@@ -242,6 +249,7 @@ class Webhook(models.Model):
     def clean(self):
         """
         Check if the webhook URL is valid
+
         :return:
         """
 

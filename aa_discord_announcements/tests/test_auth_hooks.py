@@ -3,6 +3,9 @@ Test auth_hooks
 """
 
 # Standard Library
+import importlib
+import sys
+import typing
 from http import HTTPStatus
 
 # Django
@@ -19,7 +22,7 @@ class TestHooks(BaseTestCase):
     """
 
     @classmethod
-    def setUpClass(cls) -> None:
+    def setUpClass(cls: "TestHooks") -> None:
         """
         Set up groups and users
         """
@@ -47,7 +50,7 @@ class TestHooks(BaseTestCase):
             </li>
         """
 
-    def test_render_hook_success(self):
+    def test_render_hook_success(self: "TestHooks") -> None:
         """
         Test should show the link to the app in the navigation to user with access
         :return:
@@ -61,7 +64,7 @@ class TestHooks(BaseTestCase):
         self.assertEqual(first=response.status_code, second=HTTPStatus.OK)
         self.assertContains(response=response, text=self.html_menu, html=True)
 
-    def test_render_hook_fail(self):
+    def test_render_hook_fail(self: "TestHooks") -> None:
         """
         Test should not show the link to the app in the
         navigation to user without access
@@ -75,3 +78,70 @@ class TestHooks(BaseTestCase):
 
         self.assertEqual(first=response.status_code, second=HTTPStatus.OK)
         self.assertNotContains(response=response, text=self.html_menu, html=True)
+
+    def test_type_checking_block_imports_wsgi_request_when_enabled(
+        self: "TestHooks",
+    ) -> None:
+        """
+        Ensure that when typing.TYPE_CHECKING is True at import time the
+        module-level name `WSGIRequest` is present in the `auth_hooks`
+        module namespace.
+
+        :return:
+        """
+
+        module_name = "aa_discord_announcements.auth_hooks"
+        orig_module = sys.modules.get(module_name)
+        orig_flag = typing.TYPE_CHECKING
+
+        try:
+            # Ensure django is available for this check, otherwise skip.
+            try:
+                # Django
+                import django.core.handlers.wsgi  # noqa: F401
+            except Exception:
+                self.skipTest("Django WSGIRequest unavailable in this environment")
+
+            if module_name in sys.modules:
+                del sys.modules[module_name]
+
+            typing.TYPE_CHECKING = True
+            mod = importlib.import_module(module_name)
+
+            self.assertTrue(hasattr(mod, "WSGIRequest"))
+        finally:
+            typing.TYPE_CHECKING = orig_flag
+            if orig_module is not None:
+                sys.modules[module_name] = orig_module
+            else:
+                sys.modules.pop(module_name, None)
+
+    def test_type_checking_block_does_not_import_wsgi_request_when_disabled(
+        self: "TestHooks",
+    ) -> None:
+        """
+        Ensure that when typing.TYPE_CHECKING is False at import time the
+        module-level name `WSGIRequest` is not present in the `auth_hooks`
+        module namespace.
+
+        :return:
+        """
+
+        module_name = "aa_discord_announcements.auth_hooks"
+        orig_module = sys.modules.get(module_name)
+        orig_flag = typing.TYPE_CHECKING
+
+        try:
+            if module_name in sys.modules:
+                del sys.modules[module_name]
+
+            typing.TYPE_CHECKING = False
+            mod = importlib.import_module(module_name)
+
+            self.assertFalse(hasattr(mod, "WSGIRequest"))
+        finally:
+            typing.TYPE_CHECKING = orig_flag
+            if orig_module is not None:
+                sys.modules[module_name] = orig_module
+            else:
+                sys.modules.pop(module_name, None)

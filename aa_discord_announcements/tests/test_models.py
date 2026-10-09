@@ -3,7 +3,7 @@ Test models
 """
 
 # Standard Library
-from unittest.mock import Mock, patch
+from unittest.mock import MagicMock, Mock, patch
 
 # Third Party
 from requests.exceptions import HTTPError
@@ -35,8 +35,10 @@ class TestGetDiscordGroupInfo(BaseTestCase):
     )
     @patch("aa_discord_announcements.models.DiscordUser.objects.group_to_role")
     def test_returns_discord_group_info(
-        self, mock_group_to_role, mock_discord_service_installed
-    ):
+        self: "TestGetDiscordGroupInfo",
+        mock_group_to_role: MagicMock,
+        mock_discord_service_installed: MagicMock,
+    ) -> None:
         """
         Test if _get_discord_group_info returns the correct Discord group info
 
@@ -58,8 +60,8 @@ class TestGetDiscordGroupInfo(BaseTestCase):
         "aa_discord_announcements.models.discord_service_installed", return_value=False
     )
     def test_raises_error_if_discord_service_not_installed(
-        self, mock_discord_service_installed
-    ):
+        self: "TestGetDiscordGroupInfo", mock_discord_service_installed: MagicMock
+    ) -> None:
         """
         Test if _get_discord_group_info raises a ValidationError if the Discord service is not installed
 
@@ -82,8 +84,10 @@ class TestGetDiscordGroupInfo(BaseTestCase):
         side_effect=HTTPError,
     )
     def test_raises_error_if_http_error_occurs(
-        self, mock_group_to_role, mock_discord_service_installed
-    ):
+        self: "TestGetDiscordGroupInfo",
+        mock_group_to_role: MagicMock,
+        mock_discord_service_installed: MagicMock,
+    ) -> None:
         """
         Test if _get_discord_group_info raises a ValidationError if an HTTPError occurs
 
@@ -108,8 +112,10 @@ class TestGetDiscordGroupInfo(BaseTestCase):
         return_value=None,
     )
     def test_raises_error_if_group_not_synced(
-        self, mock_group_to_role, mock_discord_service_installed
-    ):
+        self: "TestGetDiscordGroupInfo",
+        mock_group_to_role: MagicMock,
+        mock_discord_service_installed: MagicMock,
+    ) -> None:
         """
         Test if _get_discord_group_info raises a ValidationError if the group is not synced to Discord
 
@@ -132,7 +138,7 @@ class TestGeneralModel(BaseTestCase):
     Test General model
     """
 
-    def test_can_access_app_permission(self):
+    def test_can_access_app_permission(self: "TestGeneralModel") -> None:
         """
         Test if the permission 'basic_access' is in the permissions tuple
 
@@ -144,7 +150,7 @@ class TestGeneralModel(BaseTestCase):
 
         self.assertIn("basic_access", dict(general._meta.permissions))
 
-    def test_is_not_managed(self):
+    def test_is_not_managed(self: "TestGeneralModel") -> None:
         """
         Test if the model is not managed by Django
 
@@ -156,7 +162,7 @@ class TestGeneralModel(BaseTestCase):
 
         self.assertFalse(general._meta.managed)
 
-    def test_has_no_default_permissions(self):
+    def test_has_no_default_permissions(self: "TestGeneralModel") -> None:
         """
         Test if the model has no default permissions
 
@@ -179,8 +185,10 @@ class TestPingTargetModel(BaseTestCase):
     )
     @patch("aa_discord_announcements.models._get_discord_group_info")
     def test_saves_with_valid_discord_group(
-        self, mock_get_discord_group_info, mock_discord_service_installed
-    ):
+        self: "TestPingTargetModel",
+        mock_get_discord_group_info: MagicMock,
+        mock_discord_service_installed: MagicMock,
+    ) -> None:
         """
         Test if the PingTarget model saves with a valid Discord group
 
@@ -203,8 +211,8 @@ class TestPingTargetModel(BaseTestCase):
         "aa_discord_announcements.models.discord_service_installed", return_value=False
     )
     def test_raises_error_if_discord_service_not_installed_on_save(
-        self, mock_discord_service_installed
-    ):
+        self: "TestPingTargetModel", mock_discord_service_installed: MagicMock
+    ) -> None:
         """
         Test if the PingTarget model raises a ValidationError if the Discord service is not installed
 
@@ -228,8 +236,10 @@ class TestPingTargetModel(BaseTestCase):
         side_effect=ValidationError("This group has not been synced to Discord yet."),
     )
     def test_raises_error_if_discord_group_not_synced_on_save(
-        self, mock_get_discord_group_info, mock_discord_service_installed
-    ):
+        self: "TestPingTargetModel",
+        mock_get_discord_group_info: MagicMock,
+        mock_discord_service_installed: MagicMock,
+    ) -> None:
         """
         Test if the PingTarget model raises a ValidationError if the Discord group is not synced
 
@@ -251,8 +261,10 @@ class TestPingTargetModel(BaseTestCase):
     )
     @patch("aa_discord_announcements.models._get_discord_group_info")
     def test_cleans_with_valid_discord_group(
-        self, mock_get_discord_group_info, mock_discord_service_installed
-    ):
+        self: "TestPingTargetModel",
+        mock_get_discord_group_info: MagicMock,
+        mock_discord_service_installed: MagicMock,
+    ) -> None:
         """
         Test if the PingTarget model cleans with a valid Discord group
 
@@ -273,8 +285,8 @@ class TestPingTargetModel(BaseTestCase):
         "aa_discord_announcements.models.discord_service_installed", return_value=False
     )
     def test_raises_error_if_discord_service_not_installed_on_clean(
-        self, mock_discord_service_installed
-    ):
+        self: "TestPingTargetModel", mock_discord_service_installed: MagicMock
+    ) -> None:
         """
         Test if the PingTarget model raises a ValidationError if the Discord service is not installed when cleaning the model
 
@@ -298,8 +310,10 @@ class TestPingTargetModel(BaseTestCase):
         side_effect=ValidationError("This group has not been synced to Discord yet."),
     )
     def test_raises_error_if_discord_group_not_synced_on_clean(
-        self, mock_get_discord_group_info, mock_discord_service_installed
-    ):
+        self: "TestPingTargetModel",
+        mock_get_discord_group_info: MagicMock,
+        mock_discord_service_installed: MagicMock,
+    ) -> None:
         """
         Test if the PingTarget model raises a ValidationError if the Discord group is not synced when cleaning the model
 
@@ -317,7 +331,9 @@ class TestPingTargetModel(BaseTestCase):
         with self.assertRaises(ValidationError):
             ping_target.clean()
 
-    def test_should_return_ping_target_model_string_name(self):
+    def test_should_return_ping_target_model_string_name(
+        self: "TestPingTargetModel",
+    ) -> None:
         """
         Test should return the PingTarget model string name
 
@@ -336,7 +352,7 @@ class TestWebhookModel(BaseTestCase):
     Test the Webhook model
     """
 
-    def test_saves_with_valid_data(self):
+    def test_saves_with_valid_data(self: "TestWebhookModel") -> None:
         """
         Test if the Webhook model saves with valid data
 
@@ -350,7 +366,7 @@ class TestWebhookModel(BaseTestCase):
         self.assertEqual(webhook.name, "Test Channel")
         self.assertEqual(webhook.url, "https://discord.com/api/webhooks/123456/abcdef")
 
-    def test_raises_error_with_invalid_url(self):
+    def test_raises_error_with_invalid_url(self: "TestWebhookModel") -> None:
         """
         Test if the Webhook model raises a ValidationError with an invalid URL
 
@@ -363,7 +379,7 @@ class TestWebhookModel(BaseTestCase):
         with self.assertRaises(ValidationError):
             webhook.clean()
 
-    def test_cleans_with_valid_url(self):
+    def test_cleans_with_valid_url(self: "TestWebhookModel") -> None:
         """
         Test if the Webhook model cleans with a valid URL
 
@@ -378,7 +394,7 @@ class TestWebhookModel(BaseTestCase):
 
         self.assertEqual(webhook.url, "https://discord.com/api/webhooks/123456/abcdef")
 
-    def test_webhook_url_is_unique(self):
+    def test_webhook_url_is_unique(self: "TestWebhookModel") -> None:
         """
         Test if the Webhook model raises an IntegrityError if the URL is not unique
 
@@ -397,7 +413,7 @@ class TestWebhookModel(BaseTestCase):
                 url="https://discord.com/api/webhooks/123456/abcdef",
             )
 
-    def test_saves_with_restricted_groups(self):
+    def test_saves_with_restricted_groups(self: "TestWebhookModel") -> None:
         """
         Test if the Webhook model saves with restricted groups
 
@@ -413,7 +429,7 @@ class TestWebhookModel(BaseTestCase):
 
         self.assertIn(group, webhook.restricted_to_group.all())
 
-    def test_saves_with_notes(self):
+    def test_saves_with_notes(self: "TestWebhookModel") -> None:
         """
         Test if the Webhook model saves with notes
 
@@ -429,7 +445,7 @@ class TestWebhookModel(BaseTestCase):
 
         self.assertEqual(webhook.notes, "Test notes")
 
-    def test_saves_with_is_enabled(self):
+    def test_saves_with_is_enabled(self: "TestWebhookModel") -> None:
         """
         Test if the Webhook model saves with is_enabled
 
@@ -445,7 +461,7 @@ class TestWebhookModel(BaseTestCase):
 
         self.assertFalse(webhook.is_enabled)
 
-    def test_should_return_webhook_model_string_name(self):
+    def test_should_return_webhook_model_string_name(self: "TestWebhookModel") -> None:
         """
         Test should return the Webhook model string name
 

@@ -19,7 +19,7 @@ class TestSettings(BaseTestCase):
     """
 
     @modify_settings(INSTALLED_APPS={"append": "allianceauth.services.modules.discord"})
-    def test_discord_service_installed_should_return_true(self) -> None:
+    def test_discord_service_installed_should_return_true(self: "TestSettings") -> None:
         """
         Test discord_service_installed should return True with discord service enabled
 
@@ -30,7 +30,9 @@ class TestSettings(BaseTestCase):
         self.assertTrue(expr=discord_service_installed())
 
     @modify_settings(INSTALLED_APPS={"remove": "allianceauth.services.modules.discord"})
-    def test_discord_service_installed_should_return_false(self) -> None:
+    def test_discord_service_installed_should_return_false(
+        self: "TestSettings",
+    ) -> None:
         """
         Test discord_service_installed should return False without discord service enabled
 
@@ -41,7 +43,7 @@ class TestSettings(BaseTestCase):
         self.assertFalse(expr=discord_service_installed())
 
     @override_settings(DEBUG=True)
-    def test_debug_enabled_with_debug_true(self) -> None:
+    def test_debug_enabled_with_debug_true(self: "TestSettings") -> None:
         """
         Test debug_enabled with DEBUG = True
 
@@ -52,7 +54,7 @@ class TestSettings(BaseTestCase):
         self.assertTrue(debug_enabled())
 
     @override_settings(DEBUG=False)
-    def test_debug_enabled_with_debug_false(self) -> None:
+    def test_debug_enabled_with_debug_false(self: "TestSettings") -> None:
         """
         Test debug_enabled with DEBUG = False
 

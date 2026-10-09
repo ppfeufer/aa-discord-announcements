@@ -37,6 +37,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Type hinting improved
+  - Move type hinting imports into an `if TYPE_CHECKING` block and into
+    `__lazy_modules__` for Python 3.15 later on
+
 ## [3.1.2] - 2026-10-06
 
 ### Changed

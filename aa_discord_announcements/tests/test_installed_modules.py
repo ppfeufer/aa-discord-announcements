@@ -16,7 +16,7 @@ class TestModulesInstalled(BaseTestCase):
     """
 
     @classmethod
-    def setUpClass(cls) -> None:
+    def setUpClass(cls: "TestModulesInstalled") -> None:
         """
         Set up groups and users
         """
@@ -24,7 +24,9 @@ class TestModulesInstalled(BaseTestCase):
         super().setUpClass()
 
     @modify_settings(INSTALLED_APPS={"remove": "allianceauth.services.modules.discord"})
-    def test_for_discord_service_installed_when_not_installed(self):
+    def test_for_discord_service_installed_when_not_installed(
+        self: "TestModulesInstalled",
+    ) -> None:
         """
         Test for discord_service_installed when it is not
         :return:
@@ -33,7 +35,9 @@ class TestModulesInstalled(BaseTestCase):
         self.assertFalse(expr=discord_service_installed())
 
     @modify_settings(INSTALLED_APPS={"append": "allianceauth.services.modules.discord"})
-    def test_for_discord_service_installed_when_installed(self):
+    def test_for_discord_service_installed_when_installed(
+        self: "TestModulesInstalled",
+    ) -> None:
         """
         Test for discord_service_installed when it is installed
         :return:
