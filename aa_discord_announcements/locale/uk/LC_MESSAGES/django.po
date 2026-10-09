@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Discord Announcements\n"
 "Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/\n"
-"POT-Creation-Date: 2026-10-06 09:39+0200\n"
+"POT-Creation-Date: 2026-10-09 16:21+0200\n"
 "PO-Revision-Date: 2026-07-06 18:49+0000\n"
 "Last-Translator: \"Andrii M.\" <elfleg0las88@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-discord-announcements/uk/>\n"
@@ -29,145 +29,145 @@ msgstr ""
 msgid "Discord Announcements"
 msgstr "Оголошення Дискорду"
 
-#: aa_discord_announcements/admin.py:31 aa_discord_announcements/models.py:93
+#: aa_discord_announcements/admin.py:31 aa_discord_announcements/models.py:94
 msgid "Group name"
 msgstr "Назва групи"
 
 #: aa_discord_announcements/admin.py:36 aa_discord_announcements/admin.py:64
-#: aa_discord_announcements/models.py:116
-#: aa_discord_announcements/models.py:210
+#: aa_discord_announcements/models.py:117
+#: aa_discord_announcements/models.py:217
 msgid "Group restrictions"
 msgstr "Обмеження групи"
 
-#: aa_discord_announcements/admin.py:55 aa_discord_announcements/models.py:188
+#: aa_discord_announcements/admin.py:55 aa_discord_announcements/models.py:195
 msgid "Discord channel"
 msgstr "Discord канал"
 
-#: aa_discord_announcements/admin.py:59 aa_discord_announcements/models.py:196
+#: aa_discord_announcements/admin.py:59 aa_discord_announcements/models.py:203
 msgid "Webhook URL"
 msgstr "URL вебхука"
 
-#: aa_discord_announcements/forms.py:22
+#: aa_discord_announcements/forms.py:30
 msgid "This field is mandatory"
 msgstr "Це поле обовʼязкове"
 
-#: aa_discord_announcements/forms.py:47
+#: aa_discord_announcements/forms.py:55
 msgid "Discord Markdown"
 msgstr "Розмітка Discord"
 
-#: aa_discord_announcements/forms.py:50
+#: aa_discord_announcements/forms.py:58
 #, python-brace-format
 msgid "Hint: You can use {discord_markdown_link} to format the text."
 msgstr "Підказка: Ви можете використовувати {discord_markdown_link} для форматування тексту."
 
-#: aa_discord_announcements/forms.py:62
+#: aa_discord_announcements/forms.py:70
 msgid "Announcement target"
 msgstr "Ціль оголошення (роль/група)"
 
-#: aa_discord_announcements/forms.py:64
+#: aa_discord_announcements/forms.py:72
 msgid "Who do you want to ping?"
 msgstr "Кого тегнути?"
 
-#: aa_discord_announcements/forms.py:68
+#: aa_discord_announcements/forms.py:76
 msgid "Announcement channel"
 msgstr "Канал оголошення"
 
-#: aa_discord_announcements/forms.py:70
+#: aa_discord_announcements/forms.py:78
 msgid "Select a channel to send the announcement to automatically."
 msgstr "Виберіть канал для автоматичного відправлення оголошення."
 
-#: aa_discord_announcements/forms.py:74
+#: aa_discord_announcements/forms.py:82
 msgid "Announcement text"
 msgstr "Текст оголошення"
 
-#: aa_discord_announcements/forms.py:80
+#: aa_discord_announcements/forms.py:88
 msgid "Your announcement…"
 msgstr "Ваше оголошення…"
 
-#: aa_discord_announcements/models.py:45
+#: aa_discord_announcements/models.py:46
 msgid "You might want to install the Discord service first…"
 msgstr "Можливо, вам слід спочатку встановити сервіс Discord…"
 
-#: aa_discord_announcements/models.py:55
+#: aa_discord_announcements/models.py:56
 msgid "Are you sure you have your Discord linked to your Alliance Auth?"
 msgstr "Ви впевнені, що ваш Discord підключений до Alliance Auth?"
 
-#: aa_discord_announcements/models.py:61
+#: aa_discord_announcements/models.py:62
 msgid "This group has not been synced to Discord yet."
 msgstr "Цю групу ще не синхронізовано з Discord."
 
-#: aa_discord_announcements/models.py:79
+#: aa_discord_announcements/models.py:80
 msgid "Can access this app"
 msgstr "Має доступ до цього додатку"
 
-#: aa_discord_announcements/models.py:96
+#: aa_discord_announcements/models.py:97
 msgid "Name of the Discord role to ping. (Note: This must be an Auth group that is synced to Discord.)"
 msgstr "Ім'я ролі Discord, яку потрібно пінгувати. (Примітка: це має бути група Auth, яка синхронізована з Discord.)"
 
-#: aa_discord_announcements/models.py:107
+#: aa_discord_announcements/models.py:108
 msgid "Discord ID"
 msgstr "Діскорд ID"
 
-#: aa_discord_announcements/models.py:108
+#: aa_discord_announcements/models.py:109
 msgid "ID of the Discord role to ping"
 msgstr "ID ролі Discord для пінгування"
 
-#: aa_discord_announcements/models.py:117
-#: aa_discord_announcements/models.py:211
+#: aa_discord_announcements/models.py:118
+#: aa_discord_announcements/models.py:218
 msgid "Restrict ping rights to the following groups…"
 msgstr "Обмежити права на пінг для наступних груп…"
 
-#: aa_discord_announcements/models.py:124
-#: aa_discord_announcements/models.py:218
+#: aa_discord_announcements/models.py:125
+#: aa_discord_announcements/models.py:225
 msgid "Notes"
 msgstr "Примітки"
 
-#: aa_discord_announcements/models.py:125
+#: aa_discord_announcements/models.py:126
 msgid "You can add notes about this configuration here if you want"
 msgstr "Ви можете додати примітки про цю конфігурацію тут, якщо хочете"
 
-#: aa_discord_announcements/models.py:132
-#: aa_discord_announcements/models.py:226
+#: aa_discord_announcements/models.py:133
+#: aa_discord_announcements/models.py:233
 msgid "Is enabled"
 msgstr "Увімкнено"
 
-#: aa_discord_announcements/models.py:133
+#: aa_discord_announcements/models.py:134
 msgid "Whether this ping target is enabled or not"
 msgstr "Чи ціль для пінгу активна"
 
-#: aa_discord_announcements/models.py:141
+#: aa_discord_announcements/models.py:142
 msgid "Discord ping target"
 msgstr "Ціль для пінгу в Discord"
 
-#: aa_discord_announcements/models.py:142
+#: aa_discord_announcements/models.py:143
 msgid "Discord ping targets"
 msgstr "Цілі для пінгу в Discord"
 
-#: aa_discord_announcements/models.py:189
+#: aa_discord_announcements/models.py:196
 msgid "Name of the channel this webhook posts to"
 msgstr "Назва каналу, до якого цей вебхук надсилає повідомлення"
 
-#: aa_discord_announcements/models.py:199
+#: aa_discord_announcements/models.py:206
 msgid "URL of this webhook, e.g. https://discord.com/api/webhooks/123456/abcdef"
 msgstr "URL цього вебхука, наприклад https://discord.com/api/webhooks/123456/abcdef"
 
-#: aa_discord_announcements/models.py:219
+#: aa_discord_announcements/models.py:226
 msgid "You can add notes about this webhook here if you want"
 msgstr "Ви можете додати примітки про цей вебхук тут, якщо хочете"
 
-#: aa_discord_announcements/models.py:227
+#: aa_discord_announcements/models.py:234
 msgid "Whether this webhook is active or not"
 msgstr "Активний цей вебхук чи ні"
 
-#: aa_discord_announcements/models.py:235
+#: aa_discord_announcements/models.py:242
 msgid "Webhook"
 msgstr "Вебхук"
 
-#: aa_discord_announcements/models.py:236
+#: aa_discord_announcements/models.py:243
 msgid "Webhooks"
 msgstr "Вебхуки"
 
-#: aa_discord_announcements/models.py:252
+#: aa_discord_announcements/models.py:260
 msgid "Invalid webhook URL. The webhook URL you entered does not match any known format for a Discord webhook. Please check the webhook URL."
 msgstr "Недійсний URL вебхука. Вказаний вами URL не відповідає жодному з відомих форматів для Discord вебхука. Перевірте URL."
 
@@ -191,11 +191,11 @@ msgstr "Помилка! Ваше оголошення не скопійован�
 msgid "Success! Your announcement text has been copied to your clipboard."
 msgstr "Успіx! Ваше оголошення скопійоване у буфер обміну."
 
-#: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:6
+#: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:5
 msgid "No announcement created yet…"
 msgstr "Оголошення ще не створено…"
 
-#: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:23
+#: aa_discord_announcements/templates/aa_discord_announcements/partials/announcement/announcement.html:22
 msgid "Copy announcement text"
 msgstr "Скопіювати текст оголошення"
 
@@ -207,7 +207,7 @@ msgstr "Хочете допомогти перекласти цю програм
 msgid "Join our team of translators!"
 msgstr "Приєднуйтесь до нашої команди перекладачів!"
 
-#: aa_discord_announcements/templates/aa_discord_announcements/partials/form/form.html:22
+#: aa_discord_announcements/templates/aa_discord_announcements/partials/form/form.html:21
 msgid "Create announcement"
 msgstr "Створити оголошення"
 
@@ -223,10 +223,10 @@ msgstr "Не пінгувати"
 msgid "Additionally configured announcement targets"
 msgstr "Додатково налаштовані цілі оголошення"
 
-#: aa_discord_announcements/views.py:156
+#: aa_discord_announcements/views.py:162
 msgid "Form invalid. Please check your input."
 msgstr "Форма невалідна. Будь ласка, перевірте ваші введені дані."
 
-#: aa_discord_announcements/views.py:159
+#: aa_discord_announcements/views.py:165
 msgid "No form data submitted."
 msgstr "Не подано жодних даних."
