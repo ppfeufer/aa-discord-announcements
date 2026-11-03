@@ -37,11 +37,14 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.1.3] - 2026-11-03
+
 ### Changed
 
 - Type hinting improved
   - Move type hinting imports into an `if TYPE_CHECKING` block and into
     `__lazy_modules__` for Python 3.15 later on
+- Translations updated
 
 ## [3.1.2] - 2026-10-06
 
@@ -508,6 +511,7 @@ Section Order:
 [3.1.0]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.0.1...v3.1.0 "v3.1.0"
 [3.1.1]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.0...v3.1.1 "v3.1.1"
 [3.1.2]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.1...v3.1.2 "v3.1.2"
-[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.2...HEAD "In Development"
+[3.1.3]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.2...v3.1.3 "v3.1.3"
+[in development]: https://github.com/ppfeufer/aa-discord-announcements/compare/v3.1.3...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
